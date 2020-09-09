@@ -1,0 +1,490 @@
+[gd_scene load_steps=25 format=1]
+
+[ext_resource path="res://scripts/Pacman/Game.gd" type="Script" id=1]
+[ext_resource path="res://tilesets/Pacman/Tileset4.tres" type="TileSet" id=2]
+[ext_resource path="res://scripts/Pacman/Tilemap.gd" type="Script" id=3]
+[ext_resource path="res://scenes/Pacman/Personagem.tscn" type="PackedScene" id=4]
+[ext_resource path="res://scenes/Pacman/Ghost.tscn" type="PackedScene" id=5]
+[ext_resource path="res://scripts/Pacman/GhostRed.gd" type="Script" id=6]
+[ext_resource path="res://scripts/Pacman/GhostBlue.gd" type="Script" id=7]
+[ext_resource path="res://scripts/Pacman/GhostOrange.gd" type="Script" id=8]
+[ext_resource path="res://scripts/Pacman/GhostPink.gd" type="Script" id=9]
+[ext_resource path="res://assets/screen_controls/flatLight/flatLight01.png" type="Texture" id=10]
+[ext_resource path="res://assets/screen_controls/flatLight/flatLight08.png" type="Texture" id=11]
+[ext_resource path="res://assets/screen_controls/flatLight/flatLight03.png" type="Texture" id=12]
+[ext_resource path="res://assets/screen_controls/flatLight/flatLight04.png" type="Texture" id=13]
+[ext_resource path="res://scripts/Pacman/Hud.gd" type="Script" id=14]
+[ext_resource path="res://assets/Pacman/kenpixel.ttf" type="DynamicFontData" id=15]
+[ext_resource path="res://assets/screen_controls/transparentLight/transparentLight19.png" type="Texture" id=16]
+[ext_resource path="res://assets/Fontes/font150.fnt" type="BitmapFont" id=17]
+
+[sub_resource type="DynamicFont" id=1]
+
+font/size = 25
+font/use_mipmaps = false
+font/use_filter = false
+font/font = ExtResource( 15 )
+
+[sub_resource type="StyleBoxFlat" id=2]
+
+content_margin/left = -1.0
+content_margin/right = -1.0
+content_margin/top = -1.0
+content_margin/bottom = -1.0
+bg_color = Color( 0.615686, 0.615686, 0.615686, 0.941176 )
+light_color = Color( 0.8, 0.8, 0.8, 1 )
+dark_color = Color( 0.8, 0.8, 0.8, 1 )
+border_size = 0
+border_blend = true
+draw_bg = true
+
+[sub_resource type="RectangleShape2D" id=3]
+
+custom_solver_bias = 0.0
+extents = Vector2( 10, 10 )
+
+[sub_resource type="StyleBoxFlat" id=4]
+
+content_margin/left = -1.0
+content_margin/right = -1.0
+content_margin/top = -1.0
+content_margin/bottom = -1.0
+bg_color = Color( 0.615686, 0.615686, 0.615686, 0.941176 )
+light_color = Color( 0.8, 0.8, 0.8, 1 )
+dark_color = Color( 0.8, 0.8, 0.8, 1 )
+border_size = 0
+border_blend = true
+draw_bg = true
+
+[sub_resource type="RectangleShape2D" id=5]
+
+custom_solver_bias = 0.0
+extents = Vector2( 10, 10 )
+
+[sub_resource type="Animation" id=6]
+
+resource/name = "lose"
+length = 2.0
+loop = false
+step = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("lose:visibility/visible")
+tracks/0/interp = 1
+tracks/0/imported = false
+tracks/0/keys = {
+"times": FloatArray( 1 ),
+"transitions": FloatArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("lose:rect/scale")
+tracks/1/interp = 1
+tracks/1/imported = false
+tracks/1/keys = {
+"times": FloatArray( 1, 2 ),
+"transitions": FloatArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ), Vector2( 1, 1 ) ]
+}
+
+[sub_resource type="Animation" id=7]
+
+resource/name = "won"
+length = 2.0
+loop = false
+step = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("won:visibility/visible")
+tracks/0/interp = 1
+tracks/0/imported = false
+tracks/0/keys = {
+"times": FloatArray( 1 ),
+"transitions": FloatArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("won:rect/scale")
+tracks/1/interp = 1
+tracks/1/imported = false
+tracks/1/keys = {
+"times": FloatArray( 1, 2 ),
+"transitions": FloatArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ), Vector2( 1, 1 ) ]
+}
+
+[node name="Game" type="Node"]
+
+script/script = ExtResource( 1 )
+
+[node name="Board" type="Node2D" parent="."]
+
+transform/pos = Vector2( 4.52203, 69.3375 )
+transform/scale = Vector2( 1.3, 1.3 )
+
+[node name="TileMap" type="TileMap" parent="Board"]
+
+mode = 0
+tile_set = ExtResource( 2 )
+cell/size = Vector2( 32, 32 )
+cell/quadrant_size = 16
+cell/custom_transform = Matrix32( 1, 0, 0, 1, 0, 0 )
+cell/half_offset = 2
+cell/tile_origin = 0
+cell/y_sort = false
+collision/use_kinematic = false
+collision/friction = 1.0
+collision/bounce = 0.0
+collision/layers = 1
+collision/mask = 1
+occluder/light_mask = 1
+tile_data = IntArray( 0, 2, 1, 2, 2, 2, 3, 2, 4, 2, 5, 2, 6, 2, 7, 2, 8, 2, 9, 2, 10, 2, 11, 2, 12, 2, 13, 2, 14, 2, 15, 2, 16, 2, 17, 2, 18, 2, 65536, 2, 65537, 3, 65538, 3, 65539, 3, 65540, 3, 65541, 3, 65542, 3, 65543, 3, 65544, 3, 65545, 2, 65546, 3, 65547, 3, 65548, 3, 65549, 3, 65550, 3, 65551, 3, 65552, 3, 65553, 3, 65554, 2, 131072, 2, 131073, 3, 131074, 2, 131075, 2, 131076, 3, 131077, 2, 131078, 2, 131079, 2, 131080, 3, 131081, 2, 131082, 3, 131083, 2, 131084, 2, 131085, 2, 131086, 3, 131087, 2, 131088, 2, 131089, 3, 131090, 2, 196608, 2, 196609, 3, 196610, 3, 196611, 3, 196612, 3, 196613, 3, 196614, 3, 196615, 3, 196616, 3, 196617, 3, 196618, 3, 196619, 3, 196620, 3, 196621, 3, 196622, 3, 196623, 3, 196624, 3, 196625, 3, 196626, 2, 262144, 2, 262145, 3, 262146, 2, 262147, 2, 262148, 3, 262149, 2, 262150, 3, 262151, 2, 262152, 2, 262153, 2, 262154, 2, 262155, 2, 262156, 3, 262157, 2, 262158, 3, 262159, 2, 262160, 2, 262161, 3, 262162, 2, 327680, 2, 327681, 3, 327682, 3, 327683, 3, 327684, 3, 327685, 2, 327686, 3, 327687, 3, 327688, 3, 327689, 2, 327690, 3, 327691, 3, 327692, 3, 327693, 2, 327694, 3, 327695, 3, 327696, 3, 327697, 3, 327698, 2, 393216, 2, 393217, 2, 393218, 2, 393219, 2, 393220, 3, 393221, 2, 393222, 2, 393223, 2, 393224, 3, 393225, 2, 393226, 3, 393227, 2, 393228, 2, 393229, 2, 393230, 3, 393231, 2, 393232, 2, 393233, 2, 393234, 2, 458752, 3, 458753, 3, 458754, 3, 458755, 2, 458756, 3, 458757, 2, 458758, 3, 458759, 3, 458760, 3, 458761, 3, 458762, 3, 458763, 3, 458764, 3, 458765, 2, 458766, 3, 458767, 2, 458768, 3, 458769, 3, 458770, 3, 524288, 2, 524289, 2, 524290, 2, 524291, 2, 524292, 3, 524293, 2, 524294, 3, 524295, 2, 524296, 2, 524297, 3, 524298, 2, 524299, 2, 524300, 3, 524301, 2, 524302, 3, 524303, 2, 524304, 2, 524305, 2, 524306, 2, 589824, 3, 589825, 3, 589826, 3, 589827, 3, 589828, 3, 589829, 3, 589830, 3, 589831, 2, 589832, 3, 589833, 3, 589834, 3, 589835, 2, 589836, 3, 589837, 3, 589838, 3, 589839, 3, 589840, 3, 589841, 3, 589842, 3, 655360, 2, 655361, 2, 655362, 2, 655363, 2, 655364, 3, 655365, 2, 655366, 3, 655367, 2, 655368, 2, 655369, 2, 655370, 2, 655371, 2, 655372, 3, 655373, 2, 655374, 3, 655375, 2, 655376, 2, 655377, 2, 655378, 2, 720896, 3, 720897, 3, 720898, 3, 720899, 2, 720900, 3, 720901, 2, 720902, 3, 720903, 3, 720904, 3, 720905, 3, 720906, 3, 720907, 3, 720908, 3, 720909, 2, 720910, 3, 720911, 2, 720912, 3, 720913, 3, 720914, 3, 786432, 2, 786433, 2, 786434, 2, 786435, 2, 786436, 3, 786437, 2, 786438, 3, 786439, 2, 786440, 2, 786441, 2, 786442, 2, 786443, 2, 786444, 3, 786445, 2, 786446, 3, 786447, 2, 786448, 2, 786449, 2, 786450, 2, 851968, 2, 851969, 3, 851970, 3, 851971, 3, 851972, 3, 851973, 3, 851974, 3, 851975, 3, 851976, 3, 851977, 2, 851978, 3, 851979, 3, 851980, 3, 851981, 3, 851982, 3, 851983, 3, 851984, 3, 851985, 3, 851986, 2, 917504, 2, 917505, 3, 917506, 2, 917507, 2, 917508, 3, 917509, 2, 917510, 2, 917511, 2, 917512, 3, 917513, 2, 917514, 3, 917515, 2, 917516, 2, 917517, 2, 917518, 3, 917519, 2, 917520, 2, 917521, 3, 917522, 2, 983040, 2, 983041, 3, 983042, 3, 983043, 2, 983044, 3, 983045, 3, 983046, 3, 983047, 3, 983048, 3, 983049, 3, 983050, 3, 983051, 3, 983052, 3, 983053, 3, 983054, 3, 983055, 2, 983056, 3, 983057, 3, 983058, 2, 1048576, 2, 1048577, 2, 1048578, 3, 1048579, 2, 1048580, 3, 1048581, 2, 1048582, 3, 1048583, 2, 1048584, 2, 1048585, 2, 1048586, 2, 1048587, 2, 1048588, 3, 1048589, 2, 1048590, 3, 1048591, 2, 1048592, 3, 1048593, 2, 1048594, 2, 1114112, 2, 1114113, 3, 1114114, 3, 1114115, 3, 1114116, 3, 1114117, 2, 1114118, 3, 1114119, 3, 1114120, 3, 1114121, 2, 1114122, 3, 1114123, 3, 1114124, 3, 1114125, 2, 1114126, 3, 1114127, 3, 1114128, 3, 1114129, 3, 1114130, 2, 1179648, 2, 1179649, 3, 1179650, 2, 1179651, 2, 1179652, 2, 1179653, 2, 1179654, 2, 1179655, 2, 1179656, 3, 1179657, 2, 1179658, 3, 1179659, 2, 1179660, 2, 1179661, 2, 1179662, 2, 1179663, 2, 1179664, 2, 1179665, 3, 1179666, 2, 1245184, 2, 1245185, 3, 1245186, 3, 1245187, 3, 1245188, 3, 1245189, 3, 1245190, 3, 1245191, 3, 1245192, 3, 1245193, 3, 1245194, 3, 1245195, 3, 1245196, 3, 1245197, 3, 1245198, 3, 1245199, 3, 1245200, 3, 1245201, 3, 1245202, 2, 1310720, 2, 1310721, 2, 1310722, 2, 1310723, 2, 1310724, 2, 1310725, 2, 1310726, 2, 1310727, 2, 1310728, 2, 1310729, 2, 1310730, 2, 1310731, 2, 1310732, 2, 1310733, 2, 1310734, 2, 1310735, 2, 1310736, 2, 1310737, 2, 1310738, 2 )
+script/script = ExtResource( 3 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Food" type="TileMap" parent="Board"]
+
+mode = 0
+tile_set = ExtResource( 2 )
+cell/size = Vector2( 32, 32 )
+cell/quadrant_size = 16
+cell/custom_transform = Matrix32( 1, 0, 0, 1, 0, 0 )
+cell/half_offset = 2
+cell/tile_origin = 0
+cell/y_sort = false
+collision/use_kinematic = false
+collision/friction = 1.0
+collision/bounce = 0.0
+collision/layers = 1
+collision/mask = 1
+occluder/light_mask = 1
+tile_data = IntArray( 65537, 0, 65538, 0, 65539, 0, 65540, 0, 65541, 0, 65542, 0, 65543, 0, 65544, 0, 65546, 0, 65547, 0, 65548, 0, 65549, 0, 65550, 0, 65551, 0, 65552, 0, 65553, 0, 131073, 0, 131076, 0, 131086, 0, 131089, 0, 196609, 0, 196610, 0, 196611, 0, 196612, 0, 196613, 0, 196614, 0, 196615, 0, 196616, 0, 196617, 0, 196618, 0, 196619, 0, 196620, 0, 196621, 0, 196622, 0, 196623, 0, 196624, 0, 196625, 0, 262145, 0, 262148, 0, 262150, 0, 262156, 0, 262158, 0, 262161, 0, 327681, 0, 327682, 0, 327683, 0, 327684, 0, 327686, 0, 327687, 0, 327688, 0, 327690, 0, 327691, 0, 327692, 0, 327694, 0, 327695, 0, 327696, 0, 327697, 0, 393220, 0, 393230, 0, 458756, 0, 458766, 0, 524292, 0, 524302, 0, 589828, 0, 589838, 0, 655364, 0, 655374, 0, 720900, 0, 720910, 0, 786436, 0, 786446, 0, 851969, 0, 851970, 0, 851971, 0, 851972, 0, 851973, 0, 851974, 0, 851975, 0, 851976, 0, 851978, 0, 851979, 0, 851980, 0, 851981, 0, 851982, 0, 851983, 0, 851984, 0, 851985, 0, 917505, 0, 917508, 0, 917518, 0, 917521, 0, 983041, 0, 983042, 0, 983044, 0, 983045, 0, 983046, 0, 983047, 0, 983048, 0, 983049, 0, 983050, 0, 983051, 0, 983052, 0, 983053, 0, 983054, 0, 983056, 0, 983057, 0, 1048578, 0, 1048580, 0, 1048582, 0, 1048588, 0, 1048590, 0, 1048592, 0, 1114113, 0, 1114114, 0, 1114115, 0, 1114116, 0, 1114118, 0, 1114119, 0, 1114120, 0, 1114123, 0, 1114124, 0, 1114126, 0, 1114127, 0, 1114128, 0, 1114129, 0, 1179649, 0, 1179656, 0, 1179658, 0, 1179665, 0, 1245185, 0, 1245186, 0, 1245187, 0, 1245188, 0, 1245189, 0, 1245190, 0, 1245191, 0, 1245192, 0, 1245193, 0, 1245194, 0, 1245195, 0, 1245196, 0, 1245197, 0, 1245198, 0, 1245199, 0, 1245200, 0, 1245201, 0 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Personagem" parent="Board" instance=ExtResource( 4 )]
+
+[node name="GhostRed" parent="Board" instance=ExtResource( 5 )]
+
+script/script = ExtResource( 6 )
+iniposdisc = Vector2( 9, 7 )
+color = "red"
+
+[node name="GhostBlue" parent="Board" instance=ExtResource( 5 )]
+
+script/script = ExtResource( 7 )
+iniposdisc = Vector2( 10, 9 )
+color = "blue"
+points = 1000
+
+[node name="GhostOrange" parent="Board" instance=ExtResource( 5 )]
+
+script/script = ExtResource( 8 )
+iniposdisc = Vector2( 9, 9 )
+color = "orange"
+points = 200
+
+[node name="GhostPink" parent="Board" instance=ExtResource( 5 )]
+
+script/script = ExtResource( 9 )
+iniposdisc = Vector2( 8, 9 )
+color = "pink"
+points = 500
+
+[node name="Controls" type="Node2D" parent="."]
+
+[node name="Up" type="TouchScreenButton" parent="Controls"]
+
+transform/pos = Vector2( 593.235, 965 )
+transform/scale = Vector2( 2, 2 )
+normal = ExtResource( 10 )
+pressed = null
+bitmask = null
+shape = null
+shape_centered = true
+shape_visible = true
+passby_press = true
+action = "up"
+visibility_mode = 0
+
+[node name="Up1" type="TouchScreenButton" parent="Controls"]
+
+transform/pos = Vector2( 87.6151, 966 )
+transform/scale = Vector2( 2, 2 )
+normal = ExtResource( 10 )
+pressed = null
+bitmask = null
+shape = null
+shape_centered = true
+shape_visible = true
+passby_press = true
+action = "up"
+visibility_mode = 0
+
+[node name="Down" type="TouchScreenButton" parent="Controls"]
+
+transform/pos = Vector2( 586.58, 1111.84 )
+transform/scale = Vector2( 2, 2 )
+normal = ExtResource( 11 )
+pressed = null
+bitmask = null
+shape = null
+shape_centered = true
+shape_visible = true
+passby_press = true
+action = "down"
+visibility_mode = 0
+
+[node name="Down1" type="TouchScreenButton" parent="Controls"]
+
+transform/pos = Vector2( 89.6152, 1113.84 )
+transform/scale = Vector2( 2, 2 )
+normal = ExtResource( 11 )
+pressed = null
+bitmask = null
+shape = null
+shape_centered = true
+shape_visible = true
+passby_press = true
+action = "down"
+visibility_mode = 0
+
+[node name="Left" type="TouchScreenButton" parent="Controls"]
+
+transform/pos = Vector2( 2.77686, 1057.52 )
+transform/scale = Vector2( 2, 2 )
+normal = ExtResource( 12 )
+pressed = null
+bitmask = null
+shape = null
+shape_centered = true
+shape_visible = true
+passby_press = true
+action = "left"
+visibility_mode = 0
+
+[node name="Right" type="TouchScreenButton" parent="Controls"]
+
+transform/pos = Vector2( 645.912, 1057.52 )
+transform/scale = Vector2( 2, 2 )
+normal = ExtResource( 13 )
+pressed = null
+bitmask = null
+shape = null
+shape_centered = true
+shape_visible = true
+passby_press = true
+action = "right"
+visibility_mode = 0
+
+[node name="Hud" type="Control" parent="."]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 0.0
+margin/top = 0.0
+margin/right = 40.0
+margin/bottom = 40.0
+script/script = ExtResource( 14 )
+
+[node name="Score" type="Label" parent="Hud"]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 252.0
+margin/top = 17.0
+margin/right = 556.0
+margin/bottom = 63.0
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+text = "0"
+align = 1
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="backtoCasaVelha" type="TouchScreenButton" parent="."]
+
+transform/pos = Vector2( 735.118, 10.0701 )
+normal = ExtResource( 16 )
+pressed = null
+bitmask = null
+shape = null
+shape_centered = true
+shape_visible = true
+passby_press = false
+action = ""
+visibility_mode = 0
+
+[node name="end" type="Node2D" parent="."]
+
+[node name="won" type="Panel" parent="end"]
+
+rect/scale = Vector2( 0, 0 )
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 25.0
+margin/top = 300.0
+margin/right = 775.0
+margin/bottom = 1000.0
+custom_styles/panel = SubResource( 2 )
+
+[node name="won_label" type="Label" parent="end/won"]
+
+rect/scale = Vector2( 0.5, 0.5 )
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 0.0
+margin/top = 0.0
+margin/right = 1500.0
+margin/bottom = 690.0
+custom_fonts/font = ExtResource( 17 )
+custom_colors/font_color = Color( 0.156863, 0.631373, 0.156863, 1 )
+text = "Você pegou todas as peças"
+align = 1
+valign = 2
+autowrap = true
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="backtomap_label" type="Label" parent="end/won"]
+
+rect/scale = Vector2( 0.4, 0.4 )
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 0.0
+margin/top = 345.0
+margin/right = 1875.0
+margin/bottom = 495.0
+custom_fonts/font = ExtResource( 17 )
+text = "voltar ao mapa"
+align = 1
+valign = 1
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="backtomap_button" type="TouchScreenButton" parent="end/won"]
+
+transform/pos = Vector2( 355, 370 )
+transform/scale = Vector2( 33, 3 )
+normal = null
+pressed = null
+bitmask = null
+shape = SubResource( 3 )
+shape_centered = true
+shape_visible = true
+passby_press = false
+action = ""
+visibility_mode = 0
+
+[node name="lose" type="Panel" parent="end"]
+
+rect/scale = Vector2( 0, 0 )
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 25.0
+margin/top = 300.0
+margin/right = 775.0
+margin/bottom = 1000.0
+custom_styles/panel = SubResource( 4 )
+
+[node name="lose_label" type="Label" parent="end/lose"]
+
+rect/scale = Vector2( 0.5, 0.5 )
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 0.0
+margin/top = 0.0
+margin/right = 1500.0
+margin/bottom = 690.0
+custom_fonts/font = ExtResource( 17 )
+custom_colors/font_color = Color( 1, 0, 0, 1 )
+text = "Oh não, você foi pego!"
+align = 1
+valign = 2
+autowrap = true
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="playagain_label" type="Label" parent="end/lose"]
+
+rect/scale = Vector2( 0.4, 0.4 )
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 0.0
+margin/top = 345.0
+margin/right = 1875.0
+margin/bottom = 495.0
+custom_fonts/font = ExtResource( 17 )
+text = "jogar novamente"
+align = 1
+valign = 1
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="playagain_button" type="TouchScreenButton" parent="end/lose"]
+
+transform/pos = Vector2( 355, 377 )
+transform/scale = Vector2( 36, 3 )
+normal = null
+pressed = null
+bitmask = null
+shape = SubResource( 5 )
+shape_centered = true
+shape_visible = true
+passby_press = false
+action = ""
+visibility_mode = 0
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="end"]
+
+playback/process_mode = 1
+playback/default_blend_time = 0.0
+root/root = NodePath("..")
+anims/lose = SubResource( 6 )
+anims/won = SubResource( 7 )
+playback/active = true
+playback/speed = 1.0
+blend_times = [  ]
+autoplay = ""
+
+[connection signal="pac" from="Board/Personagem" to="Board/GhostOrange" method="_on_Personagem_pac"]
+
+[connection signal="pac" from="Board/Personagem" to="Board/GhostPink" method="_on_Personagem_pac"]
+
+[connection signal="pac" from="Board/Personagem" to="Board/GhostBlue" method="_on_Personagem_pac"]
+
+[connection signal="pac" from="Board/Personagem" to="Board/GhostRed" method="_on_Personagem_pac"]
+
+[connection signal="pressed" from="backtoCasaVelha" to="." method="_on_backtoCasaVelha_pressed"]
+
+[connection signal="pressed" from="end/won/backtomap_button" to="." method="_on_backtomap_button_pressed"]
+
+[connection signal="pressed" from="end/lose/playagain_button" to="." method="_on_playagain_button_pressed"]
+
+

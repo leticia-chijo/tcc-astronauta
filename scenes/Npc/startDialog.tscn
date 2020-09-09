@@ -1,0 +1,89 @@
+[gd_scene load_steps=5 format=1]
+
+[ext_resource path="res://scripts/Npc/startDialog.gd" type="Script" id=1]
+[ext_resource path="res://assets/Fontes/font32.fnt" type="BitmapFont" id=2]
+[ext_resource path="res://assets/screen_controls/shadedDark/shadedDark23.png" type="Texture" id=3]
+[ext_resource path="res://assets/screen_controls/shadedDark/shadedDark35.png" type="Texture" id=4]
+
+[node name="startDialog" type="Node"]
+
+script/script = ExtResource( 1 )
+
+[node name="layer2" type="CanvasLayer" parent="."]
+
+layer = 2
+offset = Vector2( 0, 0 )
+rotation = 0.0
+scale = Vector2( 1, 1 )
+
+[node name="box" type="Polygon2D" parent="layer2"]
+
+process/pause_mode = 2
+transform/pos = Vector2( 1053.5, 226.424 )
+transform/rot = -90.0
+transform/scale = Vector2( 1.28485, 1.04527 )
+polygon = Vector2Array( -150, 760, -150, 980, 800, 980, 800, 760 )
+uv = Vector2Array(  )
+color = Color( 0.145098, 0.156863, 0.192157, 0.941176 )
+vertex_colors = ColorArray(  )
+offset = Vector2( 0, 0 )
+texture/texture = null
+texture/offset = Vector2( 0, 0 )
+texture/scale = Vector2( 1, 1 )
+texture/rotation = 0.0
+invert/enable = false
+invert/border = 100.0
+
+[node name="label" type="RichTextLabel" parent="layer2/box"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = -120.0
+margin/top = 794.0
+margin/right = 602.0
+margin/bottom = 944.0
+custom_fonts/normal_font = ExtResource( 2 )
+bbcode/enabled = true
+bbcode/bbcode = ""
+visible_characters = -1
+percent_visible = 1.0
+
+[node name="buttonYes" type="TouchScreenButton" parent="layer2"]
+
+process/pause_mode = 2
+transform/pos = Vector2( 136, 1040 )
+transform/rot = -90.0
+transform/scale = Vector2( 1.5, 1.5 )
+normal = ExtResource( 3 )
+pressed = null
+bitmask = null
+shape = null
+shape_centered = true
+shape_visible = true
+passby_press = false
+action = ""
+visibility_mode = 0
+
+[node name="buttonNo" type="TouchScreenButton" parent="layer2"]
+
+process/pause_mode = 2
+transform/pos = Vector2( 136, 1152 )
+transform/rot = -90.0
+transform/scale = Vector2( 1.5, 1.5 )
+normal = ExtResource( 4 )
+pressed = null
+bitmask = null
+shape = null
+shape_centered = true
+shape_visible = true
+passby_press = false
+action = ""
+visibility_mode = 0
+
+[connection signal="pressed" from="layer2/buttonYes" to="." method="_on_buttonYes_pressed"]
+
+[connection signal="pressed" from="layer2/buttonNo" to="." method="_on_buttonNo_pressed"]
+
+

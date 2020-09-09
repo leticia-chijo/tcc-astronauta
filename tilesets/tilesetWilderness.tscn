@@ -1,0 +1,1903 @@
+[gd_scene load_steps=5 format=1]
+
+[ext_resource path="res://assets/Tiles/tilesWilderness.png" type="Texture" id=1]
+[ext_resource path="res://assets/Tiles/rocket1.png" type="Texture" id=2]
+[ext_resource path="res://assets/Tiles/full_rocket.png" type="Texture" id=3]
+[ext_resource path="res://assets/Tiles/playerShip1_orange.png" type="Texture" id=4]
+
+[node name="tilesetWilderness" type="Node2D"]
+
+visibility/blend_mode = 1
+visibility/light_mask = 0
+
+[node name="water1" type="Sprite" parent="."]
+
+transform/scale = Vector2( 4, 4 )
+texture = ExtResource( 1 )
+centered = false
+region = true
+region_rect = Rect2( 0, 0, 16, 16 )
+
+[node name="water2" type="Sprite" parent="."]
+
+transform/pos = Vector2( 64, 0 )
+transform/scale = Vector2( 4, 4 )
+texture = ExtResource( 1 )
+centered = false
+region = true
+region_rect = Rect2( 17, 0, 16, 16 )
+
+[node name="waterIsland1" type="Sprite" parent="."]
+
+transform/pos = Vector2( 0, 64 )
+transform/scale = Vector2( 4, 4 )
+texture = ExtResource( 1 )
+centered = false
+region = true
+region_rect = Rect2( 0, 17, 16, 16 )
+
+[node name="waterIsland2" type="Sprite" parent="."]
+
+transform/pos = Vector2( 64, 64 )
+transform/scale = Vector2( 4, 4 )
+texture = ExtResource( 1 )
+centered = false
+region = true
+region_rect = Rect2( 17, 17, 16, 16 )
+
+[node name="waterIsland3" type="Sprite" parent="."]
+
+transform/pos = Vector2( 0, 128 )
+transform/scale = Vector2( 4, 4 )
+texture = ExtResource( 1 )
+centered = false
+region = true
+region_rect = Rect2( 0, 34, 16, 16 )
+
+[node name="waterIsland4" type="Sprite" parent="."]
+
+transform/pos = Vector2( 64, 128 )
+transform/scale = Vector2( 4, 4 )
+texture = ExtResource( 1 )
+centered = false
+region = true
+region_rect = Rect2( 17, 34, 16, 16 )
+
+[node name="waterFountain1" type="Sprite" parent="."]
+
+transform/pos = Vector2( 0, 192 )
+transform/scale = Vector2( 4, 4 )
+texture = ExtResource( 1 )
+centered = false
+region = true
+region_rect = Rect2( 0, 51, 16, 16 )
+
+[node name="waterFountain2" type="Sprite" parent="."]
+
+transform/pos = Vector2( 64, 192 )
+transform/scale = Vector2( 4, 4 )
+texture = ExtResource( 1 )
+centered = false
+region = true
+region_rect = Rect2( 17, 51, 16, 16 )
+
+[node name="waterFountain3" type="Sprite" parent="."]
+
+transform/pos = Vector2( 0, 256 )
+transform/scale = Vector2( 4, 4 )
+texture = ExtResource( 1 )
+centered = false
+region = true
+region_rect = Rect2( 0, 68, 16, 16 )
+
+[node name="waterFountain4" type="Sprite" parent="."]
+
+transform/pos = Vector2( 64, 256 )
+transform/scale = Vector2( 4, 4 )
+texture = ExtResource( 1 )
+centered = false
+region = true
+region_rect = Rect2( 17, 68, 16, 16 )
+
+[node name="lake1" type="Sprite" parent="."]
+
+transform/pos = Vector2( 128, 0 )
+transform/scale = Vector2( 4, 4 )
+texture = ExtResource( 1 )
+centered = false
+region = true
+region_rect = Rect2( 34, 0, 16, 16 )
+
+[node name="lake2" type="Sprite" parent="."]
+
+transform/pos = Vector2( 192, 0 )
+transform/scale = Vector2( 4, 4 )
+texture = ExtResource( 1 )
+centered = false
+region = true
+region_rect = Rect2( 51, 0, 16, 16 )
+
+[node name="lake3" type="Sprite" parent="."]
+
+transform/pos = Vector2( 256, 0 )
+transform/scale = Vector2( 4, 4 )
+texture = ExtResource( 1 )
+centered = false
+region = true
+region_rect = Rect2( 68, 0, 16, 16 )
+
+[node name="lake4" type="Sprite" parent="."]
+
+transform/pos = Vector2( 128, 64 )
+transform/scale = Vector2( 4, 4 )
+texture = ExtResource( 1 )
+centered = false
+region = true
+region_rect = Rect2( 34, 17, 16, 16 )
+
+[node name="lake5" type="Sprite" parent="."]
+
+transform/pos = Vector2( 192, 64 )
+transform/scale = Vector2( 4, 4 )
+texture = ExtResource( 1 )
+centered = false
+region = true
+region_rect = Rect2( 51, 17, 16, 16 )
+
+[node name="lake6" type="Sprite" parent="."]
+
+transform/pos = Vector2( 256, 64 )
+transform/scale = Vector2( 4, 4 )
+texture = ExtResource( 1 )
+centered = false
+region = true
+region_rect = Rect2( 68, 17, 16, 16 )
+
+[node name="lake7" type="Sprite" parent="."]
+
+transform/pos = Vector2( 128, 128 )
+transform/scale = Vector2( 4, 4 )
+texture = ExtResource( 1 )
+centered = false
+region = true
+region_rect = Rect2( 34, 34, 16, 16 )
+
+[node name="lake8" type="Sprite" parent="."]
+
+transform/pos = Vector2( 192, 128 )
+transform/scale = Vector2( 4, 4 )
+texture = ExtResource( 1 )
+centered = false
+region = true
+region_rect = Rect2( 51, 34, 16, 16 )
+
+[node name="lake9" type="Sprite" parent="."]
+
+transform/pos = Vector2( 256, 128 )
+transform/scale = Vector2( 4, 4 )
+texture = ExtResource( 1 )
+centered = false
+region = true
+region_rect = Rect2( 68, 34, 16, 16 )
+
+[node name="pool1" type="Sprite" parent="."]
+
+transform/pos = Vector2( 128, 192 )
+transform/scale = Vector2( 4, 4 )
+texture = ExtResource( 1 )
+centered = false
+region = true
+region_rect = Rect2( 34, 51, 16, 16 )
+
+[node name="pool2" type="Sprite" parent="."]
+
+transform/pos = Vector2( 192, 192 )
+transform/scale = Vector2( 4, 4 )
+texture = ExtResource( 1 )
+centered = false
+region = true
+region_rect = Rect2( 51, 51, 16, 16 )
+
+[node name="pool3" type="Sprite" parent="."]
+
+transform/pos = Vector2( 256, 192 )
+transform/scale = Vector2( 4, 4 )
+texture = ExtResource( 1 )
+centered = false
+region = true
+region_rect = Rect2( 68, 51, 16, 16 )
+
+[node name="pool4" type="Sprite" parent="."]
+
+transform/pos = Vector2( 128, 256 )
+transform/scale = Vector2( 4, 4 )
+texture = ExtResource( 1 )
+centered = false
+region = true
+region_rect = Rect2( 34, 68, 16, 16 )
+
+[node name="pool5" type="Sprite" parent="."]
+
+transform/pos = Vector2( 192, 256 )
+transform/scale = Vector2( 4, 4 )
+texture = ExtResource( 1 )
+centered = false
+region = true
+region_rect = Rect2( 51, 68, 16, 16 )
+
+[node name="pool6" type="Sprite" parent="."]
+
+transform/pos = Vector2( 256, 256 )
+transform/scale = Vector2( 4, 4 )
+texture = ExtResource( 1 )
+centered = false
+region = true
+region_rect = Rect2( 68, 68, 16, 16 )
+
+[node name="pool7" type="Sprite" parent="."]
+
+transform/pos = Vector2( 128, 320 )
+transform/scale = Vector2( 4, 4 )
+texture = ExtResource( 1 )
+centered = false
+region = true
+region_rect = Rect2( 34, 85, 16, 16 )
+
+[node name="pool8" type="Sprite" parent="."]
+
+transform/pos = Vector2( 192, 320 )
+transform/scale = Vector2( 4, 4 )
+texture = ExtResource( 1 )
+centered = false
+region = true
+region_rect = Rect2( 51, 85, 16, 16 )
+
+[node name="pool9" type="Sprite" parent="."]
+
+transform/pos = Vector2( 256, 320 )
+transform/scale = Vector2( 4, 4 )
+texture = ExtResource( 1 )
+centered = false
+region = true
+region_rect = Rect2( 68, 85, 16, 16 )
+
+[node name="grass1" type="Sprite" parent="."]
+
+transform/pos = Vector2( 320, 0 )
+transform/scale = Vector2( 4, 4 )
+texture = ExtResource( 1 )
+centered = false
+region = true
+region_rect = Rect2( 85, 0, 16, 16 )
+
+[node name="grass2" type="Sprite" parent="."]
+
+transform/pos = Vector2( 320, 64 )
+transform/scale = Vector2( 4, 4 )
+texture = ExtResource( 1 )
+centered = false
+region = true
+region_rect = Rect2( 85, 17, 16, 16 )
+
+[node name="dirt1" type="Sprite" parent="."]
+
+transform/pos = Vector2( 384, 0 )
+transform/scale = Vector2( 4, 4 )
+texture = ExtResource( 1 )
+centered = false
+region = true
+region_rect = Rect2( 102, 0, 16, 16 )
+
+[node name="dirt2" type="Sprite" parent="."]
+
+transform/pos = Vector2( 384, 64 )
+transform/scale = Vector2( 4, 4 )
+texture = ExtResource( 1 )
+centered = false
+region = true
+region_rect = Rect2( 102, 17, 16, 16 )
+
+[node name="stone1" type="Sprite" parent="."]
+
+transform/pos = Vector2( 448, 0 )
+transform/scale = Vector2( 4, 4 )
+texture = ExtResource( 1 )
+centered = false
+region = true
+region_rect = Rect2( 119, 0, 16, 16 )
+
+[node name="stone2" type="Sprite" parent="."]
+
+transform/pos = Vector2( 448, 64 )
+transform/scale = Vector2( 4, 4 )
+texture = ExtResource( 1 )
+centered = false
+region = true
+region_rect = Rect2( 119, 17, 16, 16 )
+
+[node name="sand1" type="Sprite" parent="."]
+
+transform/pos = Vector2( 512, 0 )
+transform/scale = Vector2( 4, 4 )
+texture = ExtResource( 1 )
+centered = false
+region = true
+region_rect = Rect2( 136, 0, 16, 16 )
+
+[node name="sand2" type="Sprite" parent="."]
+
+transform/pos = Vector2( 512, 64 )
+transform/scale = Vector2( 4, 4 )
+texture = ExtResource( 1 )
+centered = false
+region = true
+region_rect = Rect2( 136, 17, 16, 16 )
+
+[node name="cobbleBrown1" type="Sprite" parent="."]
+
+transform/pos = Vector2( 320, 128 )
+transform/scale = Vector2( 4, 4 )
+texture = ExtResource( 1 )
+centered = false
+region = true
+region_rect = Rect2( 85, 34, 16, 16 )
+
+[node name="cobbleBrown2" type="Sprite" parent="."]
+
+transform/pos = Vector2( 320, 192 )
+transform/scale = Vector2( 4, 4 )
+texture = ExtResource( 1 )
+centered = false
+region = true
+region_rect = Rect2( 85, 51, 16, 16 )
+
+[node name="cobbleGray1" type="Sprite" parent="."]
+
+transform/pos = Vector2( 384, 128 )
+transform/scale = Vector2( 4, 4 )
+texture = ExtResource( 1 )
+centered = false
+region = true
+region_rect = Rect2( 102, 34, 16, 16 )
+
+[node name="cobbleGray2" type="Sprite" parent="."]
+
+transform/pos = Vector2( 384, 192 )
+transform/scale = Vector2( 4, 4 )
+texture = ExtResource( 1 )
+centered = false
+region = true
+region_rect = Rect2( 102, 51, 16, 16 )
+
+[node name="cobbleSand1" type="Sprite" parent="."]
+
+transform/pos = Vector2( 448, 128 )
+transform/scale = Vector2( 4, 4 )
+texture = ExtResource( 1 )
+centered = false
+region = true
+region_rect = Rect2( 119, 34, 16, 16 )
+
+[node name="cobbleSand2" type="Sprite" parent="."]
+
+transform/pos = Vector2( 448, 192 )
+transform/scale = Vector2( 4, 4 )
+texture = ExtResource( 1 )
+centered = false
+region = true
+region_rect = Rect2( 119, 51, 16, 16 )
+
+[node name="woodFloor1V" type="Sprite" parent="."]
+
+transform/pos = Vector2( 512, 256 )
+transform/scale = Vector2( 4, 4 )
+texture = ExtResource( 1 )
+centered = false
+region = true
+region_rect = Rect2( 136, 34, 16, 16 )
+
+[node name="woodFloor1H" type="Sprite" parent="."]
+
+transform/pos = Vector2( 512, 320 )
+transform/scale = Vector2( 4, 4 )
+texture = ExtResource( 1 )
+centered = false
+region = true
+region_rect = Rect2( 153, 34, 16, 16 )
+
+[node name="woodFloor2V" type="Sprite" parent="."]
+
+transform/pos = Vector2( 512, 128 )
+transform/scale = Vector2( 4, 4 )
+texture = ExtResource( 1 )
+centered = false
+region = true
+region_rect = Rect2( 136, 51, 16, 16 )
+
+[node name="woodFloor2H" type="Sprite" parent="."]
+
+transform/pos = Vector2( 512, 192 )
+transform/scale = Vector2( 4, 4 )
+texture = ExtResource( 1 )
+centered = false
+region = true
+region_rect = Rect2( 153, 51, 16, 16 )
+
+[node name="bricks1" type="Sprite" parent="."]
+
+transform/pos = Vector2( 320, 256 )
+transform/scale = Vector2( 4, 4 )
+texture = ExtResource( 1 )
+centered = false
+region = true
+region_rect = Rect2( 119, 68, 16, 16 )
+
+[node name="bricks2" type="Sprite" parent="."]
+
+transform/pos = Vector2( 384, 256 )
+transform/scale = Vector2( 4, 4 )
+texture = ExtResource( 1 )
+centered = false
+region = true
+region_rect = Rect2( 136, 68, 16, 16 )
+
+[node name="bricks3" type="Sprite" parent="."]
+
+transform/pos = Vector2( 448, 256 )
+transform/scale = Vector2( 4, 4 )
+texture = ExtResource( 1 )
+centered = false
+region = true
+region_rect = Rect2( 153, 68, 16, 16 )
+
+[node name="bricks4" type="Sprite" parent="."]
+
+transform/pos = Vector2( 320, 320 )
+transform/scale = Vector2( 4, 4 )
+texture = ExtResource( 1 )
+centered = false
+region = true
+region_rect = Rect2( 119, 85, 16, 16 )
+
+[node name="bricks5" type="Sprite" parent="."]
+
+transform/pos = Vector2( 384, 320 )
+transform/scale = Vector2( 4, 4 )
+texture = ExtResource( 1 )
+centered = false
+region = true
+region_rect = Rect2( 136, 85, 16, 16 )
+
+[node name="bricks6" type="Sprite" parent="."]
+
+transform/pos = Vector2( 448, 320 )
+transform/scale = Vector2( 4, 4 )
+texture = ExtResource( 1 )
+centered = false
+region = true
+region_rect = Rect2( 153, 85, 16, 16 )
+
+[node name="flowersRed1" type="Sprite" parent="."]
+
+transform/pos = Vector2( 0, 384 )
+transform/scale = Vector2( 4, 4 )
+texture = ExtResource( 1 )
+centered = false
+region = true
+region_rect = Rect2( 0, 102, 16, 16 )
+
+[node name="flowersRed3" type="Sprite" parent="."]
+
+transform/pos = Vector2( 0, 448 )
+transform/scale = Vector2( 4, 4 )
+texture = ExtResource( 1 )
+centered = false
+region = true
+region_rect = Rect2( 0, 119, 16, 16 )
+
+[node name="flowersRed4" type="Sprite" parent="."]
+
+transform/pos = Vector2( 64, 448 )
+transform/scale = Vector2( 4, 4 )
+texture = ExtResource( 1 )
+centered = false
+region = true
+region_rect = Rect2( 17, 119, 16, 16 )
+
+[node name="flowersRed2" type="Sprite" parent="."]
+
+transform/pos = Vector2( 64, 384 )
+transform/scale = Vector2( 4, 4 )
+texture = ExtResource( 1 )
+centered = false
+region = true
+region_rect = Rect2( 17, 102, 16, 16 )
+
+[node name="flowersRed5" type="Sprite" parent="."]
+
+visibility/light_mask = 0
+transform/pos = Vector2( 128, 384 )
+transform/scale = Vector2( 4, 4 )
+texture = ExtResource( 1 )
+centered = false
+region = true
+region_rect = Rect2( 34, 102, 16, 16 )
+
+[node name="flowersRed6" type="Sprite" parent="."]
+
+transform/pos = Vector2( 192, 384 )
+transform/scale = Vector2( 4, 4 )
+texture = ExtResource( 1 )
+centered = false
+region = true
+region_rect = Rect2( 51, 102, 16, 16 )
+
+[node name="flowersRed7" type="Sprite" parent="."]
+
+transform/pos = Vector2( 256, 384 )
+transform/scale = Vector2( 4, 4 )
+texture = ExtResource( 1 )
+centered = false
+region = true
+region_rect = Rect2( 68, 102, 16, 16 )
+
+[node name="flowersRed8" type="Sprite" parent="."]
+
+transform/pos = Vector2( 128, 448 )
+transform/scale = Vector2( 4, 4 )
+texture = ExtResource( 1 )
+centered = false
+region = true
+region_rect = Rect2( 34, 119, 16, 16 )
+
+[node name="flowersRed9" type="Sprite" parent="."]
+
+transform/pos = Vector2( 192, 448 )
+transform/scale = Vector2( 4, 4 )
+texture = ExtResource( 1 )
+centered = false
+region = true
+region_rect = Rect2( 51, 119, 16, 16 )
+
+[node name="flowersRed10" type="Sprite" parent="."]
+
+transform/pos = Vector2( 256, 448 )
+transform/scale = Vector2( 4, 4 )
+texture = ExtResource( 1 )
+centered = false
+region = true
+region_rect = Rect2( 68, 119, 16, 16 )
+
+[node name="flowersRed11" type="Sprite" parent="."]
+
+transform/pos = Vector2( 128, 512 )
+transform/scale = Vector2( 4, 4 )
+texture = ExtResource( 1 )
+centered = false
+region = true
+region_rect = Rect2( 34, 136, 16, 16 )
+
+[node name="flowersRed12" type="Sprite" parent="."]
+
+transform/pos = Vector2( 192, 512 )
+transform/scale = Vector2( 4, 4 )
+texture = ExtResource( 1 )
+centered = false
+region = true
+region_rect = Rect2( 51, 136, 16, 16 )
+
+[node name="flowersRed13" type="Sprite" parent="."]
+
+transform/pos = Vector2( 256, 512 )
+transform/scale = Vector2( 4, 4 )
+texture = ExtResource( 1 )
+centered = false
+region = true
+region_rect = Rect2( 68, 136, 16, 16 )
+
+[node name="flowersWhite1" type="Sprite" parent="."]
+
+transform/pos = Vector2( 0, 576 )
+transform/scale = Vector2( 4, 4 )
+texture = ExtResource( 1 )
+centered = false
+region = true
+region_rect = Rect2( 0, 153, 16, 16 )
+
+[node name="flowersWhite2" type="Sprite" parent="."]
+
+transform/pos = Vector2( 64, 576 )
+transform/scale = Vector2( 4, 4 )
+texture = ExtResource( 1 )
+centered = false
+region = true
+region_rect = Rect2( 17, 153, 16, 16 )
+
+[node name="flowersWhite3" type="Sprite" parent="."]
+
+transform/pos = Vector2( 0, 640 )
+transform/scale = Vector2( 4, 4 )
+texture = ExtResource( 1 )
+centered = false
+region = true
+region_rect = Rect2( 0, 170, 16, 16 )
+
+[node name="flowersWhite4" type="Sprite" parent="."]
+
+transform/pos = Vector2( 64, 640 )
+transform/scale = Vector2( 4, 4 )
+texture = ExtResource( 1 )
+centered = false
+region = true
+region_rect = Rect2( 17, 170, 16, 16 )
+
+[node name="flowersWhite5" type="Sprite" parent="."]
+
+transform/pos = Vector2( 128, 576 )
+transform/scale = Vector2( 4, 4 )
+texture = ExtResource( 1 )
+centered = false
+region = true
+region_rect = Rect2( 34, 153, 16, 16 )
+
+[node name="flowersWhite6" type="Sprite" parent="."]
+
+transform/pos = Vector2( 192, 576 )
+transform/scale = Vector2( 4, 4 )
+texture = ExtResource( 1 )
+centered = false
+region = true
+region_rect = Rect2( 51, 153, 16, 16 )
+
+[node name="flowersWhite7" type="Sprite" parent="."]
+
+transform/pos = Vector2( 256, 576 )
+transform/scale = Vector2( 4, 4 )
+texture = ExtResource( 1 )
+centered = false
+region = true
+region_rect = Rect2( 68, 153, 16, 16 )
+
+[node name="flowersWhite8" type="Sprite" parent="."]
+
+transform/pos = Vector2( 128, 640 )
+transform/scale = Vector2( 4, 4 )
+texture = ExtResource( 1 )
+centered = false
+region = true
+region_rect = Rect2( 34, 170, 16, 16 )
+
+[node name="flowersWhite9" type="Sprite" parent="."]
+
+transform/pos = Vector2( 192, 640 )
+transform/scale = Vector2( 4, 4 )
+texture = ExtResource( 1 )
+centered = false
+region = true
+region_rect = Rect2( 51, 170, 16, 16 )
+
+[node name="flowersWhite10" type="Sprite" parent="."]
+
+transform/pos = Vector2( 256, 640 )
+transform/scale = Vector2( 4, 4 )
+texture = ExtResource( 1 )
+centered = false
+region = true
+region_rect = Rect2( 68, 170, 16, 16 )
+
+[node name="flowersWhite11" type="Sprite" parent="."]
+
+transform/pos = Vector2( 128, 704 )
+transform/scale = Vector2( 4, 4 )
+texture = ExtResource( 1 )
+centered = false
+region = true
+region_rect = Rect2( 34, 187, 16, 16 )
+
+[node name="flowersWhite12" type="Sprite" parent="."]
+
+transform/pos = Vector2( 192, 704 )
+transform/scale = Vector2( 4, 4 )
+texture = ExtResource( 1 )
+centered = false
+region = true
+region_rect = Rect2( 51, 187, 16, 16 )
+
+[node name="flowersWhite13" type="Sprite" parent="."]
+
+transform/pos = Vector2( 256, 704 )
+transform/scale = Vector2( 4, 4 )
+texture = ExtResource( 1 )
+centered = false
+region = true
+region_rect = Rect2( 68, 187, 16, 16 )
+
+[node name="grass3" type="Sprite" parent="."]
+
+transform/pos = Vector2( 0, 768 )
+transform/scale = Vector2( 4, 4 )
+texture = ExtResource( 1 )
+centered = false
+region = true
+region_rect = Rect2( 0, 255, 16, 16 )
+
+[node name="grass4" type="Sprite" parent="."]
+
+transform/pos = Vector2( 0, 832 )
+transform/scale = Vector2( 4, 4 )
+texture = ExtResource( 1 )
+centered = false
+region = true
+region_rect = Rect2( 0, 272, 16, 16 )
+
+[node name="grass5" type="Sprite" parent="."]
+
+transform/pos = Vector2( 64, 768 )
+transform/scale = Vector2( 4, 4 )
+texture = ExtResource( 1 )
+centered = false
+region = true
+region_rect = Rect2( 17, 255, 16, 16 )
+
+[node name="grass6" type="Sprite" parent="."]
+
+transform/pos = Vector2( 64, 832 )
+transform/scale = Vector2( 4, 4 )
+texture = ExtResource( 1 )
+centered = false
+region = true
+region_rect = Rect2( 17, 272, 16, 16 )
+
+[node name="grass7" type="Sprite" parent="."]
+
+transform/pos = Vector2( 128, 768 )
+transform/scale = Vector2( 4, 4 )
+texture = ExtResource( 1 )
+centered = false
+region = true
+region_rect = Rect2( 34, 255, 16, 16 )
+
+[node name="grass8" type="Sprite" parent="."]
+
+transform/pos = Vector2( 192, 768 )
+transform/scale = Vector2( 4, 4 )
+texture = ExtResource( 1 )
+centered = false
+region = true
+region_rect = Rect2( 51, 255, 16, 16 )
+
+[node name="grass9" type="Sprite" parent="."]
+
+transform/pos = Vector2( 256, 768 )
+transform/scale = Vector2( 4, 4 )
+texture = ExtResource( 1 )
+centered = false
+region = true
+region_rect = Rect2( 68, 255, 16, 16 )
+
+[node name="grass10" type="Sprite" parent="."]
+
+transform/pos = Vector2( 128, 832 )
+transform/scale = Vector2( 4, 4 )
+texture = ExtResource( 1 )
+centered = false
+region = true
+region_rect = Rect2( 34, 272, 16, 16 )
+
+[node name="grass11" type="Sprite" parent="."]
+
+transform/pos = Vector2( 192, 832 )
+transform/scale = Vector2( 4, 4 )
+texture = ExtResource( 1 )
+centered = false
+region = true
+region_rect = Rect2( 51, 272, 16, 16 )
+
+[node name="grass12" type="Sprite" parent="."]
+
+transform/pos = Vector2( 256, 832 )
+transform/scale = Vector2( 4, 4 )
+texture = ExtResource( 1 )
+centered = false
+region = true
+region_rect = Rect2( 68, 272, 16, 16 )
+
+[node name="grass13" type="Sprite" parent="."]
+
+transform/pos = Vector2( 128, 896 )
+transform/scale = Vector2( 4, 4 )
+texture = ExtResource( 1 )
+centered = false
+region = true
+region_rect = Rect2( 34, 289, 16, 16 )
+
+[node name="grass14" type="Sprite" parent="."]
+
+transform/pos = Vector2( 192, 896 )
+transform/scale = Vector2( 4, 4 )
+texture = ExtResource( 1 )
+centered = false
+region = true
+region_rect = Rect2( 51, 289, 16, 16 )
+
+[node name="grass15" type="Sprite" parent="."]
+
+transform/pos = Vector2( 256, 896 )
+transform/scale = Vector2( 4, 4 )
+texture = ExtResource( 1 )
+centered = false
+region = true
+region_rect = Rect2( 68, 289, 16, 16 )
+
+[node name="dirtPath1" type="Sprite" parent="."]
+
+transform/pos = Vector2( 320, 384 )
+transform/scale = Vector2( 4, 4 )
+texture = ExtResource( 1 )
+centered = false
+region = true
+region_rect = Rect2( 85, 119, 16, 16 )
+
+[node name="dirtPath3" type="Sprite" parent="."]
+
+transform/pos = Vector2( 320, 448 )
+transform/scale = Vector2( 4, 4 )
+texture = ExtResource( 1 )
+centered = false
+region = true
+region_rect = Rect2( 85, 136, 16, 16 )
+
+[node name="dirtPath11" type="Sprite" parent="."]
+
+transform/pos = Vector2( 320, 512 )
+transform/scale = Vector2( 4, 4 )
+texture = ExtResource( 1 )
+centered = false
+region = true
+region_rect = Rect2( 85, 153, 16, 16 )
+
+[node name="dirtPath13" type="Sprite" parent="."]
+
+transform/pos = Vector2( 320, 576 )
+transform/scale = Vector2( 4, 4 )
+texture = ExtResource( 1 )
+centered = false
+region = true
+region_rect = Rect2( 85, 170, 16, 16 )
+
+[node name="dirtPath24" type="Sprite" parent="."]
+
+transform/pos = Vector2( 320, 640 )
+transform/scale = Vector2( 4, 4 )
+texture = ExtResource( 1 )
+centered = false
+region = true
+region_rect = Rect2( 85, 187, 16, 16 )
+
+[node name="dirtPath26" type="Sprite" parent="."]
+
+transform/pos = Vector2( 320, 704 )
+transform/scale = Vector2( 4, 4 )
+texture = ExtResource( 1 )
+centered = false
+region = true
+region_rect = Rect2( 85, 204, 16, 16 )
+
+[node name="dirtPath27" type="Sprite" parent="."]
+
+transform/pos = Vector2( 384, 704 )
+transform/scale = Vector2( 4, 4 )
+texture = ExtResource( 1 )
+centered = false
+region = true
+region_rect = Rect2( 102, 204, 16, 16 )
+
+[node name="dirtPath28" type="Sprite" parent="."]
+
+transform/pos = Vector2( 448, 704 )
+transform/scale = Vector2( 4, 4 )
+texture = ExtResource( 1 )
+centered = false
+region = true
+region_rect = Rect2( 119, 204, 16, 16 )
+
+[node name="dirtPath29" type="Sprite" parent="."]
+
+transform/pos = Vector2( 512, 704 )
+transform/scale = Vector2( 4, 4 )
+texture = ExtResource( 1 )
+centered = false
+region = true
+region_rect = Rect2( 136, 204, 16, 16 )
+
+[node name="dirtPath25" type="Sprite" parent="."]
+
+transform/pos = Vector2( 384, 640 )
+transform/scale = Vector2( 4, 4 )
+texture = ExtResource( 1 )
+centered = false
+region = true
+region_rect = Rect2( 102, 187, 16, 16 )
+
+[node name="dirtPath14" type="Sprite" parent="."]
+
+transform/pos = Vector2( 384, 576 )
+transform/scale = Vector2( 4, 4 )
+texture = ExtResource( 1 )
+centered = false
+region = true
+region_rect = Rect2( 102, 170, 16, 16 )
+
+[node name="dirtPath12" type="Sprite" parent="."]
+
+transform/pos = Vector2( 384, 512 )
+transform/scale = Vector2( 4, 4 )
+texture = ExtResource( 1 )
+centered = false
+region = true
+region_rect = Rect2( 102, 153, 16, 16 )
+
+[node name="dirtPath15" type="Sprite" parent="."]
+
+transform/pos = Vector2( 448, 512 )
+transform/scale = Vector2( 4, 4 )
+texture = ExtResource( 1 )
+centered = false
+region = true
+region_rect = Rect2( 119, 153, 16, 16 )
+
+[node name="dirtPath18" type="Sprite" parent="."]
+
+transform/pos = Vector2( 448, 576 )
+transform/scale = Vector2( 4, 4 )
+texture = ExtResource( 1 )
+centered = false
+region = true
+region_rect = Rect2( 119, 170, 16, 16 )
+
+[node name="dirtPath21" type="Sprite" parent="."]
+
+transform/pos = Vector2( 448, 640 )
+transform/scale = Vector2( 4, 4 )
+texture = ExtResource( 1 )
+centered = false
+region = true
+region_rect = Rect2( 119, 187, 16, 16 )
+
+[node name="dirtPath22" type="Sprite" parent="."]
+
+transform/pos = Vector2( 512, 640 )
+transform/scale = Vector2( 4, 4 )
+texture = ExtResource( 1 )
+centered = false
+region = true
+region_rect = Rect2( 136, 187, 16, 16 )
+
+[node name="dirtPath23" type="Sprite" parent="."]
+
+transform/pos = Vector2( 576, 640 )
+transform/scale = Vector2( 4, 4 )
+texture = ExtResource( 1 )
+centered = false
+region = true
+region_rect = Rect2( 153, 187, 16, 16 )
+
+[node name="dirtPath19" type="Sprite" parent="."]
+
+transform/pos = Vector2( 512, 576 )
+transform/scale = Vector2( 4, 4 )
+texture = ExtResource( 1 )
+centered = false
+region = true
+region_rect = Rect2( 136, 170, 16, 16 )
+
+[node name="dirtPath20" type="Sprite" parent="."]
+
+transform/pos = Vector2( 576, 576 )
+transform/scale = Vector2( 4, 4 )
+texture = ExtResource( 1 )
+centered = false
+region = true
+region_rect = Rect2( 153, 170, 16, 16 )
+
+[node name="dirtPath16" type="Sprite" parent="."]
+
+transform/pos = Vector2( 512, 512 )
+transform/scale = Vector2( 4, 4 )
+texture = ExtResource( 1 )
+centered = false
+region = true
+region_rect = Rect2( 136, 153, 16, 16 )
+
+[node name="dirtPath17" type="Sprite" parent="."]
+
+transform/pos = Vector2( 576, 512 )
+transform/scale = Vector2( 4, 4 )
+texture = ExtResource( 1 )
+centered = false
+region = true
+region_rect = Rect2( 153, 153, 16, 16 )
+
+[node name="dirtPath4" type="Sprite" parent="."]
+
+transform/pos = Vector2( 384, 448 )
+transform/scale = Vector2( 4, 4 )
+texture = ExtResource( 1 )
+centered = false
+region = true
+region_rect = Rect2( 102, 136, 16, 16 )
+
+[node name="dirtPath2" type="Sprite" parent="."]
+
+transform/pos = Vector2( 384, 384 )
+transform/scale = Vector2( 4, 4 )
+texture = ExtResource( 1 )
+centered = false
+region = true
+region_rect = Rect2( 102, 119, 16, 16 )
+
+[node name="dirtPath5" type="Sprite" parent="."]
+
+transform/pos = Vector2( 448, 384 )
+transform/scale = Vector2( 4, 4 )
+texture = ExtResource( 1 )
+centered = false
+region = true
+region_rect = Rect2( 119, 119, 16, 16 )
+
+[node name="dirtPath7" type="Sprite" parent="."]
+
+transform/pos = Vector2( 448, 448 )
+transform/scale = Vector2( 4, 4 )
+texture = ExtResource( 1 )
+centered = false
+region = true
+region_rect = Rect2( 119, 136, 16, 16 )
+
+[node name="dirtPath8" type="Sprite" parent="."]
+
+transform/pos = Vector2( 512, 448 )
+transform/scale = Vector2( 4, 4 )
+texture = ExtResource( 1 )
+centered = false
+region = true
+region_rect = Rect2( 136, 136, 16, 16 )
+
+[node name="dirtPath6" type="Sprite" parent="."]
+
+transform/pos = Vector2( 512, 384 )
+transform/scale = Vector2( 4, 4 )
+texture = ExtResource( 1 )
+centered = false
+region = true
+region_rect = Rect2( 136, 119, 16, 16 )
+
+[node name="dirtPath9" type="Sprite" parent="."]
+
+transform/pos = Vector2( 576, 384 )
+transform/scale = Vector2( 4, 4 )
+texture = ExtResource( 1 )
+centered = false
+region = true
+region_rect = Rect2( 153, 119, 16, 16 )
+
+[node name="dirtPath10" type="Sprite" parent="."]
+
+transform/pos = Vector2( 576, 448 )
+transform/scale = Vector2( 4, 4 )
+texture = ExtResource( 1 )
+centered = false
+region = true
+region_rect = Rect2( 153, 136, 16, 16 )
+
+[node name="stonePath1" type="Sprite" parent="."]
+
+transform/pos = Vector2( 320, 768 )
+transform/scale = Vector2( 4, 4 )
+texture = ExtResource( 1 )
+centered = false
+region = true
+region_rect = Rect2( 85, 221, 16, 16 )
+
+[node name="stonePath3" type="Sprite" parent="."]
+
+transform/pos = Vector2( 384, 768 )
+transform/scale = Vector2( 4, 4 )
+texture = ExtResource( 1 )
+centered = false
+region = true
+region_rect = Rect2( 102, 221, 16, 16 )
+
+[node name="stonePath5" type="Sprite" parent="."]
+
+transform/pos = Vector2( 448, 768 )
+transform/scale = Vector2( 4, 4 )
+texture = ExtResource( 1 )
+centered = false
+region = true
+region_rect = Rect2( 119, 221, 16, 16 )
+
+[node name="stonePath7" type="Sprite" parent="."]
+
+transform/pos = Vector2( 448, 832 )
+transform/scale = Vector2( 4, 4 )
+texture = ExtResource( 1 )
+centered = false
+region = true
+region_rect = Rect2( 119, 238, 16, 16 )
+
+[node name="stonePath8" type="Sprite" parent="."]
+
+transform/pos = Vector2( 512, 832 )
+transform/scale = Vector2( 4, 4 )
+texture = ExtResource( 1 )
+centered = false
+region = true
+region_rect = Rect2( 136, 238, 16, 16 )
+
+[node name="stonePath10" type="Sprite" parent="."]
+
+transform/pos = Vector2( 576, 832 )
+transform/scale = Vector2( 4, 4 )
+texture = ExtResource( 1 )
+centered = false
+region = true
+region_rect = Rect2( 153, 238, 16, 16 )
+
+[node name="stonePath6" type="Sprite" parent="."]
+
+transform/pos = Vector2( 512, 768 )
+transform/scale = Vector2( 4, 4 )
+texture = ExtResource( 1 )
+centered = false
+region = true
+region_rect = Rect2( 136, 221, 16, 16 )
+
+[node name="stonePath9" type="Sprite" parent="."]
+
+transform/pos = Vector2( 576, 768 )
+transform/scale = Vector2( 4, 4 )
+texture = ExtResource( 1 )
+centered = false
+region = true
+region_rect = Rect2( 153, 221, 16, 16 )
+
+[node name="stonePath4" type="Sprite" parent="."]
+
+transform/pos = Vector2( 384, 832 )
+transform/scale = Vector2( 4, 4 )
+texture = ExtResource( 1 )
+centered = false
+region = true
+region_rect = Rect2( 102, 238, 16, 16 )
+
+[node name="stonePath2" type="Sprite" parent="."]
+
+transform/pos = Vector2( 320, 832 )
+transform/scale = Vector2( 4, 4 )
+texture = ExtResource( 1 )
+centered = false
+region = true
+region_rect = Rect2( 85, 238, 16, 16 )
+
+[node name="stonePath11" type="Sprite" parent="."]
+
+transform/pos = Vector2( 320, 896 )
+transform/scale = Vector2( 4, 4 )
+texture = ExtResource( 1 )
+centered = false
+region = true
+region_rect = Rect2( 85, 255, 16, 16 )
+
+[node name="stonePath13" type="Sprite" parent="."]
+
+transform/pos = Vector2( 320, 960 )
+transform/scale = Vector2( 4, 4 )
+texture = ExtResource( 1 )
+centered = false
+region = true
+region_rect = Rect2( 85, 272, 16, 16 )
+
+[node name="stonePath24" type="Sprite" parent="."]
+
+transform/pos = Vector2( 320, 1024 )
+transform/scale = Vector2( 4, 4 )
+texture = ExtResource( 1 )
+centered = false
+region = true
+region_rect = Rect2( 85, 289, 16, 16 )
+
+[node name="stonePath26" type="Sprite" parent="."]
+
+transform/pos = Vector2( 320, 1088 )
+transform/scale = Vector2( 4, 4 )
+texture = ExtResource( 1 )
+centered = false
+region = true
+region_rect = Rect2( 85, 306, 16, 16 )
+
+[node name="stonePath27" type="Sprite" parent="."]
+
+transform/pos = Vector2( 384, 1088 )
+transform/scale = Vector2( 4, 4 )
+texture = ExtResource( 1 )
+centered = false
+region = true
+region_rect = Rect2( 102, 306, 16, 16 )
+
+[node name="stonePath28" type="Sprite" parent="."]
+
+transform/pos = Vector2( 448, 1088 )
+transform/scale = Vector2( 4, 4 )
+texture = ExtResource( 1 )
+centered = false
+region = true
+region_rect = Rect2( 119, 306, 16, 16 )
+
+[node name="stonePath29" type="Sprite" parent="."]
+
+transform/pos = Vector2( 512, 1088 )
+transform/scale = Vector2( 4, 4 )
+texture = ExtResource( 1 )
+centered = false
+region = true
+region_rect = Rect2( 136, 306, 16, 16 )
+
+[node name="stonePath25" type="Sprite" parent="."]
+
+transform/pos = Vector2( 384, 1024 )
+transform/scale = Vector2( 4, 4 )
+texture = ExtResource( 1 )
+centered = false
+region = true
+region_rect = Rect2( 102, 289, 16, 16 )
+
+[node name="stonePath14" type="Sprite" parent="."]
+
+transform/pos = Vector2( 384, 960 )
+transform/scale = Vector2( 4, 4 )
+texture = ExtResource( 1 )
+centered = false
+region = true
+region_rect = Rect2( 102, 272, 16, 16 )
+
+[node name="stonePath12" type="Sprite" parent="."]
+
+transform/pos = Vector2( 384, 896 )
+transform/scale = Vector2( 4, 4 )
+texture = ExtResource( 1 )
+centered = false
+region = true
+region_rect = Rect2( 102, 255, 16, 16 )
+
+[node name="stonePath15" type="Sprite" parent="."]
+
+transform/pos = Vector2( 448, 896 )
+transform/scale = Vector2( 4, 4 )
+texture = ExtResource( 1 )
+centered = false
+region = true
+region_rect = Rect2( 119, 255, 16, 16 )
+
+[node name="stonePath18" type="Sprite" parent="."]
+
+transform/pos = Vector2( 448, 960 )
+transform/scale = Vector2( 4, 4 )
+texture = ExtResource( 1 )
+centered = false
+region = true
+region_rect = Rect2( 119, 272, 16, 16 )
+
+[node name="stonePath21" type="Sprite" parent="."]
+
+transform/pos = Vector2( 448, 1024 )
+transform/scale = Vector2( 4, 4 )
+texture = ExtResource( 1 )
+centered = false
+region = true
+region_rect = Rect2( 119, 289, 16, 16 )
+
+[node name="stonePath22" type="Sprite" parent="."]
+
+transform/pos = Vector2( 512, 1024 )
+transform/scale = Vector2( 4, 4 )
+texture = ExtResource( 1 )
+centered = false
+region = true
+region_rect = Rect2( 136, 289, 16, 16 )
+
+[node name="stonePath23" type="Sprite" parent="."]
+
+transform/pos = Vector2( 576, 1024 )
+transform/scale = Vector2( 4, 4 )
+texture = ExtResource( 1 )
+centered = false
+region = true
+region_rect = Rect2( 153, 289, 16, 16 )
+
+[node name="stonePath19" type="Sprite" parent="."]
+
+transform/pos = Vector2( 512, 960 )
+transform/scale = Vector2( 4, 4 )
+texture = ExtResource( 1 )
+centered = false
+region = true
+region_rect = Rect2( 136, 272, 16, 16 )
+
+[node name="stonePath20" type="Sprite" parent="."]
+
+transform/pos = Vector2( 576, 960 )
+transform/scale = Vector2( 4, 4 )
+texture = ExtResource( 1 )
+centered = false
+region = true
+region_rect = Rect2( 153, 272, 16, 16 )
+
+[node name="stonePath16" type="Sprite" parent="."]
+
+transform/pos = Vector2( 512, 896 )
+transform/scale = Vector2( 4, 4 )
+texture = ExtResource( 1 )
+centered = false
+region = true
+region_rect = Rect2( 136, 255, 16, 16 )
+
+[node name="stonePath17" type="Sprite" parent="."]
+
+transform/pos = Vector2( 576, 896 )
+transform/scale = Vector2( 4, 4 )
+texture = ExtResource( 1 )
+centered = false
+region = true
+region_rect = Rect2( 153, 255, 16, 16 )
+
+[node name="trees1" type="Sprite" parent="."]
+
+transform/pos = Vector2( 576, 0 )
+transform/scale = Vector2( 4, 4 )
+texture = ExtResource( 1 )
+centered = false
+region = true
+region_rect = Rect2( 221, 153, 16, 16 )
+
+[node name="trees20" type="Sprite" parent="."]
+
+transform/pos = Vector2( 576, 64 )
+transform/scale = Vector2( 4, 4 )
+texture = ExtResource( 1 )
+centered = false
+region = true
+region_rect = Rect2( 221, 170, 16, 16 )
+
+[node name="trees36" type="Sprite" parent="."]
+
+transform/pos = Vector2( 576, 128 )
+transform/scale = Vector2( 4, 4 )
+texture = ExtResource( 1 )
+centered = false
+region = true
+region_rect = Rect2( 221, 187, 16, 16 )
+
+[node name="trees37" type="Sprite" parent="."]
+
+transform/pos = Vector2( 640, 128 )
+transform/scale = Vector2( 4, 4 )
+texture = ExtResource( 1 )
+centered = false
+region = true
+region_rect = Rect2( 238, 187, 16, 16 )
+
+[node name="trees38" type="Sprite" parent="."]
+
+transform/pos = Vector2( 704, 128 )
+transform/scale = Vector2( 4, 4 )
+texture = ExtResource( 1 )
+centered = false
+region = true
+region_rect = Rect2( 255, 187, 16, 16 )
+
+[node name="trees39" type="Sprite" parent="."]
+
+transform/pos = Vector2( 576, 320 )
+transform/scale = Vector2( 4, 4 )
+texture = ExtResource( 1 )
+centered = false
+region = true
+region_rect = Rect2( 272, 187, 16, 16 )
+
+[node name="trees40" type="Sprite" parent="."]
+
+transform/pos = Vector2( 640, 320 )
+transform/scale = Vector2( 4, 4 )
+texture = ExtResource( 1 )
+centered = false
+region = true
+region_rect = Rect2( 289, 187, 16, 16 )
+
+[node name="trees41" type="Sprite" parent="."]
+
+transform/pos = Vector2( 704, 320 )
+transform/scale = Vector2( 4, 4 )
+texture = ExtResource( 1 )
+centered = false
+region = true
+region_rect = Rect2( 306, 187, 16, 16 )
+
+[node name="trees42" type="Sprite" parent="."]
+
+transform/pos = Vector2( 768, 128 )
+transform/scale = Vector2( 4, 4 )
+texture = ExtResource( 1 )
+centered = false
+region = true
+region_rect = Rect2( 323, 187, 16, 16 )
+
+[node name="trees43" type="Sprite" parent="."]
+
+transform/pos = Vector2( 832, 128 )
+transform/scale = Vector2( 4, 4 )
+texture = ExtResource( 1 )
+centered = false
+region = true
+region_rect = Rect2( 340, 187, 16, 16 )
+
+[node name="trees44" type="Sprite" parent="."]
+
+transform/pos = Vector2( 896, 128 )
+transform/scale = Vector2( 4, 4 )
+texture = ExtResource( 1 )
+centered = false
+region = true
+region_rect = Rect2( 357, 187, 16, 16 )
+
+[node name="trees45" type="Sprite" parent="."]
+
+transform/pos = Vector2( 768, 320 )
+transform/scale = Vector2( 4, 4 )
+texture = ExtResource( 1 )
+centered = false
+region = true
+region_rect = Rect2( 374, 187, 16, 16 )
+
+[node name="trees46" type="Sprite" parent="."]
+
+transform/pos = Vector2( 832, 320 )
+transform/scale = Vector2( 4, 4 )
+texture = ExtResource( 1 )
+centered = false
+region = true
+region_rect = Rect2( 391, 187, 16, 16 )
+
+[node name="trees47" type="Sprite" parent="."]
+
+transform/pos = Vector2( 896, 320 )
+transform/scale = Vector2( 4, 4 )
+texture = ExtResource( 1 )
+centered = false
+region = true
+region_rect = Rect2( 408, 187, 16, 16 )
+
+[node name="trees48" type="Sprite" parent="."]
+
+transform/pos = Vector2( 704, 512 )
+transform/scale = Vector2( 4, 4 )
+texture = ExtResource( 1 )
+centered = false
+region = true
+region_rect = Rect2( 425, 187, 16, 16 )
+
+[node name="trees49" type="Sprite" parent="."]
+
+transform/pos = Vector2( 704, 448 )
+transform/scale = Vector2( 4, 4 )
+texture = ExtResource( 1 )
+centered = false
+region = true
+region_rect = Rect2( 442, 187, 16, 16 )
+
+[node name="trees50" type="Sprite" parent="."]
+
+transform/pos = Vector2( 768, 512 )
+transform/scale = Vector2( 4, 4 )
+texture = ExtResource( 1 )
+centered = false
+region = true
+region_rect = Rect2( 459, 187, 16, 16 )
+
+[node name="trees51" type="Sprite" parent="."]
+
+transform/pos = Vector2( 896, 512 )
+transform/scale = Vector2( 4, 4 )
+texture = ExtResource( 1 )
+centered = false
+region = true
+region_rect = Rect2( 476, 187, 16, 16 )
+
+[node name="trees21" type="Sprite" parent="."]
+
+transform/pos = Vector2( 640, 64 )
+transform/scale = Vector2( 4, 4 )
+texture = ExtResource( 1 )
+centered = false
+region = true
+region_rect = Rect2( 238, 170, 16, 16 )
+
+[node name="trees22" type="Sprite" parent="."]
+
+transform/pos = Vector2( 704, 64 )
+transform/scale = Vector2( 4, 4 )
+texture = ExtResource( 1 )
+centered = false
+region = true
+region_rect = Rect2( 255, 170, 16, 16 )
+
+[node name="trees23" type="Sprite" parent="."]
+
+transform/pos = Vector2( 576, 256 )
+transform/scale = Vector2( 4, 4 )
+texture = ExtResource( 1 )
+centered = false
+region = true
+region_rect = Rect2( 272, 170, 16, 16 )
+
+[node name="trees24" type="Sprite" parent="."]
+
+transform/pos = Vector2( 640, 256 )
+transform/scale = Vector2( 4, 4 )
+texture = ExtResource( 1 )
+centered = false
+region = true
+region_rect = Rect2( 289, 170, 16, 16 )
+
+[node name="trees25" type="Sprite" parent="."]
+
+transform/pos = Vector2( 704, 256 )
+transform/scale = Vector2( 4, 4 )
+texture = ExtResource( 1 )
+centered = false
+region = true
+region_rect = Rect2( 306, 170, 16, 16 )
+
+[node name="trees26" type="Sprite" parent="."]
+
+transform/pos = Vector2( 768, 64 )
+transform/scale = Vector2( 4, 4 )
+texture = ExtResource( 1 )
+centered = false
+region = true
+region_rect = Rect2( 323, 170, 16, 16 )
+
+[node name="trees27" type="Sprite" parent="."]
+
+transform/pos = Vector2( 832, 64 )
+transform/scale = Vector2( 4, 4 )
+texture = ExtResource( 1 )
+centered = false
+region = true
+region_rect = Rect2( 340, 170, 16, 16 )
+
+[node name="trees28" type="Sprite" parent="."]
+
+transform/pos = Vector2( 896, 64 )
+transform/scale = Vector2( 4, 4 )
+texture = ExtResource( 1 )
+centered = false
+region = true
+region_rect = Rect2( 357, 170, 16, 16 )
+
+[node name="trees29" type="Sprite" parent="."]
+
+transform/pos = Vector2( 768, 256 )
+transform/scale = Vector2( 4, 4 )
+texture = ExtResource( 1 )
+centered = false
+region = true
+region_rect = Rect2( 374, 170, 16, 16 )
+
+[node name="trees30" type="Sprite" parent="."]
+
+transform/pos = Vector2( 832, 256 )
+transform/scale = Vector2( 4, 4 )
+texture = ExtResource( 1 )
+centered = false
+region = true
+region_rect = Rect2( 390, 170, 16, 16 )
+
+[node name="trees31" type="Sprite" parent="."]
+
+transform/pos = Vector2( 896, 256 )
+transform/scale = Vector2( 4, 4 )
+texture = ExtResource( 1 )
+centered = false
+region = true
+region_rect = Rect2( 408, 170, 16, 16 )
+
+[node name="trees32" type="Sprite" parent="."]
+
+transform/pos = Vector2( 640, 448 )
+transform/scale = Vector2( 4, 4 )
+texture = ExtResource( 1 )
+centered = false
+region = true
+region_rect = Rect2( 425, 170, 16, 16 )
+
+[node name="trees33" type="Sprite" parent="."]
+
+transform/pos = Vector2( 640, 512 )
+transform/scale = Vector2( 4, 4 )
+texture = ExtResource( 1 )
+centered = false
+region = true
+region_rect = Rect2( 442, 170, 16, 16 )
+
+[node name="trees34" type="Sprite" parent="."]
+
+transform/pos = Vector2( 768, 448 )
+transform/scale = Vector2( 4, 4 )
+texture = ExtResource( 1 )
+centered = false
+region = true
+region_rect = Rect2( 459, 170, 16, 16 )
+
+[node name="trees35" type="Sprite" parent="."]
+
+transform/pos = Vector2( 832, 512 )
+transform/scale = Vector2( 4, 4 )
+texture = ExtResource( 1 )
+centered = false
+region = true
+region_rect = Rect2( 476, 170, 16, 16 )
+
+[node name="trees2" type="Sprite" parent="."]
+
+transform/pos = Vector2( 640, 0 )
+transform/scale = Vector2( 4, 4 )
+texture = ExtResource( 1 )
+centered = false
+region = true
+region_rect = Rect2( 238, 153, 16, 16 )
+
+[node name="trees3" type="Sprite" parent="."]
+
+transform/pos = Vector2( 704, 0 )
+transform/scale = Vector2( 4, 4 )
+texture = ExtResource( 1 )
+centered = false
+region = true
+region_rect = Rect2( 255, 153, 16, 16 )
+
+[node name="trees4" type="Sprite" parent="."]
+
+transform/pos = Vector2( 576, 192 )
+transform/scale = Vector2( 4, 4 )
+texture = ExtResource( 1 )
+centered = false
+region = true
+region_rect = Rect2( 272, 153, 16, 16 )
+
+[node name="trees5" type="Sprite" parent="."]
+
+transform/pos = Vector2( 640, 192 )
+transform/scale = Vector2( 4, 4 )
+texture = ExtResource( 1 )
+centered = false
+region = true
+region_rect = Rect2( 289, 153, 16, 16 )
+
+[node name="trees6" type="Sprite" parent="."]
+
+transform/pos = Vector2( 704, 192 )
+transform/scale = Vector2( 4, 4 )
+texture = ExtResource( 1 )
+centered = false
+region = true
+region_rect = Rect2( 306, 153, 16, 16 )
+
+[node name="trees7" type="Sprite" parent="."]
+
+transform/pos = Vector2( 768, 0 )
+transform/scale = Vector2( 4, 4 )
+texture = ExtResource( 1 )
+centered = false
+region = true
+region_rect = Rect2( 323, 153, 16, 16 )
+
+[node name="trees8" type="Sprite" parent="."]
+
+transform/pos = Vector2( 832, 0 )
+transform/scale = Vector2( 4, 4 )
+texture = ExtResource( 1 )
+centered = false
+region = true
+region_rect = Rect2( 340, 153, 16, 16 )
+
+[node name="trees9" type="Sprite" parent="."]
+
+transform/pos = Vector2( 896, 0 )
+transform/scale = Vector2( 4, 4 )
+texture = ExtResource( 1 )
+centered = false
+region = true
+region_rect = Rect2( 357, 153, 16, 16 )
+
+[node name="trees10" type="Sprite" parent="."]
+
+transform/pos = Vector2( 768, 192 )
+transform/scale = Vector2( 4, 4 )
+texture = ExtResource( 1 )
+centered = false
+region = true
+region_rect = Rect2( 374, 153, 16, 16 )
+
+[node name="trees11" type="Sprite" parent="."]
+
+transform/pos = Vector2( 832, 192 )
+transform/scale = Vector2( 4, 4 )
+texture = ExtResource( 1 )
+centered = false
+region = true
+region_rect = Rect2( 391, 153, 16, 16 )
+
+[node name="trees12" type="Sprite" parent="."]
+
+transform/pos = Vector2( 896, 192 )
+transform/scale = Vector2( 4, 4 )
+texture = ExtResource( 1 )
+centered = false
+region = true
+region_rect = Rect2( 408, 153, 16, 16 )
+
+[node name="trees13" type="Sprite" parent="."]
+
+transform/pos = Vector2( 640, 384 )
+transform/scale = Vector2( 4, 4 )
+texture = ExtResource( 1 )
+centered = false
+region = true
+region_rect = Rect2( 425, 153, 16, 16 )
+
+[node name="trees14" type="Sprite" parent="."]
+
+transform/pos = Vector2( 704, 384 )
+transform/scale = Vector2( 4, 4 )
+texture = ExtResource( 1 )
+centered = false
+region = true
+region_rect = Rect2( 442, 153, 16, 16 )
+
+[node name="trees15" type="Sprite" parent="."]
+
+transform/pos = Vector2( 768, 384 )
+transform/scale = Vector2( 4, 4 )
+texture = ExtResource( 1 )
+centered = false
+region = true
+region_rect = Rect2( 459, 153, 16, 16 )
+
+[node name="trees16" type="Sprite" parent="."]
+
+transform/pos = Vector2( 832, 384 )
+transform/scale = Vector2( 4, 4 )
+texture = ExtResource( 1 )
+centered = false
+region = true
+region_rect = Rect2( 476, 153, 16, 16 )
+
+[node name="trees17" type="Sprite" parent="."]
+
+transform/pos = Vector2( 896, 384 )
+transform/scale = Vector2( 4, 4 )
+texture = ExtResource( 1 )
+centered = false
+region = true
+region_rect = Rect2( 493, 153, 16, 16 )
+
+[node name="trees18" type="Sprite" parent="."]
+
+transform/pos = Vector2( 832, 448 )
+transform/scale = Vector2( 4, 4 )
+texture = ExtResource( 1 )
+centered = false
+region = true
+region_rect = Rect2( 510, 153, 16, 16 )
+
+[node name="trees19" type="Sprite" parent="."]
+
+transform/pos = Vector2( 896, 448 )
+transform/scale = Vector2( 4, 4 )
+texture = ExtResource( 1 )
+centered = false
+region = true
+region_rect = Rect2( 527, 153, 16, 16 )
+
+[node name="rocket1" type="Sprite" parent="."]
+
+transform/pos = Vector2( 704, 640 )
+transform/scale = Vector2( 4, 4 )
+texture = ExtResource( 2 )
+centered = false
+region = true
+region_rect = Rect2( 0, 0, 16, 16 )
+
+[node name="rocket7" type="Sprite" parent="."]
+
+transform/pos = Vector2( 704, 832 )
+transform/scale = Vector2( 4, 4 )
+texture = ExtResource( 3 )
+centered = false
+region = true
+region_rect = Rect2( 0, 0, 16, 16 )
+
+[node name="rocket9" type="Sprite" parent="."]
+
+transform/pos = Vector2( 704, 896 )
+transform/scale = Vector2( 4, 4 )
+texture = ExtResource( 3 )
+centered = false
+region = true
+region_rect = Rect2( 0, 16, 16, 16 )
+
+[node name="rocket10" type="Sprite" parent="."]
+
+transform/pos = Vector2( 768, 896 )
+transform/scale = Vector2( 4, 4 )
+texture = ExtResource( 3 )
+centered = false
+region = true
+region_rect = Rect2( 16, 16, 16, 16 )
+
+[node name="rocket8" type="Sprite" parent="."]
+
+transform/pos = Vector2( 768, 832 )
+transform/scale = Vector2( 4, 4 )
+texture = ExtResource( 3 )
+centered = false
+region = true
+region_rect = Rect2( 16, 0, 16, 16 )
+
+[node name="rocket3" type="Sprite" parent="."]
+
+transform/pos = Vector2( 704, 704 )
+transform/scale = Vector2( 4, 4 )
+texture = ExtResource( 2 )
+centered = false
+region = true
+region_rect = Rect2( 0, 16, 16, 16 )
+
+[node name="rocket4" type="Sprite" parent="."]
+
+transform/pos = Vector2( 768, 704 )
+transform/scale = Vector2( 4, 4 )
+texture = ExtResource( 2 )
+centered = false
+region = true
+region_rect = Rect2( 16, 16, 16, 16 )
+
+[node name="rocket5" type="Sprite" parent="."]
+
+transform/pos = Vector2( 832, 640 )
+transform/scale = Vector2( 4, 4 )
+texture = ExtResource( 4 )
+centered = false
+region = true
+region_rect = Rect2( 16, 0, 16, 16 )
+
+[node name="rocket6" type="Sprite" parent="."]
+
+transform/pos = Vector2( 832, 704 )
+transform/scale = Vector2( 4, 4 )
+texture = ExtResource( 4 )
+centered = false
+region = true
+region_rect = Rect2( 16, 16, 16, 16 )
+
+[node name="rocket2" type="Sprite" parent="."]
+
+transform/pos = Vector2( 768, 640 )
+transform/scale = Vector2( 4, 4 )
+texture = ExtResource( 2 )
+centered = false
+region = true
+region_rect = Rect2( 16, 0, 16, 16 )
+
+

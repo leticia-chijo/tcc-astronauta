@@ -1,0 +1,106 @@
+[gd_scene load_steps=7 format=1]
+
+[ext_resource path="res://scripts/Brinquedos/brinquedo.gd" type="Script" id=1]
+[ext_resource path="res://assets/Brinquedos/basketball.png" type="Texture" id=2]
+[ext_resource path="res://assets/Brinquedos/ladder.png" type="Texture" id=3]
+
+[sub_resource type="Animation" id=1]
+
+resource/name = "no"
+length = 0.5
+loop = false
+step = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("toy:transform/pos")
+tracks/0/interp = 1
+tracks/0/imported = false
+tracks/0/keys = {
+"times": FloatArray( 0, 0.5 ),
+"transitions": FloatArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0, -53 ), Vector2( -500, -53 ) ]
+}
+
+[sub_resource type="Animation" id=2]
+
+resource/name = "none"
+length = 0.7
+loop = false
+step = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("toy:visibility/visible")
+tracks/0/interp = 1
+tracks/0/imported = false
+tracks/0/keys = {
+"times": FloatArray( 0, 0.6 ),
+"transitions": FloatArray( 1, 1 ),
+"update": 0,
+"values": [ true, false ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("toy:modulate")
+tracks/1/interp = 1
+tracks/1/imported = false
+tracks/1/keys = {
+"times": FloatArray( 0, 0.4 ),
+"transitions": FloatArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 0.765625, 0, 0, 1 ) ]
+}
+
+[sub_resource type="Animation" id=3]
+
+length = 0.5
+loop = false
+step = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("toy:transform/pos")
+tracks/0/interp = 1
+tracks/0/imported = false
+tracks/0/keys = {
+"times": FloatArray( 0, 0.5 ),
+"transitions": FloatArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0, -53 ), Vector2( 500, -53 ) ]
+}
+
+[node name="brinquedo" type="Node2D"]
+
+transform/pos = Vector2( 0, 93.5303 )
+script/script = ExtResource( 1 )
+
+[node name="toy" type="Sprite" parent="."]
+
+transform/pos = Vector2( 0, -53 )
+transform/scale = Vector2( 0.7, 0.7 )
+z/z = 3
+texture = ExtResource( 2 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+
+playback/process_mode = 1
+playback/default_blend_time = 0.0
+root/root = NodePath("..")
+anims/no = SubResource( 1 )
+anims/none = SubResource( 2 )
+anims/yes = SubResource( 3 )
+playback/active = true
+playback/speed = 1.0
+blend_times = [  ]
+autoplay = ""
+
+[node name="ladder" type="Sprite" parent="."]
+
+transform/pos = Vector2( 0, -5.10803 )
+texture = ExtResource( 3 )
+region = true
+region_rect = Rect2( 0, 128, 512, 140 )
+
+[node name="ladder1" type="Sprite" parent="."]
+
+transform/pos = Vector2( 0, -125.108 )
+texture = ExtResource( 3 )
+region = true
+region_rect = Rect2( 0, 120, 512, 120 )
+
+

@@ -1,0 +1,27 @@
+[gd_scene load_steps=2 format=1]
+
+[ext_resource path="res://assets/Npc/violet_avenger-48x64.png" type="Texture" id=1]
+
+[node name="npcTileset" type="Node2D"]
+
+[node name="Sprite" type="Sprite" parent="."]
+
+[node name="npcBody" type="Sprite" parent="Sprite"]
+
+texture = ExtResource( 1 )
+region = true
+region_rect = Rect2( 0, 128, 48, 64 )
+
+[node name="npcBody1" type="Sprite" parent="Sprite"]
+
+texture = ExtResource( 1 )
+region = true
+region_rect = Rect2( 48, 128, 48, 64 )
+
+[node name="npcBody2" type="Sprite" parent="Sprite"]
+
+texture = ExtResource( 1 )
+region = true
+region_rect = Rect2( 96, 128, 48, 64 )
+
+

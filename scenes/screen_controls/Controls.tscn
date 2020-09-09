@@ -1,0 +1,62 @@
+[gd_scene load_steps=5 format=1]
+
+[ext_resource path="res://assets/screen_controls/flatLight/flatLight04.png" type="Texture" id=1]
+[ext_resource path="res://assets/screen_controls/flatLight/flatLight03.png" type="Texture" id=2]
+[ext_resource path="res://assets/screen_controls/flatLight/flatLight01.png" type="Texture" id=3]
+[ext_resource path="res://assets/screen_controls/flatLight/flatLight08.png" type="Texture" id=4]
+
+[node name="Controls" type="Node2D"]
+
+[node name="down" type="TouchScreenButton" parent="."]
+
+transform/pos = Vector2( 0, -30.5 )
+normal = ExtResource( 1 )
+pressed = null
+bitmask = null
+shape = null
+shape_centered = true
+shape_visible = true
+passby_press = true
+action = "ui_down"
+visibility_mode = 0
+
+[node name="up" type="TouchScreenButton" parent="."]
+
+transform/pos = Vector2( -76, -31.1634 )
+normal = ExtResource( 2 )
+pressed = null
+bitmask = null
+shape = null
+shape_centered = true
+shape_visible = true
+passby_press = true
+action = "ui_up"
+visibility_mode = 0
+
+[node name="right" type="TouchScreenButton" parent="."]
+
+transform/pos = Vector2( -30.5, -76 )
+normal = ExtResource( 3 )
+pressed = null
+bitmask = null
+shape = null
+shape_centered = true
+shape_visible = true
+passby_press = true
+action = "ui_right"
+visibility_mode = 0
+
+[node name="left" type="TouchScreenButton" parent="."]
+
+transform/pos = Vector2( -30.5, -0.663422 )
+normal = ExtResource( 4 )
+pressed = null
+bitmask = null
+shape = null
+shape_centered = true
+shape_visible = true
+passby_press = true
+action = "ui_left"
+visibility_mode = 0
+
+

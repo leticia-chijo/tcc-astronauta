@@ -1,0 +1,70 @@
+[gd_scene load_steps=7 format=1]
+
+[ext_resource path="res://scripts/Mario/platMovel.gd" type="Script" id=1]
+[ext_resource path="res://assets/Mario/Tiles/grassCliffLeft.png" type="Texture" id=2]
+[ext_resource path="res://assets/Mario/Tiles/grassMid.png" type="Texture" id=3]
+[ext_resource path="res://assets/Mario/Tiles/grassCliffRight.png" type="Texture" id=4]
+
+[sub_resource type="Curve2D" id=1]
+
+bake_interval = 5.0
+_data = {
+"points": Vector2Array( 0, 0, 0, 0, -33.7046, -0.993607, -163.245, 4.08112, 178.209, 9.52262, 185.589, -149.684, 0, 0, 0, 0, 388.285, -21.8091 )
+}
+
+[sub_resource type="ConvexPolygonShape2D" id=2]
+
+custom_solver_bias = 0.0
+points = Vector2Array( -103.853, -34.5495, 102.994, -34.908, 104.786, -28.0968, 105.503, -7.66309, 100.126, 4.52542, 94.3903, 13.1291, 85.0696, 21.7328, 69.2961, 28.544, 52.4474, 33.2043, 36.3156, 34.6382, -39.6835, 34.6382, -57.9663, 31.0534, -75.1736, 26.0346, -89.5131, 17.0724, -98.8337, 8.11029, -104.928, -5.15369, -104.928, -20.9271 )
+
+[node name="platMovel" type="Path2D"]
+
+transform/pos = Vector2( 1680, 455 )
+curve = SubResource( 1 )
+
+[node name="follow" type="PathFollow2D" parent="."]
+
+transform/pos = Vector2( -33.7046, -0.993607 )
+transform/rot = 51.7788
+offset = 0.0
+h_offset = 0.0
+v_offset = 0.0
+rotate = false
+cubic_interp = true
+loop = true
+lookahead = 4.0
+
+[node name="body" type="KinematicBody2D" parent="follow"]
+
+transform/rot = -52.0
+input/pickable = false
+shapes/0/shape = SubResource( 2 )
+shapes/0/transform = Matrix32( 1, 0, 0, 1, 0, 0 )
+shapes/0/trigger = false
+collision/layers = 1
+collision/mask = 1
+collision/margin = 0.08
+script/script = ExtResource( 1 )
+
+[node name="sprite" type="Sprite" parent="follow/body"]
+
+transform/pos = Vector2( -70, 0 )
+texture = ExtResource( 2 )
+
+[node name="sprite1" type="Sprite" parent="follow/body"]
+
+texture = ExtResource( 3 )
+
+[node name="sprite2" type="Sprite" parent="follow/body"]
+
+transform/pos = Vector2( 70, 0 )
+texture = ExtResource( 4 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="follow/body"]
+
+build_mode = 0
+polygon = Vector2Array( -103.853, -34.5495, 102.994, -34.908, 104.786, -28.0968, 105.503, -7.66309, 100.126, 4.52542, 94.3903, 13.1291, 85.0696, 21.7328, 69.2961, 28.544, 52.4474, 33.2043, 36.3156, 34.6382, -39.6835, 34.6382, -57.9663, 31.0534, -75.1736, 26.0346, -89.5131, 17.0724, -98.8337, 8.11029, -104.928, -5.15369, -104.928, -20.9271 )
+shape_range = Vector2( 0, 0 )
+trigger = false
+
+

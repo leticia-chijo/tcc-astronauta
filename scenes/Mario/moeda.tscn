@@ -1,0 +1,108 @@
+[gd_scene load_steps=6 format=1]
+
+[ext_resource path="res://scripts/Mario/moeda.gd" type="Script" id=1]
+[ext_resource path="res://assets/Mario/Food.png" type="Texture" id=2]
+
+[sub_resource type="CircleShape2D" id=1]
+
+custom_solver_bias = 0.0
+radius = 23.9638
+
+[sub_resource type="Animation" id=2]
+
+resource/name = "coletar"
+length = 0.7
+loop = false
+step = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:transform/pos")
+tracks/0/interp = 1
+tracks/0/imported = false
+tracks/0/keys = {
+"times": FloatArray( 0, 0.5 ),
+"transitions": FloatArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ), Vector2( 0, -108 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Sprite:transform/scale")
+tracks/1/interp = 1
+tracks/1/imported = false
+tracks/1/keys = {
+"times": FloatArray( 0, 0.4, 0.6 ),
+"transitions": FloatArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 4.5, 4.5 ), Vector2( 6, 6 ), Vector2( 3.5, 3.5 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Sprite:modulate")
+tracks/2/interp = 1
+tracks/2/imported = false
+tracks/2/keys = {
+"times": FloatArray( 0.4, 0.6 ),
+"transitions": FloatArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+
+[sub_resource type="Animation" id=3]
+
+resource/name = "girar"
+length = 1.2
+loop = true
+step = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:transform/pos")
+tracks/0/interp = 1
+tracks/0/imported = false
+tracks/0/keys = {
+"times": FloatArray( 0, 0.3, 0.6, 0.9, 1.2 ),
+"transitions": FloatArray( 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ), Vector2( 0, -15 ), Vector2( 0, 0 ), Vector2( 0, -15 ), Vector2( 0, 0 ) ]
+}
+
+[node name="moeda" type="Area2D"]
+
+input/pickable = true
+shapes/0/shape = SubResource( 1 )
+shapes/0/transform = Matrix32( 1, 0, 0, 1, 0.323532, -0.647064 )
+shapes/0/trigger = false
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+collision/layers = 4096
+script/script = ExtResource( 1 )
+
+[node name="Sprite" type="Sprite" parent="."]
+
+transform/scale = Vector2( 4.5, 4.5 )
+texture = ExtResource( 2 )
+hframes = 61
+frame = 1
+region = true
+region_rect = Rect2( 16, 65, 15.5, 14.75 )
+
+[node name="anim" type="AnimationPlayer" parent="."]
+
+playback/process_mode = 1
+playback/default_blend_time = 0.0
+root/root = NodePath("..")
+anims/coletar = SubResource( 2 )
+anims/girar = SubResource( 3 )
+playback/active = true
+playback/speed = 1.0
+blend_times = [  ]
+autoplay = "girar"
+
+[node name="shape" type="CollisionShape2D" parent="."]
+
+transform/pos = Vector2( 0.323532, -0.647064 )
+shape = SubResource( 1 )
+trigger = false
+_update_shape_index = 0
+
+[connection signal="body_enter" from="." to="." method="_on_moeda_body_enter"]
+
+

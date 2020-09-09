@@ -1,0 +1,463 @@
+[gd_scene load_steps=11 format=1]
+
+[ext_resource path="res://assets/Rocket/playerShip1_orange.png" type="Texture" id=1]
+[ext_resource path="res://assets/Rocket/background.png" type="Texture" id=2]
+[ext_resource path="res://assets/Fontes/font150.fnt" type="BitmapFont" id=3]
+[ext_resource path="res://assets/Fontes/font32.fnt" type="BitmapFont" id=4]
+
+[sub_resource type="Animation" id=1]
+
+resource/name = "Nova Animação"
+length = 0.8
+loop = true
+step = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:transform/pos")
+tracks/0/interp = 1
+tracks/0/imported = false
+tracks/0/keys = {
+"times": FloatArray( 0, 0.2, 0.4, 0.6, 0.8 ),
+"transitions": FloatArray( 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ), Vector2( 0, 5 ), Vector2( 0, 0 ), Vector2( 0, -5 ), Vector2( 0, 0 ) ]
+}
+
+[sub_resource type="RectangleShape2D" id=2]
+
+custom_solver_bias = 0.0
+extents = Vector2( 139.783, 47.8768 )
+
+[sub_resource type="RectangleShape2D" id=3]
+
+custom_solver_bias = 0.0
+extents = Vector2( 34.1903, 111.954 )
+
+[sub_resource type="Animation" id=4]
+
+resource/name = "Nova Animação"
+length = 6.0
+loop = true
+step = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("Background/Sprite1:transform/pos")
+tracks/0/interp = 1
+tracks/0/imported = false
+tracks/0/keys = {
+"times": FloatArray( 0, 3, 3.01 ),
+"transitions": FloatArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ), Vector2( 0, 1280 ), Vector2( 0, -1150 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Background/Sprite2:transform/pos")
+tracks/1/interp = 1
+tracks/1/imported = false
+tracks/1/keys = {
+"times": FloatArray( 0, 3, 6 ),
+"transitions": FloatArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( -300, -1280 ), Vector2( -300, 0 ), Vector2( -300, 1280 ) ]
+}
+
+[sub_resource type="Animation" id=5]
+
+resource/name = "start_scene"
+length = 50.0
+loop = false
+step = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("Continua:custom_colors/font_color")
+tracks/0/interp = 1
+tracks/0/imported = false
+tracks/0/keys = {
+"times": FloatArray( 0, 1, 2 ),
+"transitions": FloatArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Panel:visibility/opacity")
+tracks/1/interp = 1
+tracks/1/imported = false
+tracks/1/keys = {
+"times": FloatArray( 0, 6, 7 ),
+"transitions": FloatArray( 1, 1, 1 ),
+"update": 0,
+"values": [ 0.0, 0.0, 1.0 ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Label:rect/pos")
+tracks/2/interp = 1
+tracks/2/imported = false
+tracks/2/keys = {
+"times": FloatArray( 0, 7.5, 48 ),
+"transitions": FloatArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 16, 1424 ), Vector2( 16, 1424 ), Vector2( 16, -6058 ) ]
+}
+
+[sub_resource type="StyleBoxFlat" id=6]
+
+content_margin/left = -1.0
+content_margin/right = -1.0
+content_margin/top = -1.0
+content_margin/bottom = -1.0
+bg_color = Color( 0, 0, 0, 1 )
+light_color = Color( 0.8, 0.8, 0.8, 1 )
+dark_color = Color( 0.8, 0.8, 0.8, 1 )
+border_size = 0
+border_blend = true
+draw_bg = true
+
+[node name="Game" type="Node2D"]
+
+[node name="Rocket" type="RigidBody2D" parent="."]
+
+transform/pos = Vector2( 400, 1150 )
+input/pickable = false
+collision/layers = 1
+collision/mask = 1
+mode = 0
+mass = 1.0
+friction = 1.0
+bounce = 0.0
+gravity_scale = 0.0
+custom_integrator = false
+continuous_cd = 0
+contacts_reported = 0
+contact_monitor = false
+sleeping = false
+can_sleep = true
+velocity/linear = Vector2( 0, 0 )
+velocity/angular = 0.0
+damp_override/linear = -1.0
+damp_override/angular = -1.0
+
+[node name="Sprite" type="Sprite" parent="Rocket"]
+
+transform/scale = Vector2( 3, 3 )
+z/z = 5
+texture = ExtResource( 1 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Rocket"]
+
+playback/process_mode = 1
+playback/default_blend_time = 0.0
+root/root = NodePath("..")
+"anims/Nova Animação" = SubResource( 1 )
+playback/active = true
+playback/speed = 1.0
+blend_times = [  ]
+autoplay = "Nova Animação"
+
+[node name="Area2D" type="Area2D" parent="Rocket"]
+
+editor/display_folded = true
+input/pickable = true
+shapes/0/shape = SubResource( 2 )
+shapes/0/transform = Matrix32( 1, 0, 0, 1, 0, 33.3923 )
+shapes/0/trigger = false
+shapes/1/shape = SubResource( 3 )
+shapes/1/transform = Matrix32( 1, 0, 0, 1, 0, 6.3175 )
+shapes/1/trigger = false
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+
+[node name="CollisionShape1" type="CollisionShape2D" parent="Rocket/Area2D"]
+
+transform/pos = Vector2( 0, 33.3923 )
+z/z = 5
+shape = SubResource( 2 )
+trigger = false
+_update_shape_index = 0
+
+[node name="CollisionShape2" type="CollisionShape2D" parent="Rocket/Area2D"]
+
+transform/pos = Vector2( 0, 6.3175 )
+z/z = 5
+shape = SubResource( 3 )
+trigger = false
+_update_shape_index = 1
+
+[node name="Background" type="AnimationPlayer" parent="."]
+
+playback/process_mode = 1
+playback/default_blend_time = 0.0
+root/root = NodePath("..")
+"anims/Nova Animação" = SubResource( 4 )
+playback/active = true
+playback/speed = 1.0
+blend_times = [  ]
+autoplay = "Nova Animação"
+
+[node name="Sprite1" type="Sprite" parent="Background"]
+
+transform/pos = Vector2( 0, -295.591 )
+transform/scale = Vector2( 5, 5 )
+texture = ExtResource( 2 )
+centered = false
+
+[node name="Sprite2" type="Sprite" parent="Background"]
+
+transform/pos = Vector2( -300, 952.09 )
+transform/scale = Vector2( 5, 5 )
+texture = ExtResource( 2 )
+centered = false
+
+[node name="Camera" type="Camera2D" parent="."]
+
+anchor_mode = 0
+rotating = false
+current = false
+zoom = Vector2( 1, 1 )
+limit/left = -10000000
+limit/top = -10000000
+limit/right = 10000000
+limit/bottom = 10000000
+drag_margin/h_enabled = true
+drag_margin/v_enabled = true
+smoothing/enable = false
+smoothing/speed = 5.0
+drag_margin/left = 0.2
+drag_margin/top = 0.2
+drag_margin/right = 0.2
+drag_margin/bottom = 0.2
+
+[node name="Timer" type="Timer" parent="."]
+
+process_mode = 1
+wait_time = 1.0
+one_shot = false
+autostart = false
+
+[node name="Labels" type="Node2D" parent="."]
+
+z/z = 50
+
+[node name="Continua" type="Label" parent="Labels"]
+
+rect/scale = Vector2( 0.7, 0.7 )
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 13.0
+margin/top = 560.0
+margin/right = 1088.0
+margin/bottom = 673.0
+custom_fonts/font = ExtResource( 3 )
+custom_colors/font_color = Color( 1, 1, 1, 0 )
+text = "Continua"
+align = 1
+valign = 1
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Labels"]
+
+playback/process_mode = 1
+playback/default_blend_time = 0.0
+root/root = NodePath("..")
+anims/start_scene = SubResource( 5 )
+playback/active = true
+playback/speed = 1.0
+blend_times = [  ]
+autoplay = "start_scene"
+
+[node name="Panel" type="Panel" parent="Labels"]
+
+visibility/opacity = 0.0
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 0.0
+margin/top = 0.0
+margin/right = 800.0
+margin/bottom = 1280.0
+custom_styles/panel = SubResource( 6 )
+
+[node name="Label" type="Label" parent="Labels"]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 16.0
+margin/top = 1424.0
+margin/right = 788.0
+margin/bottom = 7490.0
+custom_fonts/font = ExtResource( 4 )
+custom_colors/font_color = Color( 0.78125, 0.723267, 0.723267, 1 )
+text = "Criadoras:
+Damaris Andréia Cardona
+Letícia Alves Chijo
+Paula Ueda
+
+Créditos:
+Jogo das ferramentas
+
+Medidor
+Ícone feito por Freepik
+de www.flaticon.com
+
+Spray de limpeza
+Ícone feito por Roundicons
+de www.flaticon.com
+
+Espanador
+Ícone feito por Revicon
+de www.flaticon.com
+
+Engrenagem
+Ícone feito por Freepik
+de www.flaticon.com
+
+Martelo
+Ícone feito por smalllikeart
+de www.flaticon.com
+
+Ferro de passar
+Ícone feito por Freepik
+de www.flaticon.com
+
+Espelho
+Ícone feito por Smashicons
+de www.flaticon.com
+
+Batedeira
+Ícone feito por Freepik
+de www.flaticon.com
+
+Porca
+Ícone feito por Freepik
+de www.flaticon.com
+
+Panela
+Ícone feito por Freepik
+de www.flaticon.com
+
+Rolo de macarrão
+Ícone feito por Pixel perfect
+de www.flaticon.com
+
+Chave Inglesa
+Ícone feito por smalllikeart
+de www.flaticon.com
+
+Erro
+Ícone feito por Freepik
+de www.flaticon.com
+
+Fundo do jogo
+Created by Kjpargeter
+de Freepik.com
+
+
+Jogo dos brinquedos
+
+Fundo do jogo
+de https://ansimuz.itch.io
+/magic-cliffs-environment
+
+Bola de Basquetel
+Ícone feito por Payungkead
+de www.flaticon.com
+
+Bloco
+Ícone feito por Smashicons
+de www.flaticon.com
+
+Carro
+Ícone feito por Freepik
+de www.flaticon.com
+
+Coroa
+Ícone feito por Freepik
+de www.flaticon.com
+
+Dinossauro
+Ícone feito por Freepik
+de www.flaticon.com
+
+Boneca1
+Ícone feito por Freepik
+de www.flaticon.com
+
+Boneca2
+Ícone feito por Freepik
+de www.flaticon.com
+
+Boneca3
+Ícone feito por Freepik
+de www.flaticon.com
+
+Flores
+Ícone feito por Good Ware
+de www.flaticon.com
+
+Video Game
+Ícone feito por Freepik
+de www.flaticon.com
+
+Escada
+Ícone feito por Freepi
+ de www.flaticon.com
+
+Geladeira
+Ícone feito por Freepik
+de www.flaticon.com
+
+Robô
+Ícone feito por Smashicons
+de www.flaticon.com
+
+Fogão
+Ícone feito por Freepik
+de www.flaticon.com
+
+Ursinho
+Ícone feito por Freepik
+de www.flaticon.com
+
+Trem
+Ícone feito por Smashicons
+de www.flaticon.com
+
+
+Passeie com o pet
+
+Fundo do jogo:
+de https://ansimuz.itch.io
+/hazy-urban-landscape
+
+Pet
+de https://www.gameart2d.com
+/cat-and-dog-free-sprites.html
+
+Semáforo
+de https://www.kenney.nl
+/assets/roguelike-modern-city
+
+Caixa de correio
+Ícone feito por Freepik
+de www.flaticon.com
+
+
+Jogo de comprar ropas
+
+Roupas: Ícones feitos por smalllikeart de www.flaticon.com
+
+"
+align = 1
+autowrap = true
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[connection signal="body_enter" from="Rocket/Area2D" to="Rocket" method="_on_Area2D_body_enter"]
+
+

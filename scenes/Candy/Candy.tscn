@@ -1,0 +1,114 @@
+[gd_scene load_steps=12 format=1]
+
+[ext_resource path="res://scripts/Candy/Candy.gd" type="Script" id=1]
+[ext_resource path="res://assets/screen_controls/flatLight/flatLight05.png" type="Texture" id=2]
+[ext_resource path="res://assets/Candy/roupas/shorts.png" type="Texture" id=3]
+[ext_resource path="res://assets/Candy/roupas/slippers(1).png" type="Texture" id=4]
+[ext_resource path="res://assets/Candy/roupas/tshirt.png" type="Texture" id=5]
+[ext_resource path="res://assets/Candy/roupas/shirt.png" type="Texture" id=6]
+[ext_resource path="res://assets/Candy/roupas/trousers.png" type="Texture" id=7]
+[ext_resource path="res://assets/Candy/roupas/tank-top.png" type="Texture" id=8]
+
+[sub_resource type="CircleShape2D" id=1]
+
+custom_solver_bias = 0.0
+radius = 31.297
+
+[sub_resource type="SpriteFrames" id=2]
+
+animations = [ {
+"frames": [ ExtResource( 3 ) ],
+"loop": true,
+"name": "short",
+"speed": 0.0
+}, {
+"frames": [ ExtResource( 4 ) ],
+"loop": true,
+"name": "slippers",
+"speed": 0.0
+}, {
+"frames": [ ExtResource( 5 ) ],
+"loop": true,
+"name": "tshirt",
+"speed": 0.0
+}, {
+"frames": [ ExtResource( 6 ) ],
+"loop": true,
+"name": "longSleeve",
+"speed": 0.0
+}, {
+"frames": [ ExtResource( 7 ) ],
+"loop": true,
+"name": "pants",
+"speed": 0.0
+}, {
+"frames": [ ExtResource( 8 ) ],
+"loop": true,
+"name": "tankTop",
+"speed": 0.0
+} ]
+
+[sub_resource type="Animation" id=3]
+
+resource/name = "Create"
+length = 0.5
+loop = false
+step = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:modulate")
+tracks/0/interp = 1
+tracks/0/imported = false
+tracks/0/keys = {
+"times": FloatArray( 0, 0.5 ),
+"transitions": FloatArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+
+[node name="Candy" type="Area2D"]
+
+transform/scale = Vector2( 1.5, 1.5 )
+input/pickable = true
+shapes/0/shape = SubResource( 1 )
+shapes/0/transform = Matrix32( 1, 0, 0, 1, 0, 0 )
+shapes/0/trigger = false
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+script/script = ExtResource( 1 )
+
+[node name="Sel" type="Sprite" parent="."]
+
+visibility/visible = false
+transform/scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 2 )
+
+[node name="Sprite" type="AnimatedSprite" parent="."]
+
+transform/scale = Vector2( 0.25, 0.25 )
+frames = SubResource( 2 )
+animation = "pants"
+playing = true
+
+[node name="Shape" type="CollisionShape2D" parent="."]
+
+visibility/visible = false
+shape = SubResource( 1 )
+trigger = false
+_update_shape_index = 0
+
+[node name="Anim" type="AnimationPlayer" parent="."]
+
+playback/process_mode = 1
+playback/default_blend_time = 0.0
+root/root = NodePath("..")
+anims/Create = SubResource( 3 )
+playback/active = true
+playback/speed = 1.0
+blend_times = [  ]
+autoplay = "Create"
+
+[connection signal="input_event" from="." to="." method="_on_Candy_input_event"]
+
+

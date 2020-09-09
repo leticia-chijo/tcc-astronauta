@@ -1,0 +1,20 @@
+[gd_scene load_steps=2 format=1]
+
+[ext_resource path="res://assets/screen_controls/flatLight/flatLight41.png" type="Texture" id=1]
+
+[node name="Select" type="Node2D"]
+
+[node name="TouchScreenButton" type="TouchScreenButton" parent="."]
+
+transform/pos = Vector2( -54, -24 )
+normal = ExtResource( 1 )
+pressed = null
+bitmask = null
+shape = null
+shape_centered = true
+shape_visible = true
+passby_press = false
+action = ""
+visibility_mode = 0
+
+

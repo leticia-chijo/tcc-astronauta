@@ -1,0 +1,177 @@
+[gd_scene load_steps=6 format=1]
+
+[ext_resource path="res://scripts/Mapas/Casa1.gd" type="Script" id=1]
+[ext_resource path="res://tilesets/tilesetHousesOutside.tres" type="TileSet" id=2]
+[ext_resource path="res://tilesets/tilesetIndoors.tres" type="TileSet" id=3]
+[ext_resource path="res://scenes/Personagem/Personagem.tscn" type="PackedScene" id=4]
+
+[sub_resource type="RectangleShape2D" id=1]
+
+custom_solver_bias = 0.0
+extents = Vector2( 61.0976, 1.76215 )
+
+[node name="Casa1" type="Node2D"]
+
+transform/rot = 270.0
+script/script = ExtResource( 1 )
+
+[node name="Chao" type="TileMap" parent="."]
+
+transform/scale = Vector2( 4, 4 )
+mode = 0
+tile_set = ExtResource( 2 )
+cell/size = Vector2( 16, 16 )
+cell/quadrant_size = 16
+cell/custom_transform = Matrix32( 1, 0, 0, 1, 0, 0 )
+cell/half_offset = 2
+cell/tile_origin = 0
+cell/y_sort = false
+collision/use_kinematic = false
+collision/friction = 1.0
+collision/bounce = 0.0
+collision/layers = 1
+collision/mask = 1
+occluder/light_mask = 1
+tile_data = IntArray( 65535, 185, 0, 185, 1, 185, 2, 185, 3, 185, 4, 185, 5, 185, 6, 185, 7, 185, 8, 185, 9, 185, 10, 185, 11, 185, 12, 185, 131071, 185, 65536, 185, 65537, 185, 65538, 185, 65539, 185, 65540, 185, 65541, 185, 65542, 185, 65543, 185, 65544, 185, 65545, 185, 65546, 185, 65547, 185, 65548, 185, 196607, 185, 131072, 185, 131073, 185, 131074, 185, 131075, 185, 131076, 185, 131077, 185, 131078, 185, 131079, 185, 131080, 185, 131081, 185, 131082, 185, 131083, 185, 131084, 185, 262143, 185, 196608, 185, 196609, 185, 196610, 185, 196611, 185, 196612, 185, 196613, 185, 196614, 185, 196615, 185, 196616, 185, 196617, 185, 196618, 185, 196619, 185, 196620, 185, 327679, 185, 262144, 185, 262145, 185, 262146, 185, 262147, 185, 262148, 185, 262149, 185, 262150, 185, 262151, 185, 262152, 185, 262153, 185, 262154, 185, 262155, 185, 262156, 185, 393215, 185, 327680, 185, 327681, 185, 327682, 185, 327683, 185, 327684, 185, 327685, 185, 327686, 185, 327687, 185, 327688, 185, 327689, 185, 327690, 185, 327691, 185, 327692, 185, 458751, 185, 393216, 185, 393217, 185, 393218, 185, 393219, 185, 393220, 185, 393221, 185, 393222, 185, 393223, 185, 393224, 185, 393225, 185, 393226, 185, 393227, 185, 393228, 185, 524287, 185, 458752, 185, 458753, 185, 458754, 185, 458755, 185, 458756, 185, 458757, 185, 458758, 185, 458759, 185, 458760, 185, 458761, 185, 458762, 185, 458763, 185, 458764, 185, 589823, 185, 524288, 185, 524289, 185, 524290, 185, 524291, 185, 524292, 185, 524293, 185, 524294, 185, 524295, 185, 524296, 185, 524297, 185, 524298, 185, 524299, 185, 524300, 185, 655359, 185, 589824, 185, 589825, 185, 589826, 185, 589827, 185, 589828, 185, 589829, 185, 589830, 185, 589831, 185, 589832, 185, 589833, 185, 589834, 185, 589835, 185, 589836, 185, 655364, 185, 655365, 185, 720900, 185, 720901, 185, 786436, 185, 786437, 185 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Paredes" type="TileMap" parent="."]
+
+transform/scale = Vector2( 4, 4 )
+mode = 0
+tile_set = ExtResource( 2 )
+cell/size = Vector2( 16, 16 )
+cell/quadrant_size = 16
+cell/custom_transform = Matrix32( 1, 0, 0, 1, 0, 0 )
+cell/half_offset = 2
+cell/tile_origin = 0
+cell/y_sort = false
+collision/use_kinematic = false
+collision/friction = 1.0
+collision/bounce = 0.0
+collision/layers = 1
+collision/mask = 1
+occluder/light_mask = 1
+tile_data = IntArray( -65538, 52, -65537, 50, -131072, 50, -131071, 50, -131070, 50, -131069, 50, -131068, 50, -131067, 49, -131066, 50, -131065, 50, -131064, 50, -131063, 50, -131062, 50, -131061, 50, -131060, 50, -131059, 53, -2, 45, -1, 73, -65536, 73, -65535, 73, -65534, 73, -65533, 73, -65532, 73, -65531, 45, -65530, 73, -65529, 73, -65528, 73, -65527, 73, -65526, 73, -65525, 73, -65524, 73, -65523, 45, 65534, 45, 65535, 67, 0, 67, 1, 67, 2, 67, 3, 67, 4, 67, 5, 45, 6, 67, 7, 67, 8, 67, 9, 67, 10, 67, 11, 67, 12, 67, 13, 45, 131070, 45, 65541, 45, 65549, 45, 196606, 45, 131077, 45, 131085, 45, 262142, 45, 196613, 45, 196621, 45, 327678, 54, 327679, 51, 262145, 1, 262146, 50, 262147, 50, 262148, 50, 262149, 47, 262151, 1, 262152, 50, 262153, 50, 262154, 50, 262155, 50, 262156, 50, 262157, 48, 393214, 45, 393215, 69, 327681, 72, 327682, 73, 327683, 73, 327684, 73, 327685, 69, 327687, 72, 327688, 73, 327689, 73, 327690, 73, 327691, 73, 327692, 73, 327693, 45, 458750, 45, 458751, 68, 393217, 66, 393218, 67, 393219, 67, 393220, 67, 393221, 68, 393223, 66, 393224, 67, 393225, 67, 393226, 67, 393227, 67, 393228, 67, 393229, 45, 524286, 45, 458765, 45, 589822, 45, 524301, 45, 655358, 45, 589837, 45, 720894, 46, 720895, 50, 655360, 50, 655361, 50, 655362, 50, 655363, 536870913, 655366, 1, 655367, 50, 655368, 50, 655369, 50, 655370, 50, 655371, 50, 655372, 50, 655373, 47, 786430, 72, 786431, 73, 720896, 73, 720897, 73, 720898, 73, 720899, 69, 720902, 72, 720903, 73, 720904, 73, 720905, 73, 720906, 73, 720907, 73, 720908, 73, 720909, 69, 851966, 66, 851967, 67, 786432, 67, 786433, 67, 786434, 67, 786435, 68, 786438, 66, 786439, 67, 786440, 67, 786441, 67, 786442, 67, 786443, 67, 786444, 67, 786445, 68 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Moveis" type="TileMap" parent="."]
+
+transform/scale = Vector2( 4, 4 )
+mode = 0
+tile_set = ExtResource( 3 )
+cell/size = Vector2( 16, 16 )
+cell/quadrant_size = 16
+cell/custom_transform = Matrix32( 1, 0, 0, 1, 0, 0 )
+cell/half_offset = 2
+cell/tile_origin = 0
+cell/y_sort = false
+collision/use_kinematic = false
+collision/friction = 1.0
+collision/bounce = 0.0
+collision/layers = 1
+collision/mask = 1
+occluder/light_mask = 1
+tile_data = IntArray( -65536, 29, 8, 94, 65544, 73, 327682, 24, 327684, 30 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="MoveisMedioY" type="TileMap" parent="."]
+
+transform/pos = Vector2( 0, 32 )
+transform/scale = Vector2( 6, 6 )
+mode = 0
+tile_set = ExtResource( 3 )
+cell/size = Vector2( 16, 16 )
+cell/quadrant_size = 16
+cell/custom_transform = Matrix32( 1, 0, 0, 1, 0, 0 )
+cell/half_offset = 2
+cell/tile_origin = 0
+cell/y_sort = false
+collision/use_kinematic = false
+collision/friction = 1.0
+collision/bounce = 0.0
+collision/layers = 1
+collision/mask = 1
+occluder/light_mask = 1
+tile_data = IntArray( -65532, 93, 4, 72, 196613, 117, 196614, 96, 196615, 115, 262149, 158, 262150, 156, 262151, 159, 327680, 86, 327681, 536871002, 327682, 87 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="MoveisMedioXY" type="TileMap" parent="."]
+
+transform/pos = Vector2( 32, 32 )
+transform/scale = Vector2( 6, 6 )
+mode = 0
+tile_set = ExtResource( 3 )
+cell/size = Vector2( 16, 16 )
+cell/quadrant_size = 16
+cell/custom_transform = Matrix32( 1, 0, 0, 1, 0, 0 )
+cell/half_offset = 2
+cell/tile_origin = 0
+cell/y_sort = false
+collision/use_kinematic = false
+collision/friction = 1.0
+collision/bounce = 0.0
+collision/layers = 1
+collision/mask = 1
+occluder/light_mask = 1
+tile_data = IntArray( 65535, 536871021, 1, 536871026, 2, 536871026, 131071, 536871021, 65538, 536871013 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="MoveisGrandes" type="TileMap" parent="."]
+
+transform/scale = Vector2( 8, 8 )
+mode = 0
+tile_set = ExtResource( 3 )
+cell/size = Vector2( 16, 16 )
+cell/quadrant_size = 16
+cell/custom_transform = Matrix32( 1, 0, 0, 1, 0, 0 )
+cell/half_offset = 2
+cell/tile_origin = 0
+cell/y_sort = false
+collision/use_kinematic = false
+collision/friction = 1.0
+collision/bounce = 0.0
+collision/layers = 1
+collision/mask = 1
+occluder/light_mask = 1
+tile_data = IntArray( 5, 80 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="personagem" parent="." instance=ExtResource( 4 )]
+
+transform/pos = Vector2( 323.396, 759.426 )
+
+[node name="Door" type="Area2D" parent="."]
+
+transform/pos = Vector2( 324.762, 745.189 )
+input/pickable = true
+shapes/0/shape = SubResource( 1 )
+shapes/0/transform = Matrix32( 1, 0, 0, 1, -6.49063, 83.0388 )
+shapes/0/trigger = false
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Door"]
+
+transform/pos = Vector2( -6.49063, 83.0388 )
+shape = SubResource( 1 )
+trigger = false
+_update_shape_index = 0
+
+[connection signal="body_enter" from="Door" to="." method="_on_Door_body_enter"]
+
+

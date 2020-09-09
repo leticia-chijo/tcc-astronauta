@@ -1,0 +1,387 @@
+[gd_scene load_steps=10 format=1]
+
+[ext_resource path="res://scripts/Candy/Win.gd" type="Script" id=1]
+[ext_resource path="res://assets/Candy/gui/f.png" type="Texture" id=2]
+[ext_resource path="res://assets/Candy/gui/replay.png" type="Texture" id=3]
+[ext_resource path="res://assets/Candy/gui/placeholder(1).png" type="Texture" id=4]
+[ext_resource path="res://assets/Candy/gui/s1.png" type="Texture" id=5]
+[ext_resource path="res://assets/Candy/gui/s2.png" type="Texture" id=6]
+[ext_resource path="res://assets/Fontes/fonteCandyorange.fnt" type="BitmapFont" id=7]
+
+[sub_resource type="Animation" id=1]
+
+resource/name = "hide"
+length = 0.5
+loop = false
+step = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("Replay:transform/pos")
+tracks/0/interp = 1
+tracks/0/imported = false
+tracks/0/keys = {
+"times": FloatArray( 0, 0.5 ),
+"transitions": FloatArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 172.876, 771.317 ), Vector2( 155.68, 1796.92 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Replay:transform/rot")
+tracks/1/interp = 1
+tracks/1/imported = false
+tracks/1/keys = {
+"times": FloatArray( 0, 0.5 ),
+"transitions": FloatArray( 1, 1 ),
+"update": 0,
+"values": [ 0.0, 0.0 ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Next:transform/pos")
+tracks/2/interp = 1
+tracks/2/imported = false
+tracks/2/keys = {
+"times": FloatArray( 0, 0.5 ),
+"transitions": FloatArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 481.372, 771.317 ), Vector2( 458.6, 1802.64 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("Next:transform/rot")
+tracks/3/interp = 1
+tracks/3/imported = false
+tracks/3/keys = {
+"times": FloatArray( 0, 0.5 ),
+"transitions": FloatArray( 1, 1 ),
+"update": 0,
+"values": [ 0.0, 0.0 ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("Star1:transform/pos")
+tracks/4/interp = 1
+tracks/4/imported = false
+tracks/4/keys = {
+"times": FloatArray( 0, 0.5 ),
+"transitions": FloatArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 259.016, 665.137 ), Vector2( 259.016, 1687.27 ) ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("Star1:transform/rot")
+tracks/5/interp = 1
+tracks/5/imported = false
+tracks/5/keys = {
+"times": FloatArray( 0, 0.5 ),
+"transitions": FloatArray( 1, 1 ),
+"update": 0,
+"values": [ 0.0, 0.0 ]
+}
+tracks/6/type = "value"
+tracks/6/path = NodePath("Star2:transform/pos")
+tracks/6/interp = 1
+tracks/6/imported = false
+tracks/6/keys = {
+"times": FloatArray( 0, 0.5 ),
+"transitions": FloatArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 538.48, 665.137 ), Vector2( 538.48, 1687.27 ) ]
+}
+tracks/7/type = "value"
+tracks/7/path = NodePath("Star2:transform/rot")
+tracks/7/interp = 1
+tracks/7/imported = false
+tracks/7/keys = {
+"times": FloatArray( 0, 0.5 ),
+"transitions": FloatArray( 1, 1 ),
+"update": 0,
+"values": [ 0.0, 0.0 ]
+}
+tracks/8/type = "value"
+tracks/8/path = NodePath("Star3:transform/pos")
+tracks/8/interp = 1
+tracks/8/imported = false
+tracks/8/keys = {
+"times": FloatArray( 0, 0.5 ),
+"transitions": FloatArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 398.156, 599.247 ), Vector2( 398.156, 1621.38 ) ]
+}
+tracks/9/type = "value"
+tracks/9/path = NodePath("Star3:transform/rot")
+tracks/9/interp = 1
+tracks/9/imported = false
+tracks/9/keys = {
+"times": FloatArray( 0, 0.5 ),
+"transitions": FloatArray( 1, 1 ),
+"update": 0,
+"values": [ 0.0, 0.0 ]
+}
+tracks/10/type = "value"
+tracks/10/path = NodePath("Bg:transform/pos")
+tracks/10/interp = 1
+tracks/10/imported = false
+tracks/10/keys = {
+"times": FloatArray( 0, 0.5 ),
+"transitions": FloatArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 400.485, 659.529 ), Vector2( 397.06, 1706.91 ) ]
+}
+tracks/11/type = "value"
+tracks/11/path = NodePath("Bg:transform/rot")
+tracks/11/interp = 1
+tracks/11/imported = false
+tracks/11/keys = {
+"times": FloatArray( 0, 0.5 ),
+"transitions": FloatArray( 1, 1 ),
+"update": 0,
+"values": [ 0.0, 0.0 ]
+}
+tracks/12/type = "value"
+tracks/12/path = NodePath("RichTextLabel:rect/pos")
+tracks/12/interp = 1
+tracks/12/imported = false
+tracks/12/keys = {
+"times": FloatArray( 0, 0.5 ),
+"transitions": FloatArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 99, 449 ), Vector2( 99, 1490 ) ]
+}
+
+[sub_resource type="Animation" id=2]
+
+resource/name = "show"
+length = 0.5
+loop = false
+step = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("Replay:transform/pos")
+tracks/0/interp = 1
+tracks/0/imported = false
+tracks/0/keys = {
+"times": FloatArray( 0, 0.5 ),
+"transitions": FloatArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 164.648, -216.882 ), Vector2( 170.986, 776.632 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Replay:transform/rot")
+tracks/1/interp = 1
+tracks/1/imported = false
+tracks/1/keys = {
+"times": FloatArray( 0, 0.5 ),
+"transitions": FloatArray( 1, 1 ),
+"update": 0,
+"values": [ 0.0, 0.0 ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Next:transform/pos")
+tracks/2/interp = 1
+tracks/2/imported = false
+tracks/2/keys = {
+"times": FloatArray( 0, 0.5 ),
+"transitions": FloatArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 480.704, -216.882 ), Vector2( 480.704, 776.632 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("Next:transform/rot")
+tracks/3/interp = 1
+tracks/3/imported = false
+tracks/3/keys = {
+"times": FloatArray( 0, 0.5 ),
+"transitions": FloatArray( 1, 1 ),
+"update": 0,
+"values": [ 0.0, 0.0 ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("Star1:transform/pos")
+tracks/4/interp = 1
+tracks/4/imported = false
+tracks/4/keys = {
+"times": FloatArray( 0, 0.5 ),
+"transitions": FloatArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 259.016, -315.702 ), Vector2( 259.016, 665.137 ) ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("Star1:transform/rot")
+tracks/5/interp = 1
+tracks/5/imported = false
+tracks/5/keys = {
+"times": FloatArray( 0, 0.5 ),
+"transitions": FloatArray( 1, 1 ),
+"update": 0,
+"values": [ 0.0, 0.0 ]
+}
+tracks/6/type = "value"
+tracks/6/path = NodePath("Star2:transform/pos")
+tracks/6/interp = 1
+tracks/6/imported = false
+tracks/6/keys = {
+"times": FloatArray( 0, 0.5 ),
+"transitions": FloatArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 538.48, -315.702 ), Vector2( 538.48, 665.137 ) ]
+}
+tracks/7/type = "value"
+tracks/7/path = NodePath("Star2:transform/rot")
+tracks/7/interp = 1
+tracks/7/imported = false
+tracks/7/keys = {
+"times": FloatArray( 0, 0.5 ),
+"transitions": FloatArray( 1, 1 ),
+"update": 0,
+"values": [ 0.0, 0.0 ]
+}
+tracks/8/type = "value"
+tracks/8/path = NodePath("Star3:transform/pos")
+tracks/8/interp = 1
+tracks/8/imported = false
+tracks/8/keys = {
+"times": FloatArray( 0, 0.5 ),
+"transitions": FloatArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 398.156, -381.592 ), Vector2( 398.156, 599.247 ) ]
+}
+tracks/9/type = "value"
+tracks/9/path = NodePath("Star3:transform/rot")
+tracks/9/interp = 1
+tracks/9/imported = false
+tracks/9/keys = {
+"times": FloatArray( 0, 0.5 ),
+"transitions": FloatArray( 1, 1 ),
+"update": 0,
+"values": [ 0.0, 0.0 ]
+}
+tracks/10/type = "value"
+tracks/10/path = NodePath("Bg:transform/pos")
+tracks/10/interp = 1
+tracks/10/imported = false
+tracks/10/keys = {
+"times": FloatArray( 0, 0.5 ),
+"transitions": FloatArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 397.06, -320.954 ), Vector2( 403.398, 672.56 ) ]
+}
+tracks/11/type = "value"
+tracks/11/path = NodePath("Bg:transform/rot")
+tracks/11/interp = 1
+tracks/11/imported = false
+tracks/11/keys = {
+"times": FloatArray( 0, 0.5 ),
+"transitions": FloatArray( 1, 1 ),
+"update": 0,
+"values": [ 0.0, 0.0 ]
+}
+tracks/12/type = "value"
+tracks/12/path = NodePath("RichTextLabel:rect/pos")
+tracks/12/interp = 1
+tracks/12/imported = false
+tracks/12/keys = {
+"times": FloatArray( 0, 0.5 ),
+"transitions": FloatArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 97, -539 ), Vector2( 103, 450 ) ]
+}
+
+[node name="Win" type="Node2D"]
+
+process/pause_mode = 2
+script/script = ExtResource( 1 )
+starOn = "res://assets/Candy/gui/s1.png"
+
+[node name="ColorFrame" type="ColorFrame" parent="."]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 0.0
+margin/top = 3.0
+margin/right = 800.0
+margin/bottom = 1283.0
+color = Color( 1, 1, 1, 0.470588 )
+
+[node name="Bg" type="Sprite" parent="."]
+
+transform/pos = Vector2( 400.485, 659.529 )
+transform/scale = Vector2( 0.477587, 0.573725 )
+texture = ExtResource( 2 )
+
+[node name="Replay" type="TouchScreenButton" parent="."]
+
+transform/pos = Vector2( 172.876, 771.317 )
+transform/scale = Vector2( 0.5, 0.5 )
+normal = ExtResource( 3 )
+pressed = null
+bitmask = null
+shape = null
+shape_centered = true
+shape_visible = true
+passby_press = false
+action = ""
+visibility_mode = 0
+
+[node name="Next" type="TouchScreenButton" parent="."]
+
+transform/pos = Vector2( 481.372, 771.317 )
+transform/scale = Vector2( 0.5, 0.5 )
+normal = ExtResource( 4 )
+pressed = null
+bitmask = null
+shape = null
+shape_centered = true
+shape_visible = true
+passby_press = false
+action = ""
+visibility_mode = 0
+
+[node name="Star1" type="Sprite" parent="."]
+
+transform/pos = Vector2( 259.016, 665.137 )
+transform/scale = Vector2( 0.35, 0.35 )
+texture = ExtResource( 5 )
+
+[node name="Star2" type="Sprite" parent="."]
+
+transform/pos = Vector2( 538.48, 665.137 )
+transform/scale = Vector2( 0.35, 0.35 )
+texture = ExtResource( 6 )
+
+[node name="Star3" type="Sprite" parent="."]
+
+transform/pos = Vector2( 398.156, 599.247 )
+transform/scale = Vector2( 0.35, 0.35 )
+texture = ExtResource( 6 )
+
+[node name="Anim" type="AnimationPlayer" parent="."]
+
+playback/process_mode = 1
+playback/default_blend_time = 0.0
+root/root = NodePath("..")
+anims/hide = SubResource( 1 )
+anims/show = SubResource( 2 )
+playback/active = true
+playback/speed = 1.0
+blend_times = [  ]
+autoplay = "show"
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 99.0
+margin/top = 449.0
+margin/right = 736.0
+margin/bottom = 575.0
+custom_fonts/normal_font = ExtResource( 7 )
+bbcode/enabled = false
+bbcode/bbcode = "Você ganhou"
+visible_characters = -1
+percent_visible = 1.0
+
+[connection signal="pressed" from="Replay" to="." method="_on_Replay_pressed"]
+
+[connection signal="pressed" from="Next" to="." method="_on_Next_pressed"]
+
+

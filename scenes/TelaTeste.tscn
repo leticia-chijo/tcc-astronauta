@@ -1,0 +1,13 @@
+[gd_scene load_steps=2 format=1]
+
+[ext_resource path="res://assets/SuperMario.png" type="Texture" id=1]
+
+[node name="TelaTeste" type="Node"]
+
+[node name="Sprite" type="Sprite" parent="."]
+
+transform/pos = Vector2( 431.186, 633.294 )
+transform/scale = Vector2( 15.1766, 22.4076 )
+texture = ExtResource( 1 )
+
+

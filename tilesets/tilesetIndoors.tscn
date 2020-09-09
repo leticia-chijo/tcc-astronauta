@@ -1,0 +1,1448 @@
+[gd_scene load_steps=2 format=1]
+
+[ext_resource path="res://assets/TempMainMenu/Tiles/tilesWilderness.png" type="Texture" id=1]
+
+
+
+[node name="tilesetIndoors" type="Node2D"]
+
+[node name="furniture1" type="Sprite" parent="."]
+
+transform/scale = Vector2( 4, 4 )
+texture = ExtResource( 1 )
+centered = false
+region = true
+region_rect = Rect2( 170, 0, 16, 16 )
+
+[node name="furniture23" type="Sprite" parent="."]
+
+transform/pos = Vector2( 0, 64 )
+transform/scale = Vector2( 4, 4 )
+texture = ExtResource( 1 )
+centered = false
+region = true
+region_rect = Rect2( 170, 17, 16, 16 )
+
+[node name="furniture45" type="Sprite" parent="."]
+
+transform/pos = Vector2( 0, 128 )
+transform/scale = Vector2( 4, 4 )
+texture = ExtResource( 1 )
+centered = false
+region = true
+region_rect = Rect2( 170, 34, 16, 16 )
+
+[node name="furniture67" type="Sprite" parent="."]
+
+transform/pos = Vector2( 0, 192 )
+transform/scale = Vector2( 4, 4 )
+texture = ExtResource( 1 )
+centered = false
+region = true
+region_rect = Rect2( 170, 51, 16, 16 )
+
+[node name="furniture89" type="Sprite" parent="."]
+
+transform/pos = Vector2( 0, 256 )
+transform/scale = Vector2( 4, 4 )
+texture = ExtResource( 1 )
+centered = false
+region = true
+region_rect = Rect2( 170, 68, 16, 16 )
+
+[node name="furniture111" type="Sprite" parent="."]
+
+transform/pos = Vector2( 0, 320 )
+transform/scale = Vector2( 4, 4 )
+texture = ExtResource( 1 )
+centered = false
+region = true
+region_rect = Rect2( 170, 85, 16, 16 )
+
+[node name="furniture129" type="Sprite" parent="."]
+
+transform/pos = Vector2( 0, 384 )
+transform/scale = Vector2( 4, 4 )
+texture = ExtResource( 1 )
+centered = false
+region = true
+region_rect = Rect2( 170, 102, 16, 16 )
+
+[node name="furniture130" type="Sprite" parent="."]
+
+transform/pos = Vector2( 64, 384 )
+transform/scale = Vector2( 4, 4 )
+texture = ExtResource( 1 )
+centered = false
+region = true
+region_rect = Rect2( 187, 102, 16, 16 )
+
+[node name="furniture131" type="Sprite" parent="."]
+
+transform/pos = Vector2( 128, 384 )
+transform/scale = Vector2( 4, 4 )
+texture = ExtResource( 1 )
+centered = false
+region = true
+region_rect = Rect2( 204, 102, 16, 16 )
+
+[node name="furniture132" type="Sprite" parent="."]
+
+transform/pos = Vector2( 192, 384 )
+transform/scale = Vector2( 4, 4 )
+texture = ExtResource( 1 )
+centered = false
+region = true
+region_rect = Rect2( 221, 102, 16, 16 )
+
+[node name="furniture133" type="Sprite" parent="."]
+
+transform/pos = Vector2( 256, 384 )
+transform/scale = Vector2( 4, 4 )
+texture = ExtResource( 1 )
+centered = false
+region = true
+region_rect = Rect2( 238, 102, 16, 16 )
+
+[node name="furniture134" type="Sprite" parent="."]
+
+transform/pos = Vector2( 320, 384 )
+transform/scale = Vector2( 4, 4 )
+texture = ExtResource( 1 )
+centered = false
+region = true
+region_rect = Rect2( 255, 102, 16, 16 )
+
+[node name="furniture135" type="Sprite" parent="."]
+
+transform/pos = Vector2( 384, 384 )
+transform/scale = Vector2( 4, 4 )
+texture = ExtResource( 1 )
+centered = false
+region = true
+region_rect = Rect2( 272, 102, 16, 16 )
+
+[node name="furniture136" type="Sprite" parent="."]
+
+transform/pos = Vector2( 448, 384 )
+transform/scale = Vector2( 4, 4 )
+texture = ExtResource( 1 )
+centered = false
+region = true
+region_rect = Rect2( 289, 102, 16, 16 )
+
+[node name="furniture137" type="Sprite" parent="."]
+
+transform/pos = Vector2( 512, 384 )
+transform/scale = Vector2( 4, 4 )
+texture = ExtResource( 1 )
+centered = false
+region = true
+region_rect = Rect2( 306, 102, 16, 16 )
+
+[node name="furniture138" type="Sprite" parent="."]
+
+transform/pos = Vector2( 576, 384 )
+transform/scale = Vector2( 4, 4 )
+texture = ExtResource( 1 )
+centered = false
+region = true
+region_rect = Rect2( 323, 102, 16, 16 )
+
+[node name="furniture139" type="Sprite" parent="."]
+
+transform/pos = Vector2( 640, 384 )
+transform/scale = Vector2( 4, 4 )
+texture = ExtResource( 1 )
+centered = false
+region = true
+region_rect = Rect2( 340, 102, 16, 16 )
+
+[node name="furniture140" type="Sprite" parent="."]
+
+transform/pos = Vector2( 704, 384 )
+transform/scale = Vector2( 4, 4 )
+texture = ExtResource( 1 )
+centered = false
+region = true
+region_rect = Rect2( 357, 102, 16, 16 )
+
+[node name="furniture141" type="Sprite" parent="."]
+
+transform/pos = Vector2( 768, 384 )
+transform/scale = Vector2( 4, 4 )
+texture = ExtResource( 1 )
+centered = false
+region = true
+region_rect = Rect2( 374, 102, 16, 16 )
+
+[node name="furniture142" type="Sprite" parent="."]
+
+transform/pos = Vector2( 832, 384 )
+transform/scale = Vector2( 4, 4 )
+texture = ExtResource( 1 )
+centered = false
+region = true
+region_rect = Rect2( 391, 102, 16, 16 )
+
+[node name="furniture147" type="Sprite" parent="."]
+
+transform/pos = Vector2( 0, 448 )
+transform/scale = Vector2( 4, 4 )
+texture = ExtResource( 1 )
+centered = false
+region = true
+region_rect = Rect2( 391, 119, 16, 16 )
+
+[node name="furniture151" type="Sprite" parent="."]
+
+transform/pos = Vector2( 0, 512 )
+transform/scale = Vector2( 4, 4 )
+texture = ExtResource( 1 )
+centered = false
+region = true
+region_rect = Rect2( 391, 136, 16, 16 )
+
+[node name="furniture152" type="Sprite" parent="."]
+
+transform/pos = Vector2( 64, 512 )
+transform/scale = Vector2( 4, 4 )
+texture = ExtResource( 1 )
+centered = false
+region = true
+region_rect = Rect2( 408, 136, 16, 16 )
+
+[node name="furniture153" type="Sprite" parent="."]
+
+transform/pos = Vector2( 128, 512 )
+transform/scale = Vector2( 4, 4 )
+texture = ExtResource( 1 )
+centered = false
+region = true
+region_rect = Rect2( 425, 136, 16, 16 )
+
+[node name="furniture154" type="Sprite" parent="."]
+
+transform/pos = Vector2( 192, 512 )
+transform/scale = Vector2( 4, 4 )
+texture = ExtResource( 1 )
+centered = false
+region = true
+region_rect = Rect2( 442, 136, 16, 16 )
+
+[node name="furniture155" type="Sprite" parent="."]
+
+transform/pos = Vector2( 320, 448 )
+transform/scale = Vector2( 4, 4 )
+texture = ExtResource( 1 )
+centered = false
+region = true
+region_rect = Rect2( 493, 170, 16, 16 )
+
+[node name="furniture158" type="Sprite" parent="."]
+
+transform/pos = Vector2( 320, 512 )
+transform/scale = Vector2( 4, 4 )
+texture = ExtResource( 1 )
+centered = false
+region = true
+region_rect = Rect2( 493, 187, 16, 16 )
+
+[node name="furniture159" type="Sprite" parent="."]
+
+transform/pos = Vector2( 384, 512 )
+transform/scale = Vector2( 4, 4 )
+texture = ExtResource( 1 )
+centered = false
+region = true
+region_rect = Rect2( 510, 187, 16, 16 )
+
+[node name="furniture160" type="Sprite" parent="."]
+
+transform/pos = Vector2( 448, 512 )
+transform/scale = Vector2( 4, 4 )
+texture = ExtResource( 1 )
+centered = false
+region = true
+region_rect = Rect2( 527, 187, 16, 16 )
+
+[node name="furniture156" type="Sprite" parent="."]
+
+transform/pos = Vector2( 384, 448 )
+transform/scale = Vector2( 4, 4 )
+texture = ExtResource( 1 )
+centered = false
+region = true
+region_rect = Rect2( 510, 170, 16, 16 )
+
+[node name="furniture157" type="Sprite" parent="."]
+
+transform/pos = Vector2( 448, 448 )
+transform/scale = Vector2( 4, 4 )
+texture = ExtResource( 1 )
+centered = false
+region = true
+region_rect = Rect2( 527, 170, 16, 16 )
+
+[node name="furniture148" type="Sprite" parent="."]
+
+transform/pos = Vector2( 64, 448 )
+transform/scale = Vector2( 4, 4 )
+texture = ExtResource( 1 )
+centered = false
+region = true
+region_rect = Rect2( 408, 119, 16, 16 )
+
+[node name="furniture149" type="Sprite" parent="."]
+
+transform/pos = Vector2( 128, 448 )
+transform/scale = Vector2( 4, 4 )
+texture = ExtResource( 1 )
+centered = false
+region = true
+region_rect = Rect2( 425, 119, 16, 16 )
+
+[node name="furniture150" type="Sprite" parent="."]
+
+transform/pos = Vector2( 192, 448 )
+transform/scale = Vector2( 4, 4 )
+texture = ExtResource( 1 )
+centered = false
+region = true
+region_rect = Rect2( 442, 119, 16, 16 )
+
+[node name="furniture143" type="Sprite" parent="."]
+
+transform/pos = Vector2( 896, 384 )
+transform/scale = Vector2( 4, 4 )
+texture = ExtResource( 1 )
+centered = false
+region = true
+region_rect = Rect2( 408, 102, 16, 16 )
+
+[node name="furniture144" type="Sprite" parent="."]
+
+transform/pos = Vector2( 960, 384 )
+transform/scale = Vector2( 4, 4 )
+texture = ExtResource( 1 )
+centered = false
+region = true
+region_rect = Rect2( 425, 102, 16, 16 )
+
+[node name="furniture145" type="Sprite" parent="."]
+
+transform/pos = Vector2( 1024, 384 )
+transform/scale = Vector2( 4, 4 )
+texture = ExtResource( 1 )
+centered = false
+region = true
+region_rect = Rect2( 442, 102, 16, 16 )
+
+[node name="furniture146" type="Sprite" parent="."]
+
+transform/pos = Vector2( 1088, 384 )
+transform/scale = Vector2( 4, 4 )
+texture = ExtResource( 1 )
+centered = false
+region = true
+region_rect = Rect2( 459, 102, 16, 16 )
+
+[node name="furniture112" type="Sprite" parent="."]
+
+transform/pos = Vector2( 64, 320 )
+transform/scale = Vector2( 4, 4 )
+texture = ExtResource( 1 )
+centered = false
+region = true
+region_rect = Rect2( 187, 85, 16, 16 )
+
+[node name="furniture113" type="Sprite" parent="."]
+
+transform/pos = Vector2( 128, 320 )
+transform/scale = Vector2( 4, 4 )
+texture = ExtResource( 1 )
+centered = false
+region = true
+region_rect = Rect2( 204, 85, 16, 16 )
+
+[node name="furniture114" type="Sprite" parent="."]
+
+transform/pos = Vector2( 192, 320 )
+transform/scale = Vector2( 4, 4 )
+texture = ExtResource( 1 )
+centered = false
+region = true
+region_rect = Rect2( 221, 85, 16, 16 )
+
+[node name="furniture115" type="Sprite" parent="."]
+
+transform/pos = Vector2( 256, 320 )
+transform/scale = Vector2( 4, 4 )
+texture = ExtResource( 1 )
+centered = false
+region = true
+region_rect = Rect2( 238, 85, 16, 16 )
+
+[node name="furniture116" type="Sprite" parent="."]
+
+transform/pos = Vector2( 320, 320 )
+transform/scale = Vector2( 4, 4 )
+texture = ExtResource( 1 )
+centered = false
+region = true
+region_rect = Rect2( 255, 85, 16, 16 )
+
+[node name="furniture117" type="Sprite" parent="."]
+
+transform/pos = Vector2( 384, 320 )
+transform/scale = Vector2( 4, 4 )
+texture = ExtResource( 1 )
+centered = false
+region = true
+region_rect = Rect2( 272, 85, 16, 16 )
+
+[node name="furniture118" type="Sprite" parent="."]
+
+transform/pos = Vector2( 448, 320 )
+transform/scale = Vector2( 4, 4 )
+texture = ExtResource( 1 )
+centered = false
+region = true
+region_rect = Rect2( 289, 85, 16, 16 )
+
+[node name="furniture119" type="Sprite" parent="."]
+
+transform/pos = Vector2( 512, 320 )
+transform/scale = Vector2( 4, 4 )
+texture = ExtResource( 1 )
+centered = false
+region = true
+region_rect = Rect2( 306, 85, 16, 16 )
+
+[node name="furniture120" type="Sprite" parent="."]
+
+transform/pos = Vector2( 576, 320 )
+transform/scale = Vector2( 4, 4 )
+texture = ExtResource( 1 )
+centered = false
+region = true
+region_rect = Rect2( 323, 85, 16, 16 )
+
+[node name="furniture121" type="Sprite" parent="."]
+
+transform/pos = Vector2( 640, 320 )
+transform/scale = Vector2( 4, 4 )
+texture = ExtResource( 1 )
+centered = false
+region = true
+region_rect = Rect2( 340, 85, 16, 16 )
+
+[node name="furniture122" type="Sprite" parent="."]
+
+transform/pos = Vector2( 704, 320 )
+transform/scale = Vector2( 4, 4 )
+texture = ExtResource( 1 )
+centered = false
+region = true
+region_rect = Rect2( 357, 85, 16, 16 )
+
+[node name="furniture123" type="Sprite" parent="."]
+
+transform/pos = Vector2( 768, 320 )
+transform/scale = Vector2( 4, 4 )
+texture = ExtResource( 1 )
+centered = false
+region = true
+region_rect = Rect2( 374, 85, 16, 16 )
+
+[node name="furniture124" type="Sprite" parent="."]
+
+transform/pos = Vector2( 832, 320 )
+transform/scale = Vector2( 4, 4 )
+texture = ExtResource( 1 )
+centered = false
+region = true
+region_rect = Rect2( 391, 85, 16, 16 )
+
+[node name="furniture125" type="Sprite" parent="."]
+
+transform/pos = Vector2( 896, 320 )
+transform/scale = Vector2( 4, 4 )
+texture = ExtResource( 1 )
+centered = false
+region = true
+region_rect = Rect2( 408, 85, 16, 16 )
+
+[node name="furniture126" type="Sprite" parent="."]
+
+transform/pos = Vector2( 960, 320 )
+transform/scale = Vector2( 4, 4 )
+texture = ExtResource( 1 )
+centered = false
+region = true
+region_rect = Rect2( 425, 85, 16, 16 )
+
+[node name="furniture127" type="Sprite" parent="."]
+
+transform/pos = Vector2( 1024, 320 )
+transform/scale = Vector2( 4, 4 )
+texture = ExtResource( 1 )
+centered = false
+region = true
+region_rect = Rect2( 442, 85, 16, 16 )
+
+[node name="furniture128" type="Sprite" parent="."]
+
+transform/pos = Vector2( 1088, 320 )
+transform/scale = Vector2( 4, 4 )
+texture = ExtResource( 1 )
+centered = false
+region = true
+region_rect = Rect2( 459, 85, 16, 16 )
+
+[node name="furniture90" type="Sprite" parent="."]
+
+transform/pos = Vector2( 64, 256 )
+transform/scale = Vector2( 4, 4 )
+texture = ExtResource( 1 )
+centered = false
+region = true
+region_rect = Rect2( 187, 68, 16, 16 )
+
+[node name="furniture91" type="Sprite" parent="."]
+
+transform/pos = Vector2( 128, 256 )
+transform/scale = Vector2( 4, 4 )
+texture = ExtResource( 1 )
+centered = false
+region = true
+region_rect = Rect2( 204, 68, 16, 16 )
+
+[node name="furniture92" type="Sprite" parent="."]
+
+transform/pos = Vector2( 192, 256 )
+transform/scale = Vector2( 4, 4 )
+texture = ExtResource( 1 )
+centered = false
+region = true
+region_rect = Rect2( 221, 68, 16, 16 )
+
+[node name="furniture93" type="Sprite" parent="."]
+
+transform/pos = Vector2( 256, 256 )
+transform/scale = Vector2( 4, 4 )
+texture = ExtResource( 1 )
+centered = false
+region = true
+region_rect = Rect2( 238, 68, 16, 16 )
+
+[node name="furniture94" type="Sprite" parent="."]
+
+transform/pos = Vector2( 320, 256 )
+transform/scale = Vector2( 4, 4 )
+texture = ExtResource( 1 )
+centered = false
+region = true
+region_rect = Rect2( 255, 68, 16, 16 )
+
+[node name="furniture95" type="Sprite" parent="."]
+
+transform/pos = Vector2( 384, 256 )
+transform/scale = Vector2( 4, 4 )
+texture = ExtResource( 1 )
+centered = false
+region = true
+region_rect = Rect2( 272, 68, 16, 16 )
+
+[node name="furniture96" type="Sprite" parent="."]
+
+transform/pos = Vector2( 448, 256 )
+transform/scale = Vector2( 4, 4 )
+texture = ExtResource( 1 )
+centered = false
+region = true
+region_rect = Rect2( 289, 68, 16, 16 )
+
+[node name="furniture97" type="Sprite" parent="."]
+
+transform/pos = Vector2( 512, 256 )
+transform/scale = Vector2( 4, 4 )
+texture = ExtResource( 1 )
+centered = false
+region = true
+region_rect = Rect2( 306, 68, 16, 16 )
+
+[node name="furniture98" type="Sprite" parent="."]
+
+transform/pos = Vector2( 576, 256 )
+transform/scale = Vector2( 4, 4 )
+texture = ExtResource( 1 )
+centered = false
+region = true
+region_rect = Rect2( 323, 68, 16, 16 )
+
+[node name="furniture99" type="Sprite" parent="."]
+
+transform/pos = Vector2( 640, 256 )
+transform/scale = Vector2( 4, 4 )
+texture = ExtResource( 1 )
+centered = false
+region = true
+region_rect = Rect2( 340, 68, 16, 16 )
+
+[node name="furniture100" type="Sprite" parent="."]
+
+transform/pos = Vector2( 704, 256 )
+transform/scale = Vector2( 4, 4 )
+texture = ExtResource( 1 )
+centered = false
+region = true
+region_rect = Rect2( 357, 68, 16, 16 )
+
+[node name="furniture101" type="Sprite" parent="."]
+
+transform/pos = Vector2( 768, 256 )
+transform/scale = Vector2( 4, 4 )
+texture = ExtResource( 1 )
+centered = false
+region = true
+region_rect = Rect2( 374, 68, 16, 16 )
+
+[node name="furniture102" type="Sprite" parent="."]
+
+transform/pos = Vector2( 832, 256 )
+transform/scale = Vector2( 4, 4 )
+texture = ExtResource( 1 )
+centered = false
+region = true
+region_rect = Rect2( 391, 68, 16, 16 )
+
+[node name="furniture103" type="Sprite" parent="."]
+
+transform/pos = Vector2( 896, 256 )
+transform/scale = Vector2( 4, 4 )
+texture = ExtResource( 1 )
+centered = false
+region = true
+region_rect = Rect2( 408, 68, 16, 16 )
+
+[node name="furniture104" type="Sprite" parent="."]
+
+transform/pos = Vector2( 960, 256 )
+transform/scale = Vector2( 4, 4 )
+texture = ExtResource( 1 )
+centered = false
+region = true
+region_rect = Rect2( 425, 68, 16, 16 )
+
+[node name="furniture105" type="Sprite" parent="."]
+
+transform/pos = Vector2( 1024, 256 )
+transform/scale = Vector2( 4, 4 )
+texture = ExtResource( 1 )
+centered = false
+region = true
+region_rect = Rect2( 442, 68, 16, 16 )
+
+[node name="furniture106" type="Sprite" parent="."]
+
+transform/pos = Vector2( 1088, 256 )
+transform/scale = Vector2( 4, 4 )
+texture = ExtResource( 1 )
+centered = false
+region = true
+region_rect = Rect2( 459, 68, 16, 16 )
+
+[node name="furniture107" type="Sprite" parent="."]
+
+transform/pos = Vector2( 1152, 256 )
+transform/scale = Vector2( 4, 4 )
+texture = ExtResource( 1 )
+centered = false
+region = true
+region_rect = Rect2( 476, 68, 16, 16 )
+
+[node name="furniture108" type="Sprite" parent="."]
+
+transform/pos = Vector2( 1216, 256 )
+transform/scale = Vector2( 4, 4 )
+texture = ExtResource( 1 )
+centered = false
+region = true
+region_rect = Rect2( 493, 68, 16, 16 )
+
+[node name="furniture109" type="Sprite" parent="."]
+
+transform/pos = Vector2( 1280, 256 )
+transform/scale = Vector2( 4, 4 )
+texture = ExtResource( 1 )
+centered = false
+region = true
+region_rect = Rect2( 510, 68, 16, 16 )
+
+[node name="furniture110" type="Sprite" parent="."]
+
+transform/pos = Vector2( 1344, 256 )
+transform/scale = Vector2( 4, 4 )
+texture = ExtResource( 1 )
+centered = false
+region = true
+region_rect = Rect2( 527, 68, 16, 16 )
+
+[node name="furniture68" type="Sprite" parent="."]
+
+transform/pos = Vector2( 64, 192 )
+transform/scale = Vector2( 4, 4 )
+texture = ExtResource( 1 )
+centered = false
+region = true
+region_rect = Rect2( 187, 51, 16, 16 )
+
+[node name="furniture69" type="Sprite" parent="."]
+
+transform/pos = Vector2( 128, 192 )
+transform/scale = Vector2( 4, 4 )
+texture = ExtResource( 1 )
+centered = false
+region = true
+region_rect = Rect2( 204, 51, 16, 16 )
+
+[node name="furniture70" type="Sprite" parent="."]
+
+transform/pos = Vector2( 192, 192 )
+transform/scale = Vector2( 4, 4 )
+texture = ExtResource( 1 )
+centered = false
+region = true
+region_rect = Rect2( 221, 51, 16, 16 )
+
+[node name="furniture71" type="Sprite" parent="."]
+
+transform/pos = Vector2( 256, 192 )
+transform/scale = Vector2( 4, 4 )
+texture = ExtResource( 1 )
+centered = false
+region = true
+region_rect = Rect2( 238, 51, 16, 16 )
+
+[node name="furniture72" type="Sprite" parent="."]
+
+transform/pos = Vector2( 320, 192 )
+transform/scale = Vector2( 4, 4 )
+texture = ExtResource( 1 )
+centered = false
+region = true
+region_rect = Rect2( 255, 51, 16, 16 )
+
+[node name="furniture73" type="Sprite" parent="."]
+
+transform/pos = Vector2( 384, 192 )
+transform/scale = Vector2( 4, 4 )
+texture = ExtResource( 1 )
+centered = false
+region = true
+region_rect = Rect2( 272, 51, 16, 16 )
+
+[node name="furniture74" type="Sprite" parent="."]
+
+transform/pos = Vector2( 448, 192 )
+transform/scale = Vector2( 4, 4 )
+texture = ExtResource( 1 )
+centered = false
+region = true
+region_rect = Rect2( 289, 51, 16, 16 )
+
+[node name="furniture75" type="Sprite" parent="."]
+
+transform/pos = Vector2( 512, 192 )
+transform/scale = Vector2( 4, 4 )
+texture = ExtResource( 1 )
+centered = false
+region = true
+region_rect = Rect2( 306, 51, 16, 16 )
+
+[node name="furniture76" type="Sprite" parent="."]
+
+transform/pos = Vector2( 576, 192 )
+transform/scale = Vector2( 4, 4 )
+texture = ExtResource( 1 )
+centered = false
+region = true
+region_rect = Rect2( 323, 51, 16, 16 )
+
+[node name="furniture77" type="Sprite" parent="."]
+
+transform/pos = Vector2( 640, 192 )
+transform/scale = Vector2( 4, 4 )
+texture = ExtResource( 1 )
+centered = false
+region = true
+region_rect = Rect2( 340, 51, 16, 16 )
+
+[node name="furniture78" type="Sprite" parent="."]
+
+transform/pos = Vector2( 704, 192 )
+transform/scale = Vector2( 4, 4 )
+texture = ExtResource( 1 )
+centered = false
+region = true
+region_rect = Rect2( 357, 51, 16, 16 )
+
+[node name="furniture79" type="Sprite" parent="."]
+
+transform/pos = Vector2( 768, 192 )
+transform/scale = Vector2( 4, 4 )
+texture = ExtResource( 1 )
+centered = false
+region = true
+region_rect = Rect2( 374, 51, 16, 16 )
+
+[node name="furniture80" type="Sprite" parent="."]
+
+transform/pos = Vector2( 832, 192 )
+transform/scale = Vector2( 4, 4 )
+texture = ExtResource( 1 )
+centered = false
+region = true
+region_rect = Rect2( 391, 51, 16, 16 )
+
+[node name="furniture81" type="Sprite" parent="."]
+
+transform/pos = Vector2( 896, 192 )
+transform/scale = Vector2( 4, 4 )
+texture = ExtResource( 1 )
+centered = false
+region = true
+region_rect = Rect2( 408, 51, 16, 16 )
+
+[node name="furniture82" type="Sprite" parent="."]
+
+transform/pos = Vector2( 960, 192 )
+transform/scale = Vector2( 4, 4 )
+texture = ExtResource( 1 )
+centered = false
+region = true
+region_rect = Rect2( 425, 51, 16, 16 )
+
+[node name="furniture83" type="Sprite" parent="."]
+
+transform/pos = Vector2( 1024, 192 )
+transform/scale = Vector2( 4, 4 )
+texture = ExtResource( 1 )
+centered = false
+region = true
+region_rect = Rect2( 442, 51, 16, 16 )
+
+[node name="furniture84" type="Sprite" parent="."]
+
+transform/pos = Vector2( 1088, 192 )
+transform/scale = Vector2( 4, 4 )
+texture = ExtResource( 1 )
+centered = false
+region = true
+region_rect = Rect2( 459, 51, 16, 16 )
+
+[node name="furniture85" type="Sprite" parent="."]
+
+transform/pos = Vector2( 1152, 192 )
+transform/scale = Vector2( 4, 4 )
+texture = ExtResource( 1 )
+centered = false
+region = true
+region_rect = Rect2( 476, 51, 16, 16 )
+
+[node name="furniture86" type="Sprite" parent="."]
+
+transform/pos = Vector2( 1216, 192 )
+transform/scale = Vector2( 4, 4 )
+texture = ExtResource( 1 )
+centered = false
+region = true
+region_rect = Rect2( 493, 51, 16, 16 )
+
+[node name="furniture87" type="Sprite" parent="."]
+
+transform/pos = Vector2( 1280, 192 )
+transform/scale = Vector2( 4, 4 )
+texture = ExtResource( 1 )
+centered = false
+region = true
+region_rect = Rect2( 510, 51, 16, 16 )
+
+[node name="furniture88" type="Sprite" parent="."]
+
+transform/pos = Vector2( 1344, 192 )
+transform/scale = Vector2( 4, 4 )
+texture = ExtResource( 1 )
+centered = false
+region = true
+region_rect = Rect2( 527, 51, 16, 16 )
+
+[node name="furniture46" type="Sprite" parent="."]
+
+transform/pos = Vector2( 64, 128 )
+transform/scale = Vector2( 4, 4 )
+texture = ExtResource( 1 )
+centered = false
+region = true
+region_rect = Rect2( 187, 34, 16, 16 )
+
+[node name="furniture47" type="Sprite" parent="."]
+
+transform/pos = Vector2( 128, 128 )
+transform/scale = Vector2( 4, 4 )
+texture = ExtResource( 1 )
+centered = false
+region = true
+region_rect = Rect2( 204, 34, 16, 16 )
+
+[node name="furniture48" type="Sprite" parent="."]
+
+transform/pos = Vector2( 192, 128 )
+transform/scale = Vector2( 4, 4 )
+texture = ExtResource( 1 )
+centered = false
+region = true
+region_rect = Rect2( 221, 34, 16, 16 )
+
+[node name="furniture49" type="Sprite" parent="."]
+
+transform/pos = Vector2( 256, 128 )
+transform/scale = Vector2( 4, 4 )
+texture = ExtResource( 1 )
+centered = false
+region = true
+region_rect = Rect2( 238, 34, 16, 16 )
+
+[node name="furniture50" type="Sprite" parent="."]
+
+transform/pos = Vector2( 320, 128 )
+transform/scale = Vector2( 4, 4 )
+texture = ExtResource( 1 )
+centered = false
+region = true
+region_rect = Rect2( 255, 34, 16, 16 )
+
+[node name="furniture51" type="Sprite" parent="."]
+
+transform/pos = Vector2( 384, 128 )
+transform/scale = Vector2( 4, 4 )
+texture = ExtResource( 1 )
+centered = false
+region = true
+region_rect = Rect2( 272, 34, 16, 16 )
+
+[node name="furniture52" type="Sprite" parent="."]
+
+transform/pos = Vector2( 448, 128 )
+transform/scale = Vector2( 4, 4 )
+texture = ExtResource( 1 )
+centered = false
+region = true
+region_rect = Rect2( 289, 34, 16, 16 )
+
+[node name="furniture53" type="Sprite" parent="."]
+
+transform/pos = Vector2( 512, 128 )
+transform/scale = Vector2( 4, 4 )
+texture = ExtResource( 1 )
+centered = false
+region = true
+region_rect = Rect2( 306, 34, 16, 16 )
+
+[node name="furniture54" type="Sprite" parent="."]
+
+transform/pos = Vector2( 576, 128 )
+transform/scale = Vector2( 4, 4 )
+texture = ExtResource( 1 )
+centered = false
+region = true
+region_rect = Rect2( 323, 34, 16, 16 )
+
+[node name="furniture55" type="Sprite" parent="."]
+
+transform/pos = Vector2( 640, 128 )
+transform/scale = Vector2( 4, 4 )
+texture = ExtResource( 1 )
+centered = false
+region = true
+region_rect = Rect2( 340, 34, 16, 16 )
+
+[node name="furniture56" type="Sprite" parent="."]
+
+transform/pos = Vector2( 704, 128 )
+transform/scale = Vector2( 4, 4 )
+texture = ExtResource( 1 )
+centered = false
+region = true
+region_rect = Rect2( 357, 34, 16, 16 )
+
+[node name="furniture57" type="Sprite" parent="."]
+
+transform/pos = Vector2( 768, 128 )
+transform/scale = Vector2( 4, 4 )
+texture = ExtResource( 1 )
+centered = false
+region = true
+region_rect = Rect2( 374, 34, 16, 16 )
+
+[node name="furniture58" type="Sprite" parent="."]
+
+transform/pos = Vector2( 832, 128 )
+transform/scale = Vector2( 4, 4 )
+texture = ExtResource( 1 )
+centered = false
+region = true
+region_rect = Rect2( 391, 34, 16, 16 )
+
+[node name="furniture59" type="Sprite" parent="."]
+
+transform/pos = Vector2( 896, 128 )
+transform/scale = Vector2( 4, 4 )
+texture = ExtResource( 1 )
+centered = false
+region = true
+region_rect = Rect2( 408, 34, 16, 16 )
+
+[node name="furniture60" type="Sprite" parent="."]
+
+transform/pos = Vector2( 960, 128 )
+transform/scale = Vector2( 4, 4 )
+texture = ExtResource( 1 )
+centered = false
+region = true
+region_rect = Rect2( 425, 34, 16, 16 )
+
+[node name="furniture61" type="Sprite" parent="."]
+
+transform/pos = Vector2( 1024, 128 )
+transform/scale = Vector2( 4, 4 )
+texture = ExtResource( 1 )
+centered = false
+region = true
+region_rect = Rect2( 442, 34, 16, 16 )
+
+[node name="furniture62" type="Sprite" parent="."]
+
+transform/pos = Vector2( 1088, 128 )
+transform/scale = Vector2( 4, 4 )
+texture = ExtResource( 1 )
+centered = false
+region = true
+region_rect = Rect2( 459, 34, 16, 16 )
+
+[node name="furniture63" type="Sprite" parent="."]
+
+transform/pos = Vector2( 1152, 128 )
+transform/scale = Vector2( 4, 4 )
+texture = ExtResource( 1 )
+centered = false
+region = true
+region_rect = Rect2( 476, 34, 16, 16 )
+
+[node name="furniture64" type="Sprite" parent="."]
+
+transform/pos = Vector2( 1216, 128 )
+transform/scale = Vector2( 4, 4 )
+texture = ExtResource( 1 )
+centered = false
+region = true
+region_rect = Rect2( 493, 34, 16, 16 )
+
+[node name="furniture65" type="Sprite" parent="."]
+
+transform/pos = Vector2( 1280, 128 )
+transform/scale = Vector2( 4, 4 )
+texture = ExtResource( 1 )
+centered = false
+region = true
+region_rect = Rect2( 510, 34, 16, 16 )
+
+[node name="furniture66" type="Sprite" parent="."]
+
+transform/pos = Vector2( 1344, 128 )
+transform/scale = Vector2( 4, 4 )
+texture = ExtResource( 1 )
+centered = false
+region = true
+region_rect = Rect2( 527, 34, 16, 16 )
+
+[node name="furniture24" type="Sprite" parent="."]
+
+transform/pos = Vector2( 64, 64 )
+transform/scale = Vector2( 4, 4 )
+texture = ExtResource( 1 )
+centered = false
+region = true
+region_rect = Rect2( 187, 17, 16, 16 )
+
+[node name="furniture25" type="Sprite" parent="."]
+
+transform/pos = Vector2( 128, 64 )
+transform/scale = Vector2( 4, 4 )
+texture = ExtResource( 1 )
+centered = false
+region = true
+region_rect = Rect2( 204, 17, 16, 16 )
+
+[node name="furniture26" type="Sprite" parent="."]
+
+transform/pos = Vector2( 192, 64 )
+transform/scale = Vector2( 4, 4 )
+texture = ExtResource( 1 )
+centered = false
+region = true
+region_rect = Rect2( 221, 17, 16, 16 )
+
+[node name="furniture27" type="Sprite" parent="."]
+
+transform/pos = Vector2( 256, 64 )
+transform/scale = Vector2( 4, 4 )
+texture = ExtResource( 1 )
+centered = false
+region = true
+region_rect = Rect2( 238, 17, 16, 16 )
+
+[node name="furniture28" type="Sprite" parent="."]
+
+transform/pos = Vector2( 320, 64 )
+transform/scale = Vector2( 4, 4 )
+texture = ExtResource( 1 )
+centered = false
+region = true
+region_rect = Rect2( 255, 17, 16, 16 )
+
+[node name="furniture29" type="Sprite" parent="."]
+
+transform/pos = Vector2( 384, 64 )
+transform/scale = Vector2( 4, 4 )
+texture = ExtResource( 1 )
+centered = false
+region = true
+region_rect = Rect2( 272, 17, 16, 16 )
+
+[node name="furniture30" type="Sprite" parent="."]
+
+transform/pos = Vector2( 448, 64 )
+transform/scale = Vector2( 4, 4 )
+texture = ExtResource( 1 )
+centered = false
+region = true
+region_rect = Rect2( 289, 17, 16, 16 )
+
+[node name="furniture31" type="Sprite" parent="."]
+
+transform/pos = Vector2( 512, 64 )
+transform/scale = Vector2( 4, 4 )
+texture = ExtResource( 1 )
+centered = false
+region = true
+region_rect = Rect2( 306, 17, 16, 16 )
+
+[node name="furniture32" type="Sprite" parent="."]
+
+transform/pos = Vector2( 576, 64 )
+transform/scale = Vector2( 4, 4 )
+texture = ExtResource( 1 )
+centered = false
+region = true
+region_rect = Rect2( 323, 17, 16, 16 )
+
+[node name="furniture33" type="Sprite" parent="."]
+
+transform/pos = Vector2( 640, 64 )
+transform/scale = Vector2( 4, 4 )
+texture = ExtResource( 1 )
+centered = false
+region = true
+region_rect = Rect2( 340, 17, 16, 16 )
+
+[node name="furniture34" type="Sprite" parent="."]
+
+transform/pos = Vector2( 704, 64 )
+transform/scale = Vector2( 4, 4 )
+texture = ExtResource( 1 )
+centered = false
+region = true
+region_rect = Rect2( 357, 17, 16, 16 )
+
+[node name="furniture35" type="Sprite" parent="."]
+
+transform/pos = Vector2( 768, 64 )
+transform/scale = Vector2( 4, 4 )
+texture = ExtResource( 1 )
+centered = false
+region = true
+region_rect = Rect2( 374, 17, 16, 16 )
+
+[node name="furniture36" type="Sprite" parent="."]
+
+transform/pos = Vector2( 832, 64 )
+transform/scale = Vector2( 4, 4 )
+texture = ExtResource( 1 )
+centered = false
+region = true
+region_rect = Rect2( 391, 17, 16, 16 )
+
+[node name="furniture37" type="Sprite" parent="."]
+
+transform/pos = Vector2( 896, 64 )
+transform/scale = Vector2( 4, 4 )
+texture = ExtResource( 1 )
+centered = false
+region = true
+region_rect = Rect2( 408, 17, 16, 16 )
+
+[node name="furniture38" type="Sprite" parent="."]
+
+transform/pos = Vector2( 960, 64 )
+transform/scale = Vector2( 4, 4 )
+texture = ExtResource( 1 )
+centered = false
+region = true
+region_rect = Rect2( 425, 17, 16, 16 )
+
+[node name="furniture39" type="Sprite" parent="."]
+
+transform/pos = Vector2( 1024, 64 )
+transform/scale = Vector2( 4, 4 )
+texture = ExtResource( 1 )
+centered = false
+region = true
+region_rect = Rect2( 442, 17, 16, 16 )
+
+[node name="furniture40" type="Sprite" parent="."]
+
+transform/pos = Vector2( 1088, 64 )
+transform/scale = Vector2( 4, 4 )
+texture = ExtResource( 1 )
+centered = false
+region = true
+region_rect = Rect2( 459, 17, 16, 16 )
+
+[node name="furniture41" type="Sprite" parent="."]
+
+transform/pos = Vector2( 1152, 64 )
+transform/scale = Vector2( 4, 4 )
+texture = ExtResource( 1 )
+centered = false
+region = true
+region_rect = Rect2( 476, 17, 16, 16 )
+
+[node name="furniture42" type="Sprite" parent="."]
+
+transform/pos = Vector2( 1216, 64 )
+transform/scale = Vector2( 4, 4 )
+texture = ExtResource( 1 )
+centered = false
+region = true
+region_rect = Rect2( 493, 17, 16, 16 )
+
+[node name="furniture43" type="Sprite" parent="."]
+
+transform/pos = Vector2( 1280, 64 )
+transform/scale = Vector2( 4, 4 )
+texture = ExtResource( 1 )
+centered = false
+region = true
+region_rect = Rect2( 510, 17, 16, 16 )
+
+[node name="furniture44" type="Sprite" parent="."]
+
+transform/pos = Vector2( 1344, 64 )
+transform/scale = Vector2( 4, 4 )
+texture = ExtResource( 1 )
+centered = false
+region = true
+region_rect = Rect2( 527, 17, 16, 16 )
+
+[node name="furniture2" type="Sprite" parent="."]
+
+transform/pos = Vector2( 64, 0 )
+transform/scale = Vector2( 4, 4 )
+texture = ExtResource( 1 )
+centered = false
+region = true
+region_rect = Rect2( 187, 0, 16, 16 )
+
+[node name="furniture3" type="Sprite" parent="."]
+
+transform/pos = Vector2( 128, 0 )
+transform/scale = Vector2( 4, 4 )
+texture = ExtResource( 1 )
+centered = false
+region = true
+region_rect = Rect2( 204, 0, 16, 16 )
+
+[node name="furniture4" type="Sprite" parent="."]
+
+transform/pos = Vector2( 192, 0 )
+transform/scale = Vector2( 4, 4 )
+texture = ExtResource( 1 )
+centered = false
+region = true
+region_rect = Rect2( 221, 0, 16, 16 )
+
+[node name="furniture5" type="Sprite" parent="."]
+
+transform/pos = Vector2( 256, 0 )
+transform/scale = Vector2( 4, 4 )
+texture = ExtResource( 1 )
+centered = false
+region = true
+region_rect = Rect2( 238, 0, 16, 16 )
+
+[node name="furniture6" type="Sprite" parent="."]
+
+transform/pos = Vector2( 320, 0 )
+transform/scale = Vector2( 4, 4 )
+texture = ExtResource( 1 )
+centered = false
+region = true
+region_rect = Rect2( 255, 0, 16, 16 )
+
+[node name="furniture7" type="Sprite" parent="."]
+
+transform/pos = Vector2( 384, 0 )
+transform/scale = Vector2( 4, 4 )
+texture = ExtResource( 1 )
+centered = false
+region = true
+region_rect = Rect2( 272, 0, 16, 16 )
+
+[node name="furniture8" type="Sprite" parent="."]
+
+transform/pos = Vector2( 448, 0 )
+transform/scale = Vector2( 4, 4 )
+texture = ExtResource( 1 )
+centered = false
+region = true
+region_rect = Rect2( 289, 0, 16, 16 )
+
+[node name="furniture9" type="Sprite" parent="."]
+
+transform/pos = Vector2( 512, 0 )
+transform/scale = Vector2( 4, 4 )
+texture = ExtResource( 1 )
+centered = false
+region = true
+region_rect = Rect2( 306, 0, 16, 16 )
+
+[node name="furniture10" type="Sprite" parent="."]
+
+transform/pos = Vector2( 576, 0 )
+transform/scale = Vector2( 4, 4 )
+texture = ExtResource( 1 )
+centered = false
+region = true
+region_rect = Rect2( 323, 0, 16, 16 )
+
+[node name="furniture11" type="Sprite" parent="."]
+
+transform/pos = Vector2( 640, 0 )
+transform/scale = Vector2( 4, 4 )
+texture = ExtResource( 1 )
+centered = false
+region = true
+region_rect = Rect2( 340, 0, 16, 16 )
+
+[node name="furniture12" type="Sprite" parent="."]
+
+transform/pos = Vector2( 704, 0 )
+transform/scale = Vector2( 4, 4 )
+texture = ExtResource( 1 )
+centered = false
+region = true
+region_rect = Rect2( 357, 0, 16, 16 )
+
+[node name="furniture13" type="Sprite" parent="."]
+
+transform/pos = Vector2( 768, 0 )
+transform/scale = Vector2( 4, 4 )
+texture = ExtResource( 1 )
+centered = false
+region = true
+region_rect = Rect2( 374, 0, 16, 16 )
+
+[node name="furniture14" type="Sprite" parent="."]
+
+transform/pos = Vector2( 832, 0 )
+transform/scale = Vector2( 4, 4 )
+texture = ExtResource( 1 )
+centered = false
+region = true
+region_rect = Rect2( 391, 0, 16, 16 )
+
+[node name="furniture15" type="Sprite" parent="."]
+
+transform/pos = Vector2( 896, 0 )
+transform/scale = Vector2( 4, 4 )
+texture = ExtResource( 1 )
+centered = false
+region = true
+region_rect = Rect2( 408, 0, 16, 16 )
+
+[node name="furniture16" type="Sprite" parent="."]
+
+transform/pos = Vector2( 960, 0 )
+transform/scale = Vector2( 4, 4 )
+texture = ExtResource( 1 )
+centered = false
+region = true
+region_rect = Rect2( 425, 0, 16, 16 )
+
+[node name="furniture17" type="Sprite" parent="."]
+
+transform/pos = Vector2( 1024, 0 )
+transform/scale = Vector2( 4, 4 )
+texture = ExtResource( 1 )
+centered = false
+region = true
+region_rect = Rect2( 442, 0, 16, 16 )
+
+[node name="furniture18" type="Sprite" parent="."]
+
+transform/pos = Vector2( 1088, 0 )
+transform/scale = Vector2( 4, 4 )
+texture = ExtResource( 1 )
+centered = false
+region = true
+region_rect = Rect2( 459, 0, 16, 16 )
+
+[node name="furniture19" type="Sprite" parent="."]
+
+transform/pos = Vector2( 1152, 0 )
+transform/scale = Vector2( 4, 4 )
+texture = ExtResource( 1 )
+centered = false
+region = true
+region_rect = Rect2( 476, 0, 16, 16 )
+
+[node name="furniture20" type="Sprite" parent="."]
+
+transform/pos = Vector2( 1216, 0 )
+transform/scale = Vector2( 4, 4 )
+texture = ExtResource( 1 )
+centered = false
+region = true
+region_rect = Rect2( 493, 0, 16, 16 )
+
+[node name="furniture21" type="Sprite" parent="."]
+
+transform/pos = Vector2( 1280, 0 )
+transform/scale = Vector2( 4, 4 )
+texture = ExtResource( 1 )
+centered = false
+region = true
+region_rect = Rect2( 510, 0, 16, 16 )
+
+[node name="furniture22" type="Sprite" parent="."]
+
+transform/pos = Vector2( 1344, 0 )
+transform/scale = Vector2( 4, 4 )
+texture = ExtResource( 1 )
+centered = false
+region = true
+region_rect = Rect2( 527, 0, 16, 16 )
+
+

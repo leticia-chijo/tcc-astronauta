@@ -1,0 +1,112 @@
+[gd_scene load_steps=7 format=1]
+
+[ext_resource path="res://scripts/Flappy/FlappyCano.gd" type="Script" id=1]
+[ext_resource path="res://assets/Flappy/mail-box.png" type="Texture" id=2]
+[ext_resource path="res://assets/Flappy/roguelikeCity_magenta.png" type="Texture" id=3]
+
+[sub_resource type="RectangleShape2D" id=1]
+
+custom_solver_bias = 0.0
+extents = Vector2( 107.169, 1010.16 )
+
+[sub_resource type="RectangleShape2D" id=2]
+
+custom_solver_bias = 0.0
+extents = Vector2( 63.679, 1233.68 )
+
+[sub_resource type="SegmentShape2D" id=3]
+
+custom_solver_bias = 0.0
+a = Vector2( 4.06287, -306.739 )
+b = Vector2( 4.9848, 272.719 )
+
+[node name="Cano" type="Node2D"]
+
+script/script = ExtResource( 1 )
+vel = -400
+
+[node name="mailbox" type="Sprite" parent="."]
+
+transform/pos = Vector2( 3.7948, 290.941 )
+transform/scale = Vector2( 0.4, 0.4 )
+texture = ExtResource( 2 )
+
+[node name="Semaforo" type="Sprite" parent="."]
+
+transform/pos = Vector2( -56.572, -366.256 )
+transform/scale = Vector2( 20, 20 )
+texture = ExtResource( 3 )
+vframes = 30
+hframes = 40
+frame = 602
+
+[node name="mailbox_cano1" type="Sprite" parent="."]
+
+transform/pos = Vector2( 41.0848, 1147.65 )
+transform/scale = Vector2( 15, 100 )
+texture = ExtResource( 3 )
+vframes = 28
+hframes = 40
+frame = 692
+
+[node name="semaforo_cano" type="Sprite" parent="."]
+
+transform/pos = Vector2( -33.9406, -1349.06 )
+transform/rot = 180.0
+transform/scale = Vector2( 15, 100 )
+texture = ExtResource( 3 )
+vframes = 28
+hframes = 40
+frame = 692
+
+[node name="Area2D" type="Area2D" parent="."]
+
+input/pickable = true
+shapes/0/shape = SubResource( 1 )
+shapes/0/transform = Matrix32( 1, 0, 0, 1, 5.53864, 1203.66 )
+shapes/0/trigger = false
+shapes/1/shape = SubResource( 2 )
+shapes/1/transform = Matrix32( 1, 0, 0, 1, -6.60059, -1439.9 )
+shapes/1/trigger = false
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+
+transform/pos = Vector2( 5.53864, 1203.66 )
+shape = SubResource( 1 )
+trigger = false
+_update_shape_index = 0
+
+[node name="CollisionShape2D1" type="CollisionShape2D" parent="Area2D"]
+
+transform/pos = Vector2( -6.60059, -1439.9 )
+shape = SubResource( 2 )
+trigger = false
+_update_shape_index = 1
+
+[node name="Ponto" type="Area2D" parent="."]
+
+input/pickable = true
+shapes/0/shape = SubResource( 3 )
+shapes/0/transform = Matrix32( 1, 0, 0, 1, 147.196, -24.416 )
+shapes/0/trigger = false
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Ponto"]
+
+transform/pos = Vector2( 147.196, -24.416 )
+shape = SubResource( 3 )
+trigger = false
+_update_shape_index = 0
+
+[connection signal="body_enter" from="Area2D" to="." method="_on_Area2D_body_enter"]
+
+[connection signal="body_enter" from="Ponto" to="." method="_on_Ponto_body_enter"]
+
+

@@ -1,0 +1,540 @@
+[gd_scene load_steps=25 format=1]
+
+[ext_resource path="res://scripts/Mapas/CasaMecanica.gd" type="Script" id=1]
+[ext_resource path="res://tilesets/tilesetHousesOutside.tres" type="TileSet" id=2]
+[ext_resource path="res://tilesets/tilesetCity.tres" type="TileSet" id=3]
+[ext_resource path="res://tilesets/tilesetIndoors.tres" type="TileSet" id=4]
+[ext_resource path="res://scenes/Personagem/Personagem.tscn" type="PackedScene" id=5]
+[ext_resource path="res://scenes/Npc/npc.tscn" type="PackedScene" id=6]
+[ext_resource path="res://assets/Personagens/personajes-lanto.png" type="Texture" id=7]
+
+[sub_resource type="RectangleShape2D" id=1]
+
+custom_solver_bias = 0.0
+extents = Vector2( 58.5833, 3.23364 )
+
+[sub_resource type="RectangleShape2D" id=2]
+
+custom_solver_bias = 0.0
+extents = Vector2( 190.194, 89.9877 )
+
+[sub_resource type="RectangleShape2D" id=3]
+
+custom_solver_bias = 0.0
+extents = Vector2( 349.448, 91.3055 )
+
+[sub_resource type="RectangleShape2D" id=4]
+
+custom_solver_bias = 0.0
+extents = Vector2( 600.962, 69.6482 )
+
+[sub_resource type="RectangleShape2D" id=5]
+
+custom_solver_bias = 0.0
+extents = Vector2( 190.365, 66.713 )
+
+[sub_resource type="RectangleShape2D" id=6]
+
+custom_solver_bias = 0.0
+extents = Vector2( 251.89, 67.7666 )
+
+[sub_resource type="RectangleShape2D" id=7]
+
+custom_solver_bias = 0.0
+extents = Vector2( 30.8979, 518.39 )
+
+[sub_resource type="RectangleShape2D" id=8]
+
+custom_solver_bias = 0.0
+extents = Vector2( 32.2299, 111.52 )
+
+[sub_resource type="RectangleShape2D" id=9]
+
+custom_solver_bias = 0.0
+extents = Vector2( 29.0646, 197.657 )
+
+[sub_resource type="SegmentShape2D" id=10]
+
+custom_solver_bias = 0.0
+a = Vector2( 75.0842, 10.2282 )
+b = Vector2( 0, 10 )
+
+[sub_resource type="SegmentShape2D" id=11]
+
+custom_solver_bias = 0.0
+a = Vector2( 107.332, 9.42387 )
+b = Vector2( -2.79578, 10.0873 )
+
+[sub_resource type="SegmentShape2D" id=12]
+
+custom_solver_bias = 0.0
+a = Vector2( 84.8534, 10.3819 )
+b = Vector2( 0, 10 )
+
+[sub_resource type="SegmentShape2D" id=13]
+
+custom_solver_bias = 0.0
+a = Vector2( 276.102, 10.0242 )
+b = Vector2( -9.09912, 10.4214 )
+
+[sub_resource type="SegmentShape2D" id=14]
+
+custom_solver_bias = 0.0
+a = Vector2( 91.4503, 10.2706 )
+b = Vector2( 0, 10 )
+
+[sub_resource type="SegmentShape2D" id=15]
+
+custom_solver_bias = 0.0
+a = Vector2( 35.8073, 10.0767 )
+b = Vector2( 0, 10 )
+
+[sub_resource type="SegmentShape2D" id=16]
+
+custom_solver_bias = 0.0
+a = Vector2( 16.9969, 10.7509 )
+b = Vector2( 0, 10 )
+
+[sub_resource type="RectangleShape2D" id=17]
+
+custom_solver_bias = 0.0
+extents = Vector2( 20.7958, 23.4516 )
+
+[node name="CasaMecanica" type="Node2D"]
+
+transform/rot = 270.0
+script/script = ExtResource( 1 )
+
+[node name="Chao" type="TileMap" parent="."]
+
+transform/scale = Vector2( 4, 4 )
+mode = 0
+tile_set = ExtResource( 2 )
+cell/size = Vector2( 16, 16 )
+cell/quadrant_size = 16
+cell/custom_transform = Matrix32( 1, 0, 0, 1, 0, 0 )
+cell/half_offset = 2
+cell/tile_origin = 0
+cell/y_sort = false
+collision/use_kinematic = false
+collision/friction = 1.0
+collision/bounce = 0.0
+collision/layers = 1
+collision/mask = 1
+occluder/light_mask = 1
+tile_data = IntArray( -131073, 154, -196608, 154, -196607, 154, -196606, 154, -196605, 154, -196604, 154, -196603, 154, -196602, 154, -196601, 154, -196600, 154, -196599, 154, -196598, 154, -196597, 154, -196596, 154, -196595, 154, -196594, 154, -196593, 154, -196592, 154, -65537, 148, -131072, 148, -131071, 148, -131070, 148, -131069, 148, -131068, 148, -131067, 148, -131066, 148, -131065, 148, -131064, 148, -131063, 148, -131062, 148, -131061, 148, -131060, 148, -131059, 148, -131058, 148, -131057, 148, -131056, 154, -1, 185, -65536, 185, -65535, 185, -65534, 185, -65533, 185, -65532, 185, -65531, 185, -65530, 185, -65529, 185, -65528, 185, -65527, 185, -65526, 185, -65525, 185, -65524, 185, -65523, 185, -65522, 185, -65521, 185, -65520, 185, 65535, 185, 0, 185, 1, 185, 2, 185, 3, 185, 4, 185, 5, 185, 6, 185, 7, 185, 8, 185, 9, 185, 10, 185, 11, 185, 12, 185, 13, 185, 14, 185, 15, 185, 16, 185, 131071, 185, 65536, 185, 65537, 185, 65538, 185, 65539, 185, 65540, 185, 65541, 185, 65542, 185, 65543, 185, 65544, 185, 65545, 185, 65546, 185, 65547, 185, 65548, 185, 65549, 185, 65550, 185, 65551, 185, 65552, 185, 196607, 185, 131072, 185, 131073, 85, 131074, 154, 131075, 154, 131076, 154, 131077, 154, 131078, 135, 131079, 185, 131080, 185, 131081, 154, 131082, 154, 131083, 154, 131084, 154, 131085, 154, 131086, 154, 131087, 154, 131088, 154, 262143, 185, 196608, 185, 196609, 153, 196610, 154, 196611, 154, 196612, 154, 196613, 154, 196614, 150, 196615, 185, 196616, 185, 196617, 154, 196618, 154, 196619, 154, 196620, 154, 196621, 154, 196622, 154, 196623, 154, 196624, 154, 327679, 185, 262144, 185, 262145, 146, 262146, 148, 262147, 148, 262148, 148, 262149, 148, 262150, 149, 262151, 185, 262152, 185, 262153, 154, 262154, 148, 262155, 148, 262156, 148, 262157, 148, 262158, 148, 262159, 148, 262160, 154, 393215, 185, 327680, 185, 327681, 185, 327682, 185, 327683, 185, 327684, 185, 327685, 185, 327686, 185, 327687, 185, 327688, 185, 327689, 154, 327690, 185, 327691, 185, 327692, 185, 327693, 185, 327694, 185, 327695, 185, 327696, 185, 458751, 185, 393216, 185, 393217, 185, 393218, 185, 393219, 185, 393220, 185, 393221, 185, 393222, 185, 393223, 185, 393224, 185, 393225, 153, 393226, 185, 393227, 185, 393228, 185, 393229, 185, 393230, 185, 393231, 185, 393232, 185, 524287, 185, 458752, 185, 458753, 185, 458754, 185, 458755, 185, 458756, 185, 458757, 185, 458758, 185, 458759, 185, 458760, 185, 458761, 146, 458762, 185, 458763, 185, 458764, 185, 458765, 185, 458766, 185, 458767, 185, 458768, 185, 589823, 185, 524288, 185, 524289, 185, 524290, 185, 524291, 185, 524292, 185, 524293, 185, 524294, 185, 524295, 185, 524296, 185, 524297, 185, 524298, 185, 524299, 185, 524300, 185, 524301, 185, 524302, 185, 524303, 185, 524304, 185, 655359, 185, 589824, 185, 589825, 185, 589826, 185, 589827, 185, 589828, 185, 589829, 185, 589830, 185, 589831, 185, 589832, 185, 589833, 185, 589834, 185, 589835, 185, 589836, 185, 589837, 185, 589838, 185, 589839, 185, 589840, 185, 720895, 185, 655360, 185, 655361, 185, 655362, 185, 655363, 185, 655364, 185, 655365, 185, 655366, 185, 655367, 185, 655368, 185, 655369, 185, 655370, 185, 655371, 185, 655372, 185, 655373, 185, 655374, 185, 655375, 185, 655376, 185, 786431, 185, 720896, 185, 720897, 185, 720898, 185, 720899, 185, 720900, 185, 720901, 185, 720902, 185, 720903, 185, 720904, 185, 720905, 185, 720906, 185, 720907, 185, 720908, 185, 720909, 185, 720910, 185, 720911, 185, 720912, 185, 851967, 185, 786432, 185, 786433, 185, 786434, 185, 786435, 185, 786436, 185, 786437, 185, 786438, 185, 786439, 185, 786440, 185, 786441, 185, 786442, 185, 786443, 185, 786444, 185, 786445, 185, 786446, 185, 786447, 185, 786448, 185 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Paredes" type="TileMap" parent="."]
+
+transform/pos = Vector2( 2.05054, 0 )
+transform/scale = Vector2( 4, 4 )
+mode = 0
+tile_set = ExtResource( 3 )
+cell/size = Vector2( 16, 16 )
+cell/quadrant_size = 16
+cell/custom_transform = Matrix32( 1, 0, 0, 1, 0, 0 )
+cell/half_offset = 2
+cell/tile_origin = 0
+cell/y_sort = false
+collision/use_kinematic = false
+collision/friction = 1.0
+collision/bounce = 0.0
+collision/layers = 1
+collision/mask = 1
+occluder/light_mask = 1
+tile_data = IntArray( -196610, 646, -196609, 644, -262144, 644, -262143, 644, -262142, 644, -262141, 644, -262140, 644, -262139, 644, -262138, 613, -262137, 644, -262136, 644, -262135, 644, -262134, 644, -262133, 644, -262132, 644, -262131, 644, -262130, 644, -262129, 644, -262128, 647, -131074, 609, -196602, 609, -196592, 609, -65538, 609, -131066, 609, -131056, 609, -2, 609, -65530, 609, -65520, 609, 65534, 609, 6, 609, 16, 609, 131070, 609, 65542, 609, 65552, 609, 196606, 609, 131073, 643, 131074, 644, 131075, 644, 131076, 644, 131077, 644, 131078, 611, 131081, 646, 131082, 644, 131083, 644, 131084, 644, 131085, 644, 131086, 644, 131087, 644, 131088, 612, 262142, 609, 196617, 609, 196624, 609, 327678, 609, 262153, 609, 262160, 609, 393214, 609, 327689, 606, 327696, 609, 458750, 609, 393232, 609, 524286, 609, 458768, 609, 589822, 609, 524304, 609, 655358, 609, 589840, 609, 720894, 610, 720895, 644, 655360, 644, 655361, 644, 655362, 644, 655363, 645, 655366, 643, 655367, 644, 655368, 644, 655369, 644, 655370, 644, 655371, 644, 655372, 644, 655373, 644, 655374, 644, 655375, 644, 655376, 611, 786430, 18, 786431, 528, 720896, 528, 720897, 528, 720898, 528, 720899, 19, 720902, 18, 720903, 528, 720904, 528, 720905, 528, 720906, 528, 720907, 528, 720908, 528, 720909, 528, 720910, 528, 720911, 528, 720912, 19, 851966, 351, 851967, 420, 786432, 420, 786433, 420, 786434, 420, 786435, 352, 786438, 351, 786439, 420, 786440, 420, 786441, 420, 786442, 420, 786443, 420, 786444, 420, 786445, 420, 786446, 420, 786447, 420, 786448, 352 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Moveis" type="TileMap" parent="."]
+
+transform/scale = Vector2( 4, 4 )
+mode = 0
+tile_set = ExtResource( 4 )
+cell/size = Vector2( 16, 16 )
+cell/quadrant_size = 16
+cell/custom_transform = Matrix32( 1, 0, 0, 1, 0, 0 )
+cell/half_offset = 2
+cell/tile_origin = 0
+cell/y_sort = false
+collision/use_kinematic = false
+collision/friction = 1.0
+collision/bounce = 0.0
+collision/layers = 1
+collision/mask = 1
+occluder/light_mask = 1
+tile_data = IntArray( 196612, 25, 196613, 26 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="MoveisMedios" type="TileMap" parent="."]
+
+transform/scale = Vector2( 6, 6 )
+mode = 0
+tile_set = ExtResource( 4 )
+cell/size = Vector2( 16, 16 )
+cell/quadrant_size = 16
+cell/custom_transform = Matrix32( 1, 0, 0, 1, 0, 0 )
+cell/half_offset = 2
+cell/tile_origin = 0
+cell/y_sort = false
+collision/use_kinematic = false
+collision/friction = 1.0
+collision/bounce = 0.0
+collision/layers = 1
+collision/mask = 1
+occluder/light_mask = 1
+tile_data = IntArray( -131072, 25, -131069, 30, -131067, 93, -131064, 536870939, -131063, 95, -65536, 79, -65533, 80, -65531, 72, -65527, 74, 131073, 125, 131079, 536871008, 131080, 117, 131081, 116, 196615, 536871070, 196616, 536871068, 196617, 536871071, 327687, 86, 327688, 120, 327689, 536870998 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="MoveisMedios1" type="TileMap" parent="."]
+
+transform/pos = Vector2( 40, 0 )
+transform/rot = 0.1
+transform/scale = Vector2( 6, 6 )
+mode = 0
+tile_set = ExtResource( 4 )
+cell/size = Vector2( 16, 16 )
+cell/quadrant_size = 16
+cell/custom_transform = Matrix32( 1, 0, 0, 1, 0, 0 )
+cell/half_offset = 2
+cell/tile_origin = 0
+cell/y_sort = false
+collision/use_kinematic = false
+collision/friction = 1.0
+collision/bounce = 0.0
+collision/layers = 1
+collision/mask = 1
+occluder/light_mask = 1
+tile_data = IntArray( -65535, 51 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="MoveisGrandes" type="TileMap" parent="."]
+
+transform/scale = Vector2( 8, 8 )
+mode = 0
+tile_set = ExtResource( 4 )
+cell/size = Vector2( 16, 16 )
+cell/quadrant_size = 16
+cell/custom_transform = Matrix32( 1, 0, 0, 1, 0, 0 )
+cell/half_offset = 2
+cell/tile_origin = 0
+cell/y_sort = false
+collision/use_kinematic = false
+collision/friction = 1.0
+collision/bounce = 0.0
+collision/layers = 1
+collision/mask = 1
+occluder/light_mask = 1
+tile_data = IntArray( -65531, 79 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="personagem" parent="." instance=ExtResource( 5 )]
+
+transform/pos = Vector2( 323.533, 748.809 )
+
+[node name="Door" type="Area2D" parent="."]
+
+editor/display_folded = true
+transform/pos = Vector2( 327.559, 716.189 )
+input/pickable = true
+shapes/0/shape = SubResource( 1 )
+shapes/0/transform = Matrix32( 1, 0, 0, 1, -6.98712, 110.105 )
+shapes/0/trigger = false
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Door"]
+
+transform/pos = Vector2( -6.98712, 110.105 )
+shape = SubResource( 1 )
+trigger = false
+_update_shape_index = 0
+
+[node name="Colisoes" type="Node2D" parent="."]
+
+editor/display_folded = true
+transform/pos = Vector2( -497.631, 534.722 )
+
+[node name="Paredes" type="StaticBody2D" parent="Colisoes"]
+
+transform/pos = Vector2( 850.125, -46.7652 )
+input/pickable = true
+shapes/0/shape = SubResource( 2 )
+shapes/0/transform = Matrix32( 1, 0, 0, 1, -286.001, 246.802 )
+shapes/0/trigger = false
+shapes/1/shape = SubResource( 3 )
+shapes/1/transform = Matrix32( 1, 0, 0, 1, 383.834, 248.001 )
+shapes/1/trigger = false
+shapes/2/shape = SubResource( 4 )
+shapes/2/transform = Matrix32( 1, 0, 0, 1, 125.264, -669.745 )
+shapes/2/trigger = false
+shapes/3/shape = SubResource( 5 )
+shapes/3/transform = Matrix32( 1, 0, 0, 1, -96.0752, -289.165 )
+shapes/3/trigger = false
+shapes/4/shape = SubResource( 6 )
+shapes/4/transform = Matrix32( 1, 0, 0, 1, 475.005, -291.67 )
+shapes/4/trigger = false
+shapes/5/shape = SubResource( 7 )
+shapes/5/transform = Matrix32( 1, 0, 0, 1, -445.268, -222.048 )
+shapes/5/trigger = false
+shapes/6/shape = SubResource( 7 )
+shapes/6/transform = Matrix32( 1, 0, 0, 1, 705.217, -218.606 )
+shapes/6/trigger = false
+shapes/7/shape = SubResource( 8 )
+shapes/7/transform = Matrix32( 1, 0, 0, 1, 255.398, -155.05 )
+shapes/7/trigger = false
+shapes/8/shape = SubResource( 9 )
+shapes/8/transform = Matrix32( 1, 0, 0, 1, 65.2524, -525.396 )
+shapes/8/trigger = false
+collision/layers = 1
+collision/mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Colisoes/Paredes"]
+
+transform/pos = Vector2( -286.001, 246.802 )
+shape = SubResource( 2 )
+trigger = false
+_update_shape_index = 0
+
+[node name="CollisionShape2D 2" type="CollisionShape2D" parent="Colisoes/Paredes"]
+
+transform/pos = Vector2( 383.834, 248.001 )
+shape = SubResource( 3 )
+trigger = false
+_update_shape_index = 1
+
+[node name="CollisionShape2D 3" type="CollisionShape2D" parent="Colisoes/Paredes"]
+
+transform/pos = Vector2( 125.264, -669.745 )
+shape = SubResource( 4 )
+trigger = false
+_update_shape_index = 2
+
+[node name="CollisionShape2D 4" type="CollisionShape2D" parent="Colisoes/Paredes"]
+
+transform/pos = Vector2( -96.0752, -289.165 )
+shape = SubResource( 5 )
+trigger = false
+_update_shape_index = 3
+
+[node name="CollisionShape2D 5" type="CollisionShape2D" parent="Colisoes/Paredes"]
+
+transform/pos = Vector2( 475.005, -291.67 )
+shape = SubResource( 6 )
+trigger = false
+_update_shape_index = 4
+
+[node name="CollisionShape2D 6" type="CollisionShape2D" parent="Colisoes/Paredes"]
+
+transform/pos = Vector2( -445.268, -222.048 )
+shape = SubResource( 7 )
+trigger = false
+_update_shape_index = 5
+
+[node name="CollisionShape2D7" type="CollisionShape2D" parent="Colisoes/Paredes"]
+
+transform/pos = Vector2( 705.217, -218.606 )
+shape = SubResource( 7 )
+trigger = false
+_update_shape_index = 6
+
+[node name="CollisionShape2D 7" type="CollisionShape2D" parent="Colisoes/Paredes"]
+
+transform/pos = Vector2( 255.398, -155.05 )
+shape = SubResource( 8 )
+trigger = false
+_update_shape_index = 7
+
+[node name="CollisionShape2D 8" type="CollisionShape2D" parent="Colisoes/Paredes"]
+
+transform/pos = Vector2( 65.2524, -525.396 )
+shape = SubResource( 9 )
+trigger = false
+_update_shape_index = 8
+
+[node name="Moveis" type="StaticBody2D" parent="Colisoes"]
+
+transform/pos = Vector2( 770.235, -136.325 )
+input/pickable = false
+shapes/0/shape = SubResource( 10 )
+shapes/0/transform = Matrix32( 1, 0, 0, 1, -261.078, -465.5 )
+shapes/0/trigger = false
+shapes/1/shape = SubResource( 10 )
+shapes/1/transform = Matrix32( 1, 0, 0, 1, 24.1131, -465.5 )
+shapes/1/trigger = false
+shapes/2/shape = SubResource( 10 )
+shapes/2/transform = Matrix32( 1, 0, 0, 1, -128.41, -485.355 )
+shapes/2/trigger = false
+shapes/3/shape = SubResource( 11 )
+shapes/3/transform = Matrix32( 1, 0, 0, 1, 379.711, -469.264 )
+shapes/3/trigger = false
+shapes/4/shape = SubResource( 12 )
+shapes/4/transform = Matrix32( 1, 0, 0, 1, 211.761, -473.246 )
+shapes/4/trigger = false
+shapes/5/shape = SubResource( 12 )
+shapes/5/transform = Matrix32( 1, 0, 0, 1, 596.75, -473.246 )
+shapes/5/trigger = false
+shapes/6/shape = SubResource( 13 )
+shapes/6/transform = Matrix32( 1, 0, 0, 1, 409.474, -90.015 )
+shapes/6/trigger = false
+shapes/7/shape = SubResource( 14 )
+shapes/7/transform = Matrix32( 1, 0, 0, 1, 496.228, 102.412 )
+shapes/7/trigger = false
+shapes/8/shape = SubResource( 15 )
+shapes/8/transform = Matrix32( 1, 0, 0, 1, 441.271, 120.21 )
+shapes/8/trigger = false
+shapes/9/shape = SubResource( 15 )
+shapes/9/transform = Matrix32( 1, 0, 0, 1, 610.479, 120.21 )
+shapes/9/trigger = false
+shapes/10/shape = SubResource( 16 )
+shapes/10/transform = Matrix32( 1, 0, 0, 1, 422.386, 96.3842 )
+shapes/10/trigger = false
+shapes/11/shape = SubResource( 16 )
+shapes/11/transform = Matrix32( 1, 0, 0, 1, 644.905, 95.1565 )
+shapes/11/trigger = false
+collision/layers = 1
+collision/mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Colisoes/Moveis"]
+
+transform/pos = Vector2( -261.078, -465.5 )
+shape = SubResource( 10 )
+trigger = false
+_update_shape_index = 0
+
+[node name="CollisionShape2D1" type="CollisionShape2D" parent="Colisoes/Moveis"]
+
+transform/pos = Vector2( 24.1131, -465.5 )
+shape = SubResource( 10 )
+trigger = false
+_update_shape_index = 1
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Colisoes/Moveis"]
+
+transform/pos = Vector2( -128.41, -485.355 )
+shape = SubResource( 10 )
+trigger = false
+_update_shape_index = 2
+
+[node name="CollisionShape2D 2" type="CollisionShape2D" parent="Colisoes/Moveis"]
+
+transform/pos = Vector2( 379.711, -469.264 )
+shape = SubResource( 11 )
+trigger = false
+_update_shape_index = 3
+
+[node name="CollisionShape2D 3" type="CollisionShape2D" parent="Colisoes/Moveis"]
+
+transform/pos = Vector2( 211.761, -473.246 )
+shape = SubResource( 12 )
+trigger = false
+_update_shape_index = 4
+
+[node name="CollisionShape2D5" type="CollisionShape2D" parent="Colisoes/Moveis"]
+
+transform/pos = Vector2( 596.75, -473.246 )
+shape = SubResource( 12 )
+trigger = false
+_update_shape_index = 5
+
+[node name="CollisionShape2D 4" type="CollisionShape2D" parent="Colisoes/Moveis"]
+
+transform/pos = Vector2( 409.474, -90.015 )
+shape = SubResource( 13 )
+trigger = false
+_update_shape_index = 6
+
+[node name="CollisionShape2D 5" type="CollisionShape2D" parent="Colisoes/Moveis"]
+
+transform/pos = Vector2( 496.228, 102.412 )
+shape = SubResource( 14 )
+trigger = false
+_update_shape_index = 7
+
+[node name="CollisionShape2D 6" type="CollisionShape2D" parent="Colisoes/Moveis"]
+
+transform/pos = Vector2( 441.271, 120.21 )
+shape = SubResource( 15 )
+trigger = false
+_update_shape_index = 8
+
+[node name="CollisionShape2D7" type="CollisionShape2D" parent="Colisoes/Moveis"]
+
+transform/pos = Vector2( 610.479, 120.21 )
+shape = SubResource( 15 )
+trigger = false
+_update_shape_index = 9
+
+[node name="CollisionShape2D 7" type="CollisionShape2D" parent="Colisoes/Moveis"]
+
+transform/pos = Vector2( 422.386, 96.3842 )
+shape = SubResource( 16 )
+trigger = false
+_update_shape_index = 10
+
+[node name="CollisionShape2D8" type="CollisionShape2D" parent="Colisoes/Moveis"]
+
+transform/pos = Vector2( 644.905, 95.1565 )
+shape = SubResource( 16 )
+trigger = false
+_update_shape_index = 11
+
+[node name="mecanica" parent="." instance=ExtResource( 6 )]
+
+transform/pos = Vector2( 345.356, 322.635 )
+
+[node name="Sprite" type="Sprite" parent="mecanica"]
+
+transform/pos = Vector2( -2.21606, 7.38687 )
+transform/scale = Vector2( 1.5, 1.5 )
+texture = ExtResource( 7 )
+region = true
+region_rect = Rect2( 128, 128, 32, 32 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="mecanica"]
+
+input/pickable = false
+shapes/0/shape = SubResource( 17 )
+shapes/0/transform = Matrix32( 1, 0, 0, 1, -2.21606, 8.12561 )
+shapes/0/trigger = false
+collision/layers = 1
+collision/mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="mecanica/StaticBody2D"]
+
+transform/pos = Vector2( -2.21606, 8.12561 )
+shape = SubResource( 17 )
+trigger = false
+_update_shape_index = 0
+
+[connection signal="body_enter" from="Door" to="." method="_on_Door_body_enter"]
+
+[connection signal="body_enter" from="mecanica" to="." method="_on_mecanica_body_enter"]
+
+

@@ -1,0 +1,97 @@
+[gd_scene load_steps=6 format=1]
+
+[ext_resource path="res://scenes/Npc/npc.gd" type="Script" id=1]
+[ext_resource path="res://assets/Mapas/pipo-popupemotes Split images/pipo-popupemotes004.png" type="Texture" id=2]
+
+[sub_resource type="RectangleShape2D" id=1]
+
+custom_solver_bias = 0.0
+extents = Vector2( 112.474, 52.7969 )
+
+[sub_resource type="Animation" id=2]
+
+resource/name = "poupupanim"
+length = 1.0
+loop = true
+step = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/imported = false
+tracks/0/keys = {
+"times": FloatArray( 0, 0.5, 1 ),
+"transitions": FloatArray( 1, 1, 1 ),
+"update": 1,
+"values": [ 0, 1, 2 ]
+}
+
+[sub_resource type="CircleShape2D" id=3]
+
+custom_solver_bias = 0.0
+radius = 10.0
+
+[node name="npc" type="Area2D"]
+
+transform/scale = Vector2( 1.5, 1.5 )
+input/pickable = true
+shapes/0/shape = SubResource( 1 )
+shapes/0/transform = Matrix32( 0.556012, 0, 0, 1.15417, 5.17345, 15.1815 )
+shapes/0/trigger = false
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+script/script = ExtResource( 1 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+
+transform/pos = Vector2( 5.17345, 15.1815 )
+transform/scale = Vector2( 0.556012, 1.15417 )
+shape = SubResource( 1 )
+trigger = false
+_update_shape_index = 0
+
+[node name="BotaoDialogo" type="Node2D" parent="."]
+
+transform/pos = Vector2( 1.88324, 5.76383 )
+
+[node name="Sprite" type="Sprite" parent="BotaoDialogo"]
+
+transform/pos = Vector2( 19.1537, -47.5758 )
+transform/scale = Vector2( 1.66667, 1.66667 )
+texture = ExtResource( 2 )
+hframes = 3
+frame = 1
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="BotaoDialogo"]
+
+playback/process_mode = 1
+playback/default_blend_time = 0.0
+root/root = NodePath("..")
+anims/poupupanim = SubResource( 2 )
+playback/active = true
+playback/speed = 1.0
+blend_times = [  ]
+autoplay = "poupupanim"
+
+[node name="TouchScreenButton" type="TouchScreenButton" parent="BotaoDialogo"]
+
+transform/pos = Vector2( 17.3333, -51.3334 )
+transform/scale = Vector2( 3, 3 )
+normal = null
+pressed = null
+bitmask = null
+shape = SubResource( 3 )
+shape_centered = true
+shape_visible = true
+passby_press = false
+action = ""
+visibility_mode = 0
+
+[connection signal="body_enter" from="." to="." method="_on_npc_body_enter"]
+
+[connection signal="body_exit" from="." to="." method="_on_npc_body_exit"]
+
+[connection signal="pressed" from="BotaoDialogo/TouchScreenButton" to="." method="_on_TouchScreenButton_pressed"]
+
+
